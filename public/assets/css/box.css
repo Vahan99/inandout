@@ -1,0 +1,34 @@
+.ellipsis {height: 60px;display: -webkit-box;margin: 0 auto;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+th,
+td {
+  padding: 10px 15px;
+}
+thead {
+  background: #00a99d;
+  color: #fff;
+}
+th {
+  font-weight: bold;
+}
+tbody tr:nth-child(even) {
+  background: #f0f0f2;
+}
+td {
+  border-bottom: 1px solid #cecfd5;
+  border-right: 1px solid #cecfd5;
+  font-family: segoe ui;
+  font-size: 17px;
+}
+td:first-child {
+  border-left: 1px solid #cecfd5;
+}
+.ellipsis p {
+  display: inline-block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

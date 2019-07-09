@@ -1,0 +1,1 @@
+<td>{{$images->image}}</td>
