@@ -30,7 +30,7 @@ return [
     'nav-traffick' => 'Տրանսպորտ',
     'nav-rent-a-car' => 'Ավտովարձույթ',
     'nav-car-a-driver' => 'Մեքենա վարորդով',
-    'nav-worldnoah' => 'Նոյի Երկիր',
+    'nav-worldnoah' => 'Ընկերություն',
     'nav-about' => 'Մեր մասին',
     'nav-contacts' => 'Կոնտակտային տվյալներ',
     'nav-job' => 'Թափուր աշխատատեղ',
@@ -188,5 +188,6 @@ return [
     'price-policy-with-driver' => 'Գնային քաղաքականությունը վարորդով',
     'price-policy-without-driver' => 'Գնային քաղաքականությունը առանց վարորդի',
     'starting-place' => 'Սկսելու վայրը',
-    'enter_tour_name' => 'Մուտքագրեք տուրի անվանումը'
+    'enter_tour_name' => 'Մուտքագրեք տուրի անվանումը',
+
 ];

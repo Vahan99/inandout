@@ -4,19 +4,14 @@
     $settings = \App\Setting::first();
 @endphp
 @section('content')
-    {{--<div id="parallax2" class="parallax">--}}
-        {{--<div class="bg2 parallax-bg bg-fixed" style="background-position: 50% -61px; background: url('../uploads/drivers_page.png'--}}{{--{{ $image }}--}}{{--)"></div>--}}
-        {{--<div class="overlay"></div>--}}
-        {{--<div class="parallax-content">--}}
-            {{--<div class="container "></div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
+
     <div class="drivers_main_pic"></div>
 
+    <div class="container-fluid drivers_back">
     <div class="container drivers_container">
         <div class="row">
         <br>
-        {{--<h2 class="--}}{{--animated fadeInUp visible --}}{{--animated-logo animated fadeInUp visible drivers_page" data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-cars')</h2>--}}
+
         <div {{--class="col-md-12--}}">
             <form action="{{ route('drivers.index') }}" method="get" class="form1">
                 <div class="row">
@@ -113,4 +108,5 @@
         </div>
     </div>
     </div>
+
 @endsection

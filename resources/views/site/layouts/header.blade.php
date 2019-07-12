@@ -18,7 +18,7 @@
     <link href="{{asset('assets')}}/css/select2.css" rel="stylesheet">
     <link href="{{asset('assets')}}/css/smoothness/jquery-ui-1.10.0.custom.css" rel="stylesheet">
     <link href="{{asset('assets')}}/css/style.css" rel="stylesheet">
-    <link rel="shortcut icon" href="{{asset('assets')}}/images/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="../uploads/favicon.png" type="image/png">
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/default.css') }}">
 
@@ -222,35 +222,32 @@
     <div class="top1_wrapper">
         <div class="container">
             <div class="top1 clearfix">
-                <div class="email1"><a href="#">{{ $settings->mail }}</a></div>
+                <div class="email1"><a href="mailto:{{$settings->mail}}">{{ $settings->mail }}</a></div>
                 <div class="phone1">{{ $settings->phone }}</div>
                 <div class="social_wrapper">
                     <ul class="social clearfix">
                         @if(!is_null($settings->tripadvisor))
                             <li class="trip_o">
                                 <a href="{{ $settings->tripadvisor }}" class="tripadvisor" style="background-image: url({{ ('../uploads/tripadvisor.png') }})" target="_blank">
-                                    {{--<img src="../uploads/tripadvisor.png"/>--}}
                                 </a>
                             </li>
                         @endif
                         @if(!is_null($settings->facebook))
                             <li class="face_o">
                                 <a href="{{ $settings->facebook }}" class="facebook" style="background-image: url({{ ('../uploads/face.png') }})" target="_blank">
-                                    {{--<img src="../uploads/face.png"/>--}}
                                 </a>
                             </li>
                         @endif
                         @if(!is_null($settings->vk))
                             <li class="vk_o">
                                 <a href="{{ $settings->vk }}" class="vk" style="background-image: url({{ ('../uploads/vk.png') }})" target="_blank">
-                                    {{--<img src="../uploads/vk.png"/>--}}
                                 </a>
                             </li>
                         @endif
                         @if(!is_null($settings->instagram))
                             <li class="insta_o">
                                 <a href="{{ $settings->instagram }}" class="instagram" style="background-image: url({{ ('../uploads/instagram.png') }})" target="_blank">
-                                    {{--<img src="../uploads/instagram.png"/>--}}
+
                                 </a>
                             </li>
                         @endif
@@ -392,11 +389,6 @@
                             </li>
                             <li class="sub-menu sub-menu-1 {{ active_link(['drivers.index', 'driver.single']) }}">
                                 <a href="{{ route('drivers.index') }}">@lang('message.nav-traffick')</a>
-                                {{--<ul>--}}
-                                {{--<li class="sub-menu-2 {{ active_link('drivers.index') }}">--}}
-                                {{--<a href="{{ route('drivers.index') }}">@lang('message.nav-car-a-driver')</a>--}}
-                                {{--</li>--}}
-                                {{--</ul>--}}
                             </li>
                             <li class="sub-menu sub-menu-1 {{ active_link(['about.index', 'view.contact', 'vacancy.index', 'service.index']) }}">
                                 <a href="#">@lang('message.nav-worldnoah') <em></em></a>

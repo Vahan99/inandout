@@ -30,7 +30,7 @@ return [
     'nav-traffick' => 'Transport',
     'nav-rent-a-car' => 'Car rental',
     'nav-car-a-driver' => 'Car with driver',
-    'nav-worldnoah' => 'Noah s Land',
+    'nav-worldnoah' => 'Company',
     'nav-about' => 'About us',
     'nav-contacts' => 'Contact',
     'nav-job' => 'Vacancy',
@@ -186,5 +186,6 @@ return [
     'price-policy-with-driver' => 'Price Policy With Driver',
     'price-policy-without-driver' => 'Price Policy Without Driver',
     'starting-place' => 'Starting point',
-    'enter_tour_name' => 'Enter tour name'
+    'enter_tour_name' => 'Enter tour name',
+
 ];

@@ -3,37 +3,7 @@
 @endphp
 @extends('site.layouts.app')
 @section('content')
-    <div id="slider_wrapper" style="/*background: url(/uploads/{{ $settings->image }})*/ center center no-repeat; "
-         class="container-fluid text-center mt-2">
-
-
-        {{--<div class="container">--}}
-        {{--<div id="slider_inner">--}}
-        {{--<div class="">--}}
-        {{--<div id="slider">--}}
-        {{--<div class="">--}}
-        {{--<div class="carousel-box">--}}
-        {{--<div class="inner">--}}
-        {{--<div class="carousel main">--}}
-        {{--<ul>--}}
-        {{--<li>--}}
-        {{--<div class="slider">--}}
-        {{--<div class="slider_inner">--}}
-        {{--<div class="txt1"><span>{!! $settings->title !!}</span></div>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-        {{--</li>--}}
-        {{--</ul>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-        {{--<div class="slider_pagination"></div>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-        {{--</div>--}}
-    </div>
+    {{----}}
 
     <div id="popular_cruises1">
         <div class="main-page-container" id="mid_content_wrapper">

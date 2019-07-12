@@ -18,6 +18,7 @@
 {{--@endif--}}
 <div class="tours_main_pic"></div>
 <div id="content">
+    <div class="container-fluid drivers_back">
         <div class="container drivers_container">
             <div class="tabs_wrapper tabs1_wrapper">
                 <div class="tabs tabs2 ui-tabs ui-widget ui-widget-content ui-corner-all">
@@ -41,33 +42,19 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{--Tour name filter--}}
-                                {{--<div class="col-md-3">--}}
-                                    {{--<label >@lang('message.enter_tour_name'):</label>--}}
-                                    {{--<label>Tour</label>--}}
-                                    {{--<div class="input1_wrapper">--}}
-                                        {{--<div class="input1_inner">--}}
-                                            {{--<select class="select2 select select2-hidden-accessible" name="slug" style="width: 100%" tabindex="-1" aria-hidden="true">--}}
-                                                {{--<option value="">@lang('message.select-all')</option>--}}
-                                                {{--@if(count($tours))--}}
-                                                    {{--@foreach($tours as $key => $tour)--}}
-                                                        {{--<option value='{{ $tour->name }}'>{{ $tour->name }} </option>--}}
-                                                    {{--@endforeach--}}
-                                                {{--@endif--}}
-                                            {{--</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9bvf-container"><span class="select2-selection__rendered" id="select2-9bvf-container" title="city or airport">@lang('message.city-airport')</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>--}}
-
-                                            {{--<input type="text" name="search" class="input" placeholder="@lang('message.enter_tour_name')" value="{{ isset(request()->search) ? request()->search : '' }}">--}}
-
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                                {{--Price filter--}}
                                 <div class="col-md-3">
                                     {{--<label for="">@lang('message.enter_tour_name'):</label>--}}
                                     <label>Price<span class="range_input_prices"></span></label>
                                     <div class="input1_wrapper">
                                         <div class="input1_inner range_input">
-                                            <input {{--id="ex15"--}} name="range_val" id="tour_range" type="range" min="300" max="500" step="10"  class="form-control-range" {{--data-slider-min="1000" data-slider-max="10000000" data-slider-step="5"--}} />
+                                            @if(currency()->getCurrency()['code'] === 'AMD')
+                                                <input name="range_val" id="tour_range" type="range" min="0" max="5000000" step="20000"  class="form-control-range" />
+                                                @elseif(currency()->getCurrency()['code'] === 'RUB')
+                                                <input  name="range_val" id="tour_range" type="range" min="0" max="3000000" step="20000"  class="form-control-range" />
+                                                @else
+                                                <input name="range_val" id="tour_range" type="range" min="0" max="40000" step="1000"  class="form-control-range" />
+                                            @endif
+                                            {{--<input --}}{{--id="ex15"--}}{{-- name="range_val" id="tour_range" type="range" min="300" max="500" step="10"  class="form-control-range" />--}}
                                             <div  class="text-center range_val"></div>
                                         </div>
                                     </div>
@@ -127,6 +114,7 @@
             </div>
             {{ $tours->links('vendor.pagination.default') }}
         </div>
+    </div>
     </div>
 @endsection
 

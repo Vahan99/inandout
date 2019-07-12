@@ -4,16 +4,10 @@
 @endphp
 
 @section('content')
-    {{--<div id="parallax2" class="parallax">--}}
-        {{--<div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $image }}')"></div>--}}
-        {{--<div class="overlay"></div>--}}
-        {{--<div class="parallax-content">--}}
-            {{--<div class="container">--}}
-            {{--</div>--}}
-        {{--</div>--}}
-    {{--</div>--}}
+
     <div class="hotels_main_pic"></div>
     <div id="content">
+        <div class="container-fluid drivers_back">
         <div class="container drivers_container">
             <div class="tabs_wrapper tabs1_wrapper">
                 <div class="tabs tabs2 ui-tabs ui-widget ui-widget-content ui-corner-all">
@@ -88,6 +82,7 @@
             </div>
         </div>
         {{ $hotels->links('vendor.pagination.default') }}
+    </div>
     </div>
     </div>
 @endsection

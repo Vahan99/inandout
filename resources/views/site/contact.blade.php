@@ -8,19 +8,6 @@
     width: 100% !important;
   }
 </style>
-{{--<div id="parallax2" class="parallax">--}}
-  {{--<div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $model->images }}')"></div>--}}
-  {{--<div class="overlay"></div>--}}
-  {{--<div class="parallax-content">--}}
-    {{--<div class="container">--}}
-    {{--</div>--}}
-  {{--</div>--}}
-{{--</div>--}}
-{{--<div class="breadcrumbs1_wrapper">--}}
-  {{--<div class="container">--}}
-    {{--<div class="breadcrumbs1"><br/></div>--}}
-  {{--</div>--}}
-{{--</div>--}}
 
 <div class="contacts_main_pic"></div>
 

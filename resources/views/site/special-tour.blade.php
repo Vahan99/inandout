@@ -1,7 +1,7 @@
 @extends('site.layouts.app')
 @section('content')
     <div class="container-fluid tour_content_bg">{{--start container-fluid--}}
-        <div class="container">
+        <div class="container one_tour">
             <div class="row">
                 <div class="col-sm-12 ">
                     <div class="blog_content">
@@ -22,8 +22,7 @@
                                                                     <div class="sl1">
                                                                         <div class="sl1_inner">
                                                                             {{--<img src="/uploads/{{ $image }}" alt="{{ $model->name }}" class="img-responsive">--}}
-                                                                            <img src="/uploads/second_img.png"
-                                                                                 class="img-responsive">
+                                                                            <img src="/uploads/second_img.png" class="img-responsive" />
                                                                         </div>
                                                                     </div>
                                                                 </li>
@@ -44,51 +43,6 @@
                                 <p>{!! $model->desc; !!}</p>
                             </div>
                         </div>
-
-                        {{--@if($model->meta_data)--}}
-                            {{--<div class="post-story-body clearfix text-center">--}}
-                                {{--<h5 class="font-green text-center">@lang('message.aboutas-min-title2')</h5>--}}
-                                {{--<table width="100%" class="table-responsive table table-bordered">--}}
-                                    {{--<thead>--}}
-                                    {{--@php--}}
-                                        {{--$head_texts = $model->meta_data['head_texts'];--}}
-                                        {{--$lang = \App::getLocale();--}}
-                                    {{--@endphp--}}
-                                    {{--<tr>--}}
-                                        {{--<th width="33.3%" class="text-center">--}}
-                                            {{--{{ $head_texts['num_of_person_' . $lang] }}--}}
-                                        {{--</th>--}}
-                                        {{--<th width="33.3%" class="text-center">--}}
-                                            {{--{{ $head_texts['price_' . $lang] }}--}}
-                                        {{--</th>--}}
-                                        {{--<th width="33.3%" class="text-center">--}}
-                                            {{--{{ $head_texts['guide_' . $lang] }}--}}
-                                        {{--</th>--}}
-                                    {{--</tr>--}}
-                                    {{--</thead>--}}
-                                    {{--<tbody>--}}
-                                    {{--@foreach($model->meta_data['data'] as $key => $data)--}}
-                                        {{--<tr>--}}
-                                            {{--<td>--}}
-                                                {{--{{ $data['name'] }}--}}
-                                            {{--</td>--}}
-                                            {{--<td>--}}
-                                                {{--<a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price']) }}">--}}
-                                                    {{--{{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}--}}
-                                                {{--</a>--}}
-                                            {{--</td>--}}
-                                            {{--<td>--}}
-                                                {{--<a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">--}}
-                                                    {{--{{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}--}}
-                                                {{--</a>--}}
-                                            {{--</td>--}}
-                                        {{--</tr>--}}
-                                    {{--@endforeach--}}
-                                    {{--</tbody>--}}
-                                {{--</table>--}}
-                            {{--</div>--}}
-                        {{--@endif--}}
-
                     </div>
                 </div>
             </div>
@@ -107,38 +61,7 @@
                                     $head_texts = $model->meta_data['head_texts'];
                                     $lang = \App::getLocale();
                                 @endphp
-                                {{--<tr class="headings_row">--}}
-                                    {{--<th --}}{{--width="33.3%--}}{{--" class="text-center">--}}
-                                        {{--{{ $head_texts['num_of_person_' . $lang] }}--}}
-                                    {{--</th>--}}
-                                    {{--<th --}}{{--width="33.3%--}}{{--" class="text-center">--}}
-                                        {{--{{ $head_texts['price_' . $lang] }}--}}
-                                    {{--</th>--}}
-                                    {{--<th --}}{{--width="33.3%--}}{{--" class="text-center">--}}
-                                        {{--{{ $head_texts['guide_' . $lang] }}--}}
-                                    {{--</th>--}}
-                                {{--</tr>--}}
-                                {{--</thead>--}}
-                                {{--<tbody>--}}
-                                {{--@foreach($model->meta_data['data'] as $key => $data)--}}
-                                    {{--<tr>--}}
-                                        {{--<td>--}}
-                                            {{--{{ $data['name'] }}--}}
-                                        {{--</td>--}}
-                                        {{--<td>--}}
-                                            {{--<a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price']) }}">--}}
-                                                {{--{{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}--}}
-                                            {{--</a>--}}
-                                        {{--</td>--}}
-                                        {{--<td>--}}
-                                            {{--<a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">--}}
-                                                {{--{{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}--}}
-                                            {{--</a>--}}
-                                        {{--</td>--}}
-                                    {{--</tr>--}}
-                                {{--@endforeach--}}
-                                {{--</tbody>--}}
-                            {{--</table>--}}
+
                         </div>
                     @endif
                     <table class="single_tour_table ">

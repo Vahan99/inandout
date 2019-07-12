@@ -128,7 +128,6 @@ class IndexController extends Controller
         $tours = $model->tours();
         if(isset($request->region)) {
             $tours = $tours->where('region_id', $request->region);
-//            dd($model->get());
         }
         if(isset($request->range_val)) {
             $tours = $tours->where('price', $request->range_val);

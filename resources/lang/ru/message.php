@@ -29,7 +29,7 @@ return [
     'nav-traffick' => 'Транспортные средства',
     'nav-rent-a-car' => 'Прокат автомобилей',
     'nav-car-a-driver' => 'Автомобиль с водителем',
-    'nav-worldnoah' => 'Земля Ноя',
+    'nav-worldnoah' => 'Компания',
     'nav-about' => 'О нас',
     'nav-contacts' => 'Контактная информация',
     'nav-job' => 'Работа вакансии',

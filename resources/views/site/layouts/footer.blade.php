@@ -1,8 +1,11 @@
 {{--</div>--}}
+@php
+    $settings = \App\Setting::first();
+@endphp
 <div class="bot2_wrapper">
     <div class="container">
         <div class="left_side">
-            <i class="fa fa-envelope footer_env"><span class="foot_mail">info@landofnoah.am</span></i><span>|</span><i class="fa fa-phone footer_phone"><span class="foot_phone">+3749888888.+37499999999</span></i>
+            <i class="fa fa-envelope footer_env"><span class="foot_mail">{{ $settings->mail }}</span></i><span>|</span><i class="fa fa-phone footer_phone"><span class="foot_phone">{{ $settings->phone }}</span></i>
             {{--Copyright © {{ date('Y') }} <strong>Land of Noah</strong>--}}
         </div>
         <div class="right_side footer_right">Visit us on Social Networks
@@ -21,9 +24,12 @@
         </div>
         <div class="footer_space"></div>
         <div class="foot_divider"></div>
-        <div class="foot_copyright text-center">
-            <img src='../assets/images/copy.png' />
-            <span class="foot_copy">All Rights Reserved - 2019</span>
+        <div class="foot_copyright{{-- text-center--}}">
+            {{--<img src='../assets/images/copy.png' />--}}
+            <div class="foot_main_content">
+                <span class="foot_copy">© All Rights Reserved - {{ date('Y') }}</span>
+                <span class="foot_owner" style="float:right"><a href="https://mgplab.com/" >Powered By<span class="owner_comp">Megapolis [ Lab ]</span></a></span>
+            </div>
         </div>
     </div>
 </div>
