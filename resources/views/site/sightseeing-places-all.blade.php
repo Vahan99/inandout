@@ -70,7 +70,7 @@
     </div>
 @else
     <div id="parallax2" class="parallax">
-        <div class="bg2 parallax-bg bg-fixed" style="background-position: 50% -61px; background-image: url('/uploads/{{ $image }}')"></div>
+        <div class="bg2 parallax-bg bg-fixed" style="background-position: 50% -61px; background-image: url('./uploads/{{ $image }}')"></div>
         <div class="overlay"></div>
         <div class="parallax-content">
             <div class="container">

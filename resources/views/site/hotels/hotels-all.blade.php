@@ -7,7 +7,7 @@
 
     <div class="hotels_main_pic"></div>
     <div id="content">
-        <div class="container-fluid drivers_back">
+        <div class="{{--container-fluid--}} drivers_back">
         <div class="container drivers_container">
             <div class="tabs_wrapper tabs1_wrapper">
                 <div class="tabs tabs2 ui-tabs ui-widget ui-widget-content ui-corner-all">

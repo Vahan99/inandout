@@ -18,7 +18,7 @@
 {{--@endif--}}
 <div class="tours_main_pic"></div>
 <div id="content">
-    <div class="container-fluid drivers_back">
+    <div class="drivers_back">
         <div class="container drivers_container">
             <div class="tabs_wrapper tabs1_wrapper">
                 <div class="tabs tabs2 ui-tabs ui-widget ui-widget-content ui-corner-all">
@@ -112,10 +112,11 @@
                     </div>
                 </div>
             </div>
-            {{ $tours->links('vendor.pagination.default') }}
-        </div>
+                {{ $tours->links('vendor.pagination.default') }}
+            </div>
     </div>
     </div>
+
 @endsection
 
 @push('event-remove')

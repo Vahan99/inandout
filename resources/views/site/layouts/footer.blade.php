@@ -6,25 +6,21 @@
     <div class="container">
         <div class="left_side">
             <i class="fa fa-envelope footer_env"><span class="foot_mail">{{ $settings->mail }}</span></i><span>|</span><i class="fa fa-phone footer_phone"><span class="foot_phone">{{ $settings->phone }}</span></i>
-            {{--Copyright © {{ date('Y') }} <strong>Land of Noah</strong>--}}
+
         </div>
         <div class="right_side footer_right">Visit us on Social Networks
             <a href="{{ $settings->tripadvisor }}" class="tripadvisor" style="background-image: url({{ ('../../uploads/tripadvisor_w.png') }})" target="_blank">
-                {{--<img src="../uploads/tripadvisor_w.png" />--}}
             </a>
             <a href="{{ $settings->facebook }}" class="facebook" style="background-image: url({{ ('../../uploads/face_w.png') }})" target="_blank">
-                {{--<img src="../uploads/face_w.png" />--}}
             </a>
             <a href="{{ $settings->vk }}" class="vk" style="background-image: url({{ ('../../uploads/vk_w.png') }})"  target="_blank">
-                {{--<img src="../uploads/vk_w.png" />--}}
             </a>
             <a href="{{ $settings->instagram }}" class="instagram" style="background-image: url({{ ('../../uploads/insta_w.png') }})" target="_blank">
-                {{--<img src="../uploads/insta_w.png" />--}}
             </a>
         </div>
         <div class="footer_space"></div>
         <div class="foot_divider"></div>
-        <div class="foot_copyright{{-- text-center--}}">
+        <div class="foot_copyright">
             {{--<img src='../assets/images/copy.png' />--}}
             <div class="foot_main_content">
                 <span class="foot_copy">© All Rights Reserved - {{ date('Y') }}</span>

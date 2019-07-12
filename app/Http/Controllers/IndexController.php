@@ -357,7 +357,7 @@ class IndexController extends Controller
         $list = \App\Region::with('restaurants')->orderBy('id', 'desc')->get();
         $image = \App\Gallery::wherePage('restaurants')->firstOrFail()->image;
 
-        return view('site.restaurants-all', compact('region', 'restaurants', 'list', 'slug', 'image'));
+        return view('site.restaurants-all', compact(/*'region',*/ 'restaurants', 'list', 'slug', 'image'));
     }
 
     public function apartmentsAll(Request $request)
@@ -385,7 +385,7 @@ class IndexController extends Controller
 
         $image = \App\Gallery::wherePage('apartment')->firstOrFail()->image;
         $list = \App\Region::with('apartments')->orderBy('id', 'desc')->get();
-        return view('site.apartments.apartments-all', compact('region', 'apartments', 'list', 'slug', 'image'));
+        return view('site.apartments.apartments-all', compact(/*'region',*/ 'apartments', 'list', 'slug', 'image'));
     }
 
     public function hotelsAll(Request $request)
@@ -442,7 +442,7 @@ class IndexController extends Controller
             $list = \App\Region::with('hostels')->orderBy('id', 'desc')->get();
             $image = \App\Gallery::wherePage('hostel')->firstOrFail()->image;
 //            dd('test');
-            return view('site.hostels.hostels-all', compact('region', 'hostels', 'list', 'slug', 'image'));
+            return view('site.hostels.hostels-all', compact(/*'region',*/ 'hostels', 'list', 'slug', 'image'));
         }
 
     public function drivers(Request $request)

@@ -4614,14 +4614,13 @@ h5 {
 }
 
 .drivers_back {
-    background: url("../../uploads/mid_back.jpg") ;
+    background: url("../../uploads/mid_back.jpg");
     background-position: left;
     background-repeat: no-repeat;
     /*background-size: cover;*/
 }
 .drivers_container {
     width: 1350px;
-    /*background: url("../../uploads/mid_back.jpg") left no-repeat;*/
 }
 
 .drivers_main_pic {
