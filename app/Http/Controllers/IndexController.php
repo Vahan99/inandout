@@ -149,7 +149,6 @@ class IndexController extends Controller
         $model = \App\Tour::whereSlug($slug)
             ->firstOrFail();
         $settings = Setting::first();
-//        dd($model);
         return view('site.special-tour', compact('model', 'settings'));
     }
 

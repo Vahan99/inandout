@@ -1,4 +1,9 @@
 @extends('site.layouts.app')
+@php
+    $head_texts = $model->meta_data['head_texts'];
+    $lang = \App::getLocale();
+@endphp
+
 @section('content')
     <div class="container-fluid tour_content_bg">{{--start container-fluid--}}
         <div class="container one_tour">
@@ -51,19 +56,13 @@
     <div id="content">
         <div class="container-fluid">
             <div class="container w_wt_table">
-                <div class="table_wrapper">
-                    @if($model->meta_data)
-                        <div class="post-story-body clearfix text-center">
-                            {{--<h5 class="--}}{{--font-green--}}{{-- text-center first_row">@lang('message.aboutas-min-title2')</h5>--}}
-                            {{--<table width="100%" class="table-responsive table table-bordered">--}}
-                                {{--<thead>--}}
-                                @php
-                                    $head_texts = $model->meta_data['head_texts'];
-                                    $lang = \App::getLocale();
-                                @endphp
-
-                        </div>
-                    @endif
+                @if($model->meta_data)
+                    <div class="table_wrapper">
+                    <div class="post-story-body clearfix text-center">
+                        {{--<h5 class="--}}{{--font-green--}}{{-- text-center first_row">@lang('message.aboutas-min-title2')</h5>--}}
+                        {{--<table width="100%" class="table-responsive table table-bordered">--}}
+                            {{--<thead>--}}
+                    </div>
                     <table class="single_tour_table ">
                         <tr>
                             <td colspan="3" class="text-center first_row">@lang('message.aboutas-min-title2')</td>
@@ -73,7 +72,6 @@
                             <th>{{ $head_texts['price_' . $lang] }}</th>
                             <th>{{ $head_texts['guide_' . $lang] }}</th>
                         </tr>
-
                         @foreach($model->meta_data['data'] as $key => $data)
                             <tr>
                                 <td>
@@ -93,6 +91,7 @@
                         @endforeach
                     </table>
                 </div>
+                @endif
             </div>
         </div>
     </div>{{--end content--}}
