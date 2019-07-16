@@ -8,13 +8,15 @@ a[href^="tel:"] {
 }
 
 ::selection {
-    background: #1cbbb4 !important;
-    color: #fff
+    /*background: #1cbbb4 !important;*/
+    /*color: #fff;*/
+    color: #D7733D;
 }
 
 ::-moz-selection {
-    background: #1cbbb4 !important;
-    color: #fff
+    /*background: #1cbbb4 !important;*/
+    /*color: #fff;*/
+    color: #D7733D;
 }
 
 a {
@@ -24,7 +26,8 @@ a {
 }
 
 a:hover {
-    color: #1cbbb4;
+    /*color: #1cbbb4;*/
+    color: #D7733D;
     text-decoration: none;
     outline: none
 }
@@ -264,9 +267,9 @@ body {
 
 .lang1 {
     float: right;
-    border-right: 1px solid #ebebeb;
-    border-left: 1px solid #ebebeb;
+    border-right: 2px solid #CACACA;
     width: 150px;
+    /*border-left: 1px solid #CACACA;*/
 }
 
 .lang1 .dropdown-toggle {
@@ -277,8 +280,8 @@ body {
     display: block;
     width: 100%;
     padding-left: 30px;
-    text-align: left;
-    font-size: 13px;
+    /*text-align: left;*/
+    font-size: 15px;
     line-height: 20px; /*color: #acacac;*/
 }
 
@@ -301,9 +304,9 @@ body {
 
 .currency .dropdown-toggle .caret, .lang1 .dropdown-toggle .caret {
     display: inline-block;
-    width: 10px;
-    height: 6px;
-    border: none;
+    width: 3.5px;
+    height: 3px;
+    /*border: none;*/
     background: url(../images/arr0.png);
     margin-left: 10px;
 }
@@ -329,7 +332,7 @@ body {
 }
 
 .lang1 .dropdown-menu a:hover, .currency .dropdown-menu a:hover {
-    background: #3dd2cb;
+    background: #D7733D;
     color: #fff;
 }
 
@@ -977,11 +980,11 @@ header {
 
 .select2-results__option {
     padding: 10px 5px 10px 15px;
-    background: #62c7bf;
+    background: white;
     font-size: 14px;
     line-height: 20px;
-    color: #fff;
-    border-top: 1px solid #4cb6ae;
+    color: #c2c2c2;
+    /*border-top: 1px solid #4cb6ae;*/
 }
 
 .select2-results__option:first-child {
@@ -999,7 +1002,8 @@ header {
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background: #fff;
-    color: #62c7bf;
+    /*color: #62c7bf;*/
+    color: #d7733d;
 }
 
 .ui-datepicker {

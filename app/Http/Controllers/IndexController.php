@@ -298,7 +298,7 @@ class IndexController extends Controller
             $message->to($data['email'], $data['name']);
             $message->bcc(env('MAIL_FROM_ADDRESS'), 'LandOfNoah.com');
             $message->cc(env('MAIL_FROM_ADDRESS'), 'LandOfNoah.com');
-            $message->subject("Land Of Noah Travel Agency");
+            $message->subject("InAndOut Travel Agency");
         });
         return redirect()->route('view.index')->with('success-mail-send', 200);
     }

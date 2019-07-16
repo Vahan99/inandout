@@ -4,7 +4,7 @@
         <!DOCTYPE html>
 <html lang="am">
 <head>
-    <title>Land of Noah</title>
+    <title>InAndOut</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,147 +74,6 @@
     {{-- Facebook --}}
     @stack('social-meta')
     @stack('event-remove')
-    <style>
-        .currency .dropdown-toggle:before {
-            {{--content: "{{ currency()->getCurrency()['symbol'] }}";--}}
-             content: "";
-            background: url("{{currency()->getCurrency()['symbol']}}") 0 0 no-repeat;
-            display: inline-block;
-            width: 18px;
-            height: 12px;
-            /*vertical-align: top;*/
-            /*margin-top: 3px;*/
-            /*margin-right: 0px;*/
-            font-size: 17px;
-            font-weight: 500;
-        }
-
-        .lang1 .dropdown-toggle:before {
-            content: '';
-            display: inline-block;
-            width: 18px;
-            height: 12px;
-            {{--background: url(/assets/images/flag_{{ \App::getLocale() }}.png) 0 0 no-repeat;--}}
-             background: url(/uploads/globus_icon.png) 0 0 no-repeat;
-            vertical-align: top;
-            margin-top: 3px;
-            margin-right: 5px;
-        }
-
-        /*.nav li.active > a {*/
-        /*color: #1cbbb4;*/
-        /*}*/
-
-        .font-green {
-            color: #1cbbb4;
-        }
-
-        .popular .popular_inner .txt2 {
-            color: #959595;
-            padding-bottom: 15px;
-        }
-
-        .ellipsis, .ellipsis p {
-            height: 64px;
-            display: -webkit-box;
-            margin: 0 auto;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            -webkit-line-clamp: 3;
-        }
-
-        .ellipsis, .ellipsis p {
-            margin-bottom: 0;
-        }
-
-        .input1_inner:after {
-            background: transparent;
-        }
-
-        .navbar_ .nav > li > a, .sub-menu li a, h1, /*h2,*/
-        p, /*h3,*/
-        h4, h5, label, .top1_wrapper {
-            font-family: segoe ui !important;
-        }
-
-        tr:first-child td {
-            border-top: 1px solid #cecfd5;
-        }
-
-        .navbar_ .nav > li > a:hover, .navbar_ .nav > li > a:focus, .navbar_ .nav > li.sfHover > a, .navbar_ .nav > li.sfHover > a:hover {
-            color: #f58636;
-            text-decoration: none;
-            background: none;
-            box-shadow: none;
-            moz-box-shadow: none;
-            -webkit-box-shadow: none;
-            border: none; /*border-color: #f58636;*/
-        }
-
-        .navbar_ .nav > li.active > a, .navbar_ .nav > li.active > a:hover, .navbar_ .nav > li.active > a:focus {
-            color: #f58636;
-            text-decoration: none;
-            background: none;
-            box-shadow: none;
-            moz-box-shadow: none;
-            -webkit-box-shadow: none;
-            border: none; /*border-color: #f58636;*/
-        }
-
-        .sub-menu li a:hover {
-            text-decoration: none;
-            color: #f28436;
-        }
-
-        ::-webkit-input-placeholder { /* Chrome */
-            opacity: 0.7 !important;
-        }
-
-        :-ms-input-placeholder { /* IE 10+ */
-            opacity: 0.7 !important;
-        }
-
-        ::-moz-placeholder { /* Firefox 19+ */
-            opacity: 0.7 !important;
-        }
-
-        :-moz-placeholder { /* Firefox 4 - 18 */
-            opacity: 0.7 !important;
-        }
-
-        .currency {
-            float: right;
-            border-right: 1px solid #ebebeb;
-            width: 150px;
-            margin-right: 20px;
-        }
-
-        .currency .dropdown-toggle {
-            border: none;
-            padding: 0;
-            background: none !important;
-            outline: none;
-            display: block;
-            width: 100%;
-            /*text-align: left;*/
-            font-size: 13px;
-            line-height: 20px;
-            /*color: #acacac;*/
-        }
-
-        .currency .dropdown-menu {
-            min-width: 100%;
-            margin: 0;
-            padding: 0;
-            left: -1px;
-            right: -1px;
-            margin-top: 13px;
-            border-radius: 0;
-            border: 1px solid #ebebeb;
-            box-shadow: none;
-        }
-    </style>
     @stack('post-css')
 </head>
 <body class="front">
@@ -806,6 +665,147 @@
             </div>
         </div>
 @endif
+    <style>
+        .currency .dropdown-toggle:before {
+            {{--content: "{{ currency()->getCurrency()['symbol'] }}";--}}
+content: "";
+            background: url("{{currency()->getCurrency()['symbol']}}") 0 0 no-repeat;
+            display: inline-block;
+            width: 18px;
+            height: 12px;
+            /*vertical-align: top;*/
+            /*margin-top: 3px;*/
+            /*margin-right: 0px;*/
+            font-size: 17px;
+            font-weight: 500;
+        }
+
+        .lang1 .dropdown-toggle:before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 12px;
+            {{--background: url(/assets/images/flag_{{ \App::getLocale() }}.png) 0 0 no-repeat;--}}
+background: url(/uploads/globus_icon.png) 0 0 no-repeat;
+            vertical-align: top;
+            margin-top: 3px;
+            margin-right: 5px;
+        }
+
+        /*.nav li.active > a {*/
+        /*color: #1cbbb4;*/
+        /*}*/
+
+        .font-green {
+            color: #1cbbb4;
+        }
+
+        .popular .popular_inner .txt2 {
+            color: #959595;
+            padding-bottom: 15px;
+        }
+
+        .ellipsis, .ellipsis p {
+            height: 64px;
+            display: -webkit-box;
+            margin: 0 auto;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 3;
+        }
+
+        .ellipsis, .ellipsis p {
+            margin-bottom: 0;
+        }
+
+        .input1_inner:after {
+            background: transparent;
+        }
+
+        .navbar_ .nav > li > a, .sub-menu li a, h1, /*h2,*/
+        p, /*h3,*/
+        h4, h5, label, .top1_wrapper {
+            font-family: segoe ui !important;
+        }
+
+        tr:first-child td {
+            border-top: 1px solid #cecfd5;
+        }
+
+        .navbar_ .nav > li > a:hover, .navbar_ .nav > li > a:focus, .navbar_ .nav > li.sfHover > a, .navbar_ .nav > li.sfHover > a:hover {
+            color: #f58636;
+            text-decoration: none;
+            background: none;
+            box-shadow: none;
+            moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            border: none; /*border-color: #f58636;*/
+        }
+
+        .navbar_ .nav > li.active > a, .navbar_ .nav > li.active > a:hover, .navbar_ .nav > li.active > a:focus {
+            color: #f58636;
+            text-decoration: none;
+            background: none;
+            box-shadow: none;
+            moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            border: none; /*border-color: #f58636;*/
+        }
+
+        .sub-menu li a:hover {
+            text-decoration: none;
+            color: #f28436;
+        }
+
+        ::-webkit-input-placeholder { /* Chrome */
+            opacity: 0.7 !important;
+        }
+
+        :-ms-input-placeholder { /* IE 10+ */
+            opacity: 0.7 !important;
+        }
+
+        ::-moz-placeholder { /* Firefox 19+ */
+            opacity: 0.7 !important;
+        }
+
+        :-moz-placeholder { /* Firefox 4 - 18 */
+            opacity: 0.7 !important;
+        }
+
+        .currency {
+            float: right;
+            border-right: 2px solid #CACACA;
+            width: 150px;
+            margin-right: 20px;
+        }
+
+        .currency .dropdown-toggle {
+            border: none;
+            padding: 0;
+            background: none !important;
+            outline: none;
+            display: block;
+            width: 100%;
+            /*text-align: left;*/
+            font-size: 15px;
+            line-height: 20px;
+            /*color: #acacac;*/
+        }
+
+        .currency .dropdown-menu {
+            min-width: 100%;
+            margin: 0;
+            padding: 0;
+            left: -1px;
+            right: -1px;
+            margin-top: 13px;
+            border-radius: 0;
+            border: 1px solid #ebebeb;
+            box-shadow: none;
+        }
+    </style>
 
 
 
