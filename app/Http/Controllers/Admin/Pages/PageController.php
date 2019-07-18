@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Pages;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\BaseController;
 use App\Page;
 class PageController extends BaseController
@@ -25,11 +26,13 @@ class PageController extends BaseController
         $model = Page::whereSlug($slug)->first();
 
         $req = $request->all();
-        if(isset($req['images'])) {
-            unlink(public_path('uploads/') . $model->images);
+        if(isset($req['images']) && file_exists(public_path('uploads/'). $model->images)) {
+            unlink(public_path('uploads/'). $model->images);
             $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
+            dd($req['images'].'if_block');
         }
-
+        $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
+//        dd($req['images']);
         $model->update($req);
         $model->save();
         return redirect()->back()->with(['success' => 'Tour was successfully updated!']);

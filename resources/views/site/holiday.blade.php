@@ -1,14 +1,15 @@
 @extends('site.layouts.app')
 @section('content')
-<div id="parallax2" class="parallax">
-  <div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $model->images }}')"></div>
-  <div class="overlay"></div>
-  <div class="parallax-content">
-    <div class="container">
-    </div>
-  </div>
-</div>
-  <div class="main">
+{{--<div id="parallax2" class="parallax">--}}
+  {{--<div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $model->images }}')"></div>--}}
+  {{--<div class="overlay"></div>--}}
+  {{--<div class="parallax-content">--}}
+  {{--<div class="container">--}}
+  {{--</div>--}}
+  {{--</div>--}}
+{{--</div>--}}
+<div class="holiday_main_pic" style="background-image: url('/uploads/{{ $model->images }}')"></div>
+<div class="main">
   <div id="content">
   <div class="container">
     <div class="row">

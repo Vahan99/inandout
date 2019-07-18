@@ -112,6 +112,9 @@
                         @endif
                     </ul>
                 </div>
+                <div >
+
+                </div>
                 <div class="currency" style="width:100px !important;">
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle"
@@ -119,7 +122,18 @@
                                 data-toggle="dropdown"
                                 aria-haspopup="true"
                                 aria-expanded="true">
-                            {{ currency()->getCurrency()['code']}}
+                            {{--@php--}}
+                                {{--if(app()->getLocale() === 'en') {--}}
+                                    {{--echo currency()->getCurrencies()['USD']['code'];--}}
+                                 {{--}--}}
+                                 {{--elseif(app()->getLocale() === 'ru') {--}}
+                                  {{--echo currency()->getCurrencies()['RUB']['code'];--}}
+                                 {{--}--}}
+                                 {{--else {--}}
+                                    {{--echo currency()->getCurrencies()['AMD']['code'];--}}
+                                 {{--}--}}
+                            {{--@endphp--}}
+                            {{currency()->getCurrency()['code']}}
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
