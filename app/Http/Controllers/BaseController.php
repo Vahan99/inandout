@@ -7,11 +7,7 @@ class BaseController extends Controller
 {
     public function fileUpload($files, $path)
     {
-        if(count($files) == 1 && !is_null($files)){
-            $fileName = rand(0, 10000) . '_' . time() . '.' . $files->getClientOriginalExtension();
-            $files->move($path, $fileName);
-            return $fileName;
-        }else if(!is_null($files)) {
+        if(!is_null($files)) {
             $fileNames = [];
             foreach ($files as $file) {
                 $fileName = rand(0, 10000) . '_' . time() . '.' . $file->getClientOriginalExtension();
