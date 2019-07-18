@@ -26,14 +26,14 @@ class PageController extends BaseController
         $model = Page::whereSlug($slug)->first();
 
         $req = $request->all();
-        if(isset($req['images']) && file_exists(public_path('uploads/'). $model->images)) {
-            if($model->images){
+        if(isset($req['images'])) {
+            if($model->images && file_exists(public_path('uploads/'). $model->images)){
                 unlink(public_path('uploads/'). $model->images);
-                $fileName = time() . '.' . $request->images[0]->getClientOriginalExtension();
-                $request->images[0]->move(public_path('uploads/'), $fileName);
+                $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
+            }else{
+                $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
             }
         }
-        $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
         $model->images = $request->images;
         $model->update($req);
         $model->save();
