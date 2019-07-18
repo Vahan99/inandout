@@ -31,8 +31,8 @@ class PageController extends BaseController
                 unlink(public_path('uploads/'). $model->images);
                 $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
             }
+            $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
         }
-        $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
 //        dd($req['images']);
         $model->update($req);
         $model->save();
