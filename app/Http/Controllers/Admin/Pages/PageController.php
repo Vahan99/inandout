@@ -31,9 +31,8 @@ class PageController extends BaseController
                 unlink(public_path('uploads/'). $model->images);
                 $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
             }
-            $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
         }
-//        dd($req['images']);
+        $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
         $model->update($req);
         $model->save();
         return redirect()->back()->with(['success' => 'Tour was successfully updated!']);
