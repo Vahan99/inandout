@@ -33,6 +33,7 @@ class PageController extends BaseController
             }
         }
         $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
+        $model->imaes = $request->images;
         $model->update($req);
         $model->save();
         return redirect()->back()->with(['success' => 'Tour was successfully updated!']);
