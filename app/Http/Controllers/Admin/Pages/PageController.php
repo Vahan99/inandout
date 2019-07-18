@@ -29,7 +29,9 @@ class PageController extends BaseController
         if(isset($req['images']) && file_exists(public_path('uploads/'). $model->images)) {
             if($model->images){
                 unlink(public_path('uploads/'). $model->images);
-                $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
+                $fileName = rand(0, 10000) . '_' . time() . '.' . $request->images[0]->getClientOriginalExtension();
+                $request->images[0]->move(public_path('uploads/'), $fileName)[0];
+//                $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
             }
         }
         $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
