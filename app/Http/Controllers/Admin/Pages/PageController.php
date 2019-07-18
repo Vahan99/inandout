@@ -30,8 +30,8 @@ class PageController extends BaseController
             if($model->images){
                 unlink(public_path('uploads/'). $model->images);
                 $fileName = rand(0, 10000) . '_' . time() . '.' . $request->images[0]->getClientOriginalExtension();
+                dd($request->images[0]);
                 $request->images[0]->move(public_path('uploads/'), $fileName)[0];
-//                $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
             }
         }
         $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
