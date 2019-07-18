@@ -9,6 +9,7 @@ class BaseController extends Controller
     {
         if(!is_null($files)) {
             $fileNames = [];
+            dd($files);
             foreach ($files as $file) {
                 $fileName = rand(0, 10000) . '_' . time() . '.' . $file->getClientOriginalExtension();
                 array_push($fileNames, $fileName);
