@@ -15,4 +15,4 @@ composer.loc
 /public/uploads
 /public_html
 /bower_components
-
+/bootstrap/cache
