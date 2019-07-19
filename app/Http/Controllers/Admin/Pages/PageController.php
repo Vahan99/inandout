@@ -33,11 +33,20 @@ class PageController extends BaseController
             }else{
                 $req['images'] = $this->fileUpload($request->images, public_path('uploads/'))[0];
             }
+            $model->images = $request->images;
+            $model->update($req);
+            $model->save();
+            return redirect()->back()->with(['success' => 'Tour was successfully updated!']);
         }
-        $model->images = $request->images;
-        $model->update($req);
-        $model->save();
-        return redirect()->back()->with(['success' => 'Tour was successfully updated!']);
+        else {
+            $model->update($req);
+            $model->save();
+            return redirect()->back()->with(['success' => 'Tour was successfully updated!']);
+        }
+//        $model->images = $request->images;
+//        $model->update($req);
+//        $model->save();
+//        return redirect()->back()->with(['success' => 'Tour was successfully updated!']);
     }
 
     public function imageDelete(Request $request, $id, $image) {
