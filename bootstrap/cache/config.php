@@ -1,7 +1,186 @@
 <?php return array (
+  'services' => 
+  array (
+    'mailgun' => 
+    array (
+      'domain' => NULL,
+      'secret' => NULL,
+    ),
+    'ses' => 
+    array (
+      'key' => NULL,
+      'secret' => NULL,
+      'region' => 'us-east-1',
+    ),
+    'sparkpost' => 
+    array (
+      'secret' => NULL,
+    ),
+    'stripe' => 
+    array (
+      'model' => 'App\\User',
+      'key' => NULL,
+      'secret' => NULL,
+    ),
+  ),
+  'database' => 
+  array (
+    'default' => 'mysql',
+    'connections' => 
+    array (
+      'sqlite' => 
+      array (
+        'driver' => 'sqlite',
+        'database' => 'inandout_inandout',
+        'prefix' => '',
+      ),
+      'mysql' => 
+      array (
+        'driver' => 'mysql',
+        'host' => 'localhost',
+        'port' => '3306',
+        'database' => 'inandout_inandout',
+        'username' => 'inandout',
+        'password' => 'F2Fd&]8Z',
+        'unix_socket' => '',
+        'charset' => 'utf8mb4',
+        'collation' => 'utf8mb4_unicode_ci',
+        'prefix' => '',
+        'strict' => false,
+        'engine' => NULL,
+      ),
+      'pgsql' => 
+      array (
+        'driver' => 'pgsql',
+        'host' => 'localhost',
+        'port' => '3306',
+        'database' => 'inandout_inandout',
+        'username' => 'inandout',
+        'password' => 'F2Fd&]8Z',
+        'charset' => 'utf8',
+        'prefix' => '',
+        'schema' => 'public',
+        'sslmode' => 'prefer',
+      ),
+      'sqlsrv' => 
+      array (
+        'driver' => 'sqlsrv',
+        'host' => 'localhost',
+        'port' => '3306',
+        'database' => 'inandout_inandout',
+        'username' => 'inandout',
+        'password' => 'F2Fd&]8Z',
+        'charset' => 'utf8',
+        'prefix' => '',
+      ),
+    ),
+    'migrations' => 'migrations',
+    'redis' => 
+    array (
+      'client' => 'predis',
+      'default' => 
+      array (
+        'host' => '127.0.0.1',
+        'password' => NULL,
+        'port' => '6379',
+        'database' => 0,
+      ),
+    ),
+  ),
+  'laravellocalization' => 
+  array (
+    'supportedLocales' => 
+    array (
+      'en' => 
+      array (
+        'name' => 'English',
+        'script' => 'Latn',
+        'native' => 'English',
+        'regional' => 'en_GB',
+      ),
+      'ru' => 
+      array (
+        'name' => 'Russian',
+        'script' => 'Cyrl',
+        'native' => 'русский',
+        'regional' => 'ru_RU',
+      ),
+      'hy' => 
+      array (
+        'name' => 'Armenian',
+        'script' => 'Armn',
+        'native' => 'Հայերեն',
+        'regional' => 'hy_AM',
+      ),
+    ),
+    'useAcceptLanguageHeader' => true,
+    'hideDefaultLocaleInURL' => true,
+    'localesOrder' => 
+    array (
+      0 => 'hy',
+    ),
+    'localesMapping' => 
+    array (
+    ),
+    'utf8suffix' => '.UTF-8',
+    'urlsIgnored' => 
+    array (
+      0 => '/skipped',
+    ),
+  ),
+  'filesystems' => 
+  array (
+    'default' => 'local',
+    'cloud' => 's3',
+    'disks' => 
+    array (
+      'local' => 
+      array (
+        'driver' => 'local',
+        'root' => '/home/inandout/inandout/storage/app',
+      ),
+      'public' => 
+      array (
+        'driver' => 'local',
+        'root' => '/home/inandout/inandout/storage/app/public',
+        'url' => 'http://tour.loc/storage',
+        'visibility' => 'public',
+      ),
+      's3' => 
+      array (
+        'driver' => 's3',
+        'key' => NULL,
+        'secret' => NULL,
+        'region' => NULL,
+        'bucket' => NULL,
+      ),
+    ),
+  ),
+  'session' => 
+  array (
+    'driver' => 'file',
+    'lifetime' => 120,
+    'expire_on_close' => false,
+    'encrypt' => false,
+    'files' => '/home/inandout/inandout/storage/framework/sessions',
+    'connection' => NULL,
+    'table' => 'sessions',
+    'store' => NULL,
+    'lottery' => 
+    array (
+      0 => 2,
+      1 => 100,
+    ),
+    'cookie' => 'inandout_session',
+    'path' => '/',
+    'domain' => NULL,
+    'secure' => false,
+    'http_only' => true,
+    'same_site' => NULL,
+  ),
   'app' => 
   array (
-    'name' => 'Laravel',
+    'name' => 'InAndOut',
     'env' => 'local',
     'debug' => true,
     'url' => 'http://tour.loc',
@@ -15,7 +194,7 @@
       'ru' => 'Russian',
     ),
     'fallback_locale' => 'en',
-    'key' => 'base64:A9dmr7D3jwiDmv9wJ+LCHCxQpb7+kOznzW0a5/QlNgg=',
+    'key' => 'base64:aeaFWwnMXUi6BCNVjC+0sxJH9gpRECHOWzHBVzFYMyA=',
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
@@ -133,36 +312,6 @@
       ),
     ),
   ),
-  'broadcasting' => 
-  array (
-    'default' => 'log',
-    'connections' => 
-    array (
-      'pusher' => 
-      array (
-        'driver' => 'pusher',
-        'key' => '',
-        'secret' => '',
-        'app_id' => '',
-        'options' => 
-        array (
-        ),
-      ),
-      'redis' => 
-      array (
-        'driver' => 'redis',
-        'connection' => 'default',
-      ),
-      'log' => 
-      array (
-        'driver' => 'log',
-      ),
-      'null' => 
-      array (
-        'driver' => 'null',
-      ),
-    ),
-  ),
   'cache' => 
   array (
     'default' => 'file',
@@ -185,7 +334,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\xampp\\htdocs\\landofnoah\\storage\\framework/cache/data',
+        'path' => '/home/inandout/inandout/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -247,137 +396,34 @@
       ),
     ),
   ),
-  'database' => 
+  'broadcasting' => 
   array (
-    'default' => 'mysql',
+    'default' => 'log',
     'connections' => 
     array (
-      'sqlite' => 
+      'pusher' => 
       array (
-        'driver' => 'sqlite',
-        'database' => 'landofnoah',
-        'prefix' => '',
+        'driver' => 'pusher',
+        'key' => '',
+        'secret' => '',
+        'app_id' => '',
+        'options' => 
+        array (
+        ),
       ),
-      'mysql' => 
+      'redis' => 
       array (
-        'driver' => 'mysql',
-        'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'landofnoah',
-        'username' => 'root',
-        'password' => '',
-        'unix_socket' => '',
-        'charset' => 'utf8mb4',
-        'collation' => 'utf8mb4_unicode_ci',
-        'prefix' => '',
-        'strict' => false,
-        'engine' => NULL,
+        'driver' => 'redis',
+        'connection' => 'default',
       ),
-      'pgsql' => 
+      'log' => 
       array (
-        'driver' => 'pgsql',
-        'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'landofnoah',
-        'username' => 'root',
-        'password' => '',
-        'charset' => 'utf8',
-        'prefix' => '',
-        'schema' => 'public',
-        'sslmode' => 'prefer',
+        'driver' => 'log',
       ),
-      'sqlsrv' => 
+      'null' => 
       array (
-        'driver' => 'sqlsrv',
-        'host' => '127.0.0.1',
-        'port' => '3306',
-        'database' => 'landofnoah',
-        'username' => 'root',
-        'password' => '',
-        'charset' => 'utf8',
-        'prefix' => '',
+        'driver' => 'null',
       ),
-    ),
-    'migrations' => 'migrations',
-    'redis' => 
-    array (
-      'client' => 'predis',
-      'default' => 
-      array (
-        'host' => '127.0.0.1',
-        'password' => NULL,
-        'port' => '6379',
-        'database' => 0,
-      ),
-    ),
-  ),
-  'filesystems' => 
-  array (
-    'default' => 'local',
-    'cloud' => 's3',
-    'disks' => 
-    array (
-      'local' => 
-      array (
-        'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\landofnoah\\storage\\app',
-      ),
-      'public' => 
-      array (
-        'driver' => 'local',
-        'root' => 'C:\\xampp\\htdocs\\landofnoah\\storage\\app/public',
-        'url' => 'http://tour.loc/storage',
-        'visibility' => 'public',
-      ),
-      's3' => 
-      array (
-        'driver' => 's3',
-        'key' => NULL,
-        'secret' => NULL,
-        'region' => NULL,
-        'bucket' => NULL,
-      ),
-    ),
-  ),
-  'laravellocalization' => 
-  array (
-    'supportedLocales' => 
-    array (
-      'en' => 
-      array (
-        'name' => 'English',
-        'script' => 'Latn',
-        'native' => 'English',
-        'regional' => 'en_GB',
-      ),
-      'ru' => 
-      array (
-        'name' => 'Russian',
-        'script' => 'Cyrl',
-        'native' => 'русский',
-        'regional' => 'ru_RU',
-      ),
-      'hy' => 
-      array (
-        'name' => 'Armenian',
-        'script' => 'Armn',
-        'native' => 'Հայերեն',
-        'regional' => 'hy_AM',
-      ),
-    ),
-    'useAcceptLanguageHeader' => true,
-    'hideDefaultLocaleInURL' => true,
-    'localesOrder' => 
-    array (
-      0 => 'hy',
-    ),
-    'localesMapping' => 
-    array (
-    ),
-    'utf8suffix' => '.UTF-8',
-    'urlsIgnored' => 
-    array (
-      0 => '/skipped',
     ),
   ),
   'mail' => 
@@ -399,7 +445,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\xampp\\htdocs\\landofnoah\\resources\\views/vendor/mail',
+        0 => '/home/inandout/inandout/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -449,59 +495,13 @@
       'table' => 'failed_jobs',
     ),
   ),
-  'services' => 
-  array (
-    'mailgun' => 
-    array (
-      'domain' => NULL,
-      'secret' => NULL,
-    ),
-    'ses' => 
-    array (
-      'key' => NULL,
-      'secret' => NULL,
-      'region' => 'us-east-1',
-    ),
-    'sparkpost' => 
-    array (
-      'secret' => NULL,
-    ),
-    'stripe' => 
-    array (
-      'model' => 'App\\User',
-      'key' => NULL,
-      'secret' => NULL,
-    ),
-  ),
-  'session' => 
-  array (
-    'driver' => 'file',
-    'lifetime' => 120,
-    'expire_on_close' => false,
-    'encrypt' => false,
-    'files' => 'C:\\xampp\\htdocs\\landofnoah\\storage\\framework/sessions',
-    'connection' => NULL,
-    'table' => 'sessions',
-    'store' => NULL,
-    'lottery' => 
-    array (
-      0 => 2,
-      1 => 100,
-    ),
-    'cookie' => 'laravel_session',
-    'path' => '/',
-    'domain' => NULL,
-    'secure' => false,
-    'http_only' => true,
-    'same_site' => NULL,
-  ),
   'view' => 
   array (
     'paths' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\landofnoah\\resources\\views',
+      0 => '/home/inandout/inandout/resources/views',
     ),
-    'compiled' => 'C:\\xampp\\htdocs\\landofnoah\\storage\\framework\\views',
+    'compiled' => '/home/inandout/inandout/storage/framework/views',
   ),
   'ide-helper' => 
   array (
@@ -513,7 +513,7 @@
     'include_helpers' => false,
     'helper_files' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\landofnoah/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
+      0 => '/home/inandout/inandout/vendor/laravel/framework/src/Illuminate/Support/helpers.php',
     ),
     'model_locations' => 
     array (
