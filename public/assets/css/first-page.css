@@ -1,0 +1,406 @@
+.empty-div {
+    height: 122px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 100;
+    top:0;
+}
+
+header .header-container {
+    position: relative;
+    max-width: 1340px;
+    margin: auto;
+    height: 122px;
+}
+
+header .logo-container {
+    position: absolute;
+    background-image: url("../img/In&Out-logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 189px;
+    height: 67px;
+    left: 0;
+    top: 15px;
+}
+
+header .logo-social-links {
+    position: absolute;
+    right: 150px;
+    top: 15px;
+}
+
+header .logo-social-links ul {
+    display: flex;
+    margin-right: 15px;
+}
+
+header .logo-social-links form {
+
+}
+
+header .logo-social-links form .form-group {
+    margin-right: 15px;
+}
+
+header .logo-social-links ul li a {
+    width: 100%;
+    height: 100%;
+}
+
+header .logo-social-links ul li a i {
+    background: url("../img/social-icons.png");
+    text-indent: -9999px;
+    text-align: left;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+header .logo-social-links ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+header .logo-social-links ul .tripadvisor {
+    background-position: -2px -16px;
+    width: 23px;
+    height: 14px;
+}
+
+header .logo-social-links ul .tripadvisor:hover {
+    background-position: -2px -0px;
+    width: 23px;
+    height: 14px;
+}
+
+header .logo-social-links ul .facebook {
+    background-position: -12px -90px;
+    width: 8px;
+    height: 14px;
+}
+
+header .logo-social-links ul .facebook:hover {
+    background-position: -2px -90px;
+    width: 8px;
+    height: 14px;
+}
+
+header .logo-social-links ul .vkontakte {
+    background-position: -2px -45px;
+    width: 19px;
+    height: 11px;
+}
+
+header .logo-social-links ul .vkontakte:hover {
+    background-position: -2px -32px;
+    width: 19px;
+    height: 11px;
+}
+
+header .logo-social-links ul .instagram {
+    background-position: -2px -74px;
+    width: 14px;
+    height: 14px;
+}
+
+header .logo-social-links ul .instagram:hover {
+    background-position: -2px -58px;
+    width: 14px;
+    height: 14px;
+}
+
+header .navigation-bar {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+}
+
+header .navigation-bar ul {
+    display: flex;
+}
+
+header .navigation-bar ul li {
+    display: inline-block;
+}
+
+header .navigation-bar ul li:not(:last-child) {
+    margin-right: 10px;
+}
+
+header .navigation-bar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    color: #EF8200;
+    border: 1px solid #EF8200;
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+.main-page-image {
+    height: 820px;
+    position: relative;
+}
+
+.decoration-header {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.decoration-cont-style {
+    font-size: 67px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.decoration:after {
+    content: '';
+    position: absolute;
+    background-image: url("../img/decoration-logo.png");
+    width: 384px;
+    height: 69px;
+    left: 11%;
+    top: 61%;
+}
+
+.tours-slider {
+    max-width: 1360px;
+    margin: auto;
+    position: absolute;
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tours-slider .tour-single {
+    height: 350px;
+    width: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.tours-slider .tour-single:not(:last-child) {
+    margin-right: 15px;
+}
+
+.tours-slider .tour-single .tour-single-content {
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.tours-slider .tour-single .tour-single-content span {
+    color: white;
+    font-size: 15px;
+    display: inline-block;
+    padding-bottom: 25px;
+}
+
+.tours-slider .tour-single .tour-single-content P {
+    color: white;
+    padding-bottom: 40px;
+}
+
+body .btn {
+    color: white;
+    background-color: #EF8200;
+    padding: 5px 57px;
+    border-radius: 22px;
+    text-transform: uppercase;
+
+}
+
+.hotels {
+    margin-top: 87px;
+}
+
+.hotels .hotels-container {
+    max-width: 1360px;
+    margin: auto;
+}
+
+.hotels .hotels-container .decoration-cont-style {
+    color: #1E2C37;
+    position: relative;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.hotels .hotels-container .decoration-cont-style:after {
+    left: 44%;
+}
+
+/*.hotels .hotels-container .decoration-hotels {*/
+    /*position: relative;*/
+    /*color: #1E2C37;*/
+    /*left: unset;*/
+    /*top: unset;*/
+    /*transform: unset;*/
+    /*margin-bottom: 59px;*/
+/*}*/
+/*.hotels .hotels-container .decoration-hotels:after {*/
+
+    /*margin: auto;*/
+/*}*/
+
+.hotels .hotels-container .hotels-content {
+    display: flex;
+    flex-wrap: wrap!important;
+
+}
+
+.hotels .hotels-container .hotels-content .hotels-item {
+    width: 50%;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.transport {
+    background-color: #F2F2F2;
+}
+.transport .transport-container {
+
+}
+
+.transport .transport-container .transport-content {
+    max-width: 1360px;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.transport .transport-container .transport-content .decoration-cont-style {
+    position: relative;
+    color: black;
+    margin-bottom: 86px;
+}
+.transport .transport-container .transport-content .decoration-cont-style:after {
+    left: 48%;
+}
+
+.transport-slider {
+
+}
+
+.transport-slider .transport-slider-item {
+    width: 410px;
+    background-color: white;
+}
+.transport-slider .transport-slider-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.transport-slider .transport-slider-item .transport-slider-item-content {
+    padding: 43px 60px 39px;
+}
+
+
+.transport-slider .transport-slider-item .transport-slider-image {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.transport-slider .transport-slider-item h1 {
+    font-size: 16px;
+    color: #1E2C37;
+    padding-bottom: 25px;
+}
+.transport-slider .transport-slider-item p {
+    font-size: 13px;
+    font-weight: 100;
+    padding-bottom: 25px;
+}
+.transport-slider .transport-slider-item .btn {
+
+}
+
+.footer-container {
+    max-width: 1360px;
+    margin: auto;
+}
+
+.footer-row-1 {
+    padding: 15px 0;
+    border-bottom: 1px solid black;
+}
+
+.footer-row-1 .footer-navigation {
+
+}
+
+.footer-row-1 .footer-navigation li {
+
+}
+
+.footer-row-1 .footer-navigation li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.footer-row-1 .footer-navigation li a {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #1E2C37;
+    text-decoration: none;
+}
+
+.footer-row-1 .footer-email-number {
+
+}
+
+.footer-row-1 .footer-email-number li {
+    padding: 0 30px;
+}
+
+.footer-row-1 .footer-email-number .email-logo {
+    border-right: 1px solid black;
+    position: relative;
+}
+
+.footer-row-1 .footer-email-number .email-logo:before {
+    content: '';
+    position: absolute;
+    background-image: url("../img/email-icon.png");
+    width: 14px;
+    height: 11px;
+    left: 7px;
+    top: 8px;
+}
+
+.footer-row-1 .footer-email-number .number-logo {
+    position: relative;
+}
+
+.footer-row-1 .footer-email-number .number-logo:before {
+    content: '';
+    position: absolute;
+    background-image: url("../img/number-icon.png");
+    width: 13px;
+    height: 13px;
+    left: 10px;
+    top: 7px;
+}
+
+.footer-row-1 .footer-email-number li a {
+    font-size: 13px;
+    color: #1E2C37;
+    text-decoration: none;
+}
+
+.footer-row-1 .footer-email-number li span {
+    font-size: 13px;
+    color: #1E2C37;
+}

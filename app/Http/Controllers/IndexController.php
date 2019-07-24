@@ -27,6 +27,21 @@ class IndexController extends Controller
         $settings = \App\Setting::first();
         return view('site.index', compact('tours','cars', 'hotels','settings'));
     }
+//    public function index()
+//    {
+//        $hotels = collect();
+//        Residence::with('images')
+//            ->where('residence_type',20)
+//            ->inRandomOrder()
+//            ->orderBy('id', 'desc')
+//            ->chunk(4, function ($q) use ($hotels) {
+//                $hotels->push($q);
+//            });
+//        $tours = Tour::with('region')->whereSightseeingPlace(0)->take(10)->inRandomOrder()->orderBy('id', 'desc')->get();
+//        $cars = CarDriver::with('sliderImages')->take(10)->inRandomOrder()->orderBy('id', 'desc')->get();
+//        $settings = \App\Setting::first();
+//        return view('site.index2', compact('tours','cars', 'hotels','settings'));
+//    }
 
     public function contact()
     {
@@ -413,6 +428,7 @@ class IndexController extends Controller
 
         $list = \App\Region::with('hotels')->orderBy('id', 'desc')->get();
         $image = \App\Gallery::wherePage('hotel')->firstOrFail()->image;
+        $rooms = \App\RoomType::
         return view('site.hotels.hotels-all', compact(/*'region',*/ 'hotels', 'list', 'slug', 'image'));
     }
     public function hostelsAll(Request $request)
