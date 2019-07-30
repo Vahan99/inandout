@@ -4,21 +4,23 @@
 @include('site.layouts.header2')
 <main>
     <div class="empty-div"></div>
-    <section class="main-page-image" style="background-image: url('{{asset('assets')}}/img/main-page-background.jpg')">
-        <h1 class="decoration-header decoration decoration-cont-style">@lang('message.aboutas-tours')</h1>
-        @if(count($tours) > 2)
-            <div class="tours-slider">
-                @foreach($tours as $tour)
-                    <div class="tour-single" style="background-image: url('../uploads/{{ $tour->grid_image }}')">
-                        <div class="tour-single-content">
-                                    <span>{{ $tour->name }}</span>
-                            <p>{!! strip_tags($tour->desc) !!}</p>
-                            <a class="btn">{{ route('tour-single', ['slug' => $tour->slug]) }}@lang('message.read-more')</a></button>
+    <section class="main-page-image" style="background: url('{{asset('assets')}}/img/main-page-background.jpg')">
+        <div style="background-color: rgba(30,44,55,.3);width: 100%;height: 100%">
+            <h1 class="decoration-header decoration decoration-cont-style">@lang('message.aboutas-tours')</h1>
+            @if(count($tours) > 2)
+                <div class="tours-slider">
+                    @foreach($tours as $tour)
+                        <div class="tour-single" style="background-image: url('../uploads/{{ $tour->grid_image }}')">
+                            <div class="tour-single-content">
+                                <span>{{ $tour->name }}</span>
+                                <p>{!! strip_tags($tour->desc) !!}</p>
+                                <button class="btn"><a href="{{ route('tour-single', ['slug' => $tour->slug]) }}">@lang('message.read-more')</a></button>
+                            </div>
                         </div>
-                    </div>
-                @endforeach
-            </div>
-        @endif
+                    @endforeach
+                </div>
+            @endif
+        </div>
     </section>
     <section class="hotels">
         <div class="hotels-container">
@@ -28,7 +30,11 @@
                     @foreach($hotels as $hotel)
                         <a href="javascript:;" class="hotels-content">
                             @foreach($hotel as $h)
-                                    <div class="hotels-item" style="background-image: url('/uploads/{{ $h->grid_image }}')"></div>
+                                    <div class="hotels-item" style="background-image: url('/uploads/{{ $h->grid_image }}')">
+                                       <div class="hotels-item-background">
+                                           <p>{{$h->name}}</p>
+                                       </div>
+                                    </div>
                             @endforeach
                         </a>
                     @endforeach
@@ -48,7 +54,10 @@
                                 <div class="transport-slider-item-content">
                                     <h1>{{ $car->name }}</h1>
                                     <p>{!! strip_tags($car->desc) !!}</p>
-                                    <button class="btn"><a href="{{ route('car-single', ['slug' => $car->slug]) }}">@lang('message.read-more')</a></button>
+                                    <button class="btn">
+                                        <a href="{{ route('car-single', ['slug' => $car->slug]) }}">@lang('message.read-more')
+                                        </a>
+                                    </button>
                                 </div>
                             </div>
                         @endforeach

@@ -36,8 +36,8 @@
                                         <div class="select1_inner">
                                             <select class="select2 select select2-hidden-accessible" name="slug" style="width: 100%" tabindex="-1" aria-hidden="true">
                                                 <option value="">@lang('message.select-all')</option>
-                                                @foreach($list as $region)
-                                                    @if(count($region->hotels))
+                                                @foreach($regions as $region)
+                                                    @if(count($region->hotels) )
                                                         <option value="{{ $region->slug }}" {{ $slug && $slug == $region->slug ? 'selected' : '' }}>{{ $region->name }}</option>
                                                     @endif
                                                 @endforeach
@@ -46,16 +46,34 @@
                                     </div>
                                 </div>
                                 {{--ROOM TYPE--}}
+                                <div class="col-sm-3 col-md-3">
+                                    <label>Room Type</label>
+                                    <div class="select1_wrapper">
+                                        <div class="select1_inner">
+                                            <select class="select2 select select2-hidden-accessible" name="room" style="width: 100%" tabindex="-1" aria-hidden="true">
+                                                <option value="">@lang('message.select-all')</option>
+                                                @if(count($rooms))
+                                                    @foreach($rooms as $key => $room)
+                                                        <option value={{$key}}>{{ $room }}</option>
+                                                    @endforeach
+                                                @endif
+                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9bvf-container"><span class="select2-selection__rendered" id="select2-9bvf-container" title="city or airport">@lang('message.city-airport')</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 {{--BED TYPE--}}
                                 <div class="col-sm-3 col-md-3">
                                     <label>Bed Type</label>
                                     <div class="select1_wrapper">
                                         <div class="select1_inner">
-                                            <select class="select2 select select2-hidden-accessible" name="slug" style="width: 100%" tabindex="-1" aria-hidden="true">
+                                            <select class="select2 select select2-hidden-accessible" name="bed" style="width: 100%" tabindex="-1" aria-hidden="true">
                                                 <option value="">@lang('message.select-all')</option>
-                                                <option value="twin">Twin</option>
-                                                <option value="double">Double</option>
+                                                @if(count($beds))
+                                                    @foreach($beds as $key => $bed)
+                                                        <option value={{$key}}>{{ $bed  }}</option>
+                                                    @endforeach
+                                                @endif
                                             </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9bvf-container"><span class="select2-selection__rendered" id="select2-9bvf-container" title="city or airport">@lang('message.city-airport')</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                                         </div>
                                     </div>

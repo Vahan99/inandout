@@ -18,7 +18,7 @@
               @if(count($model))
               @foreach($model as $service)
               <div class="post-story">
-                <h5 style="color: #1cbbb4">{{ $service->name }}</h5>
+                <h5 style="color: #ef8200">{{ $service->name }}</h5>
                   <div class="post-story-body clearfix">
                     <p>{!! $service->desc !!}</p>
                   </div>

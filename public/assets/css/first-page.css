@@ -1,3 +1,4 @@
+
 .empty-div {
     height: 122px;
 }
@@ -7,7 +8,7 @@ header {
     width: 100%;
     background-color: white;
     z-index: 100;
-    top:0;
+    top: 0;
 }
 
 header .header-container {
@@ -19,6 +20,8 @@ header .header-container {
 
 header .logo-container {
     position: absolute;
+    text-decoration: none;
+    display: block;
     background-image: url("../img/In&Out-logo.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,31 +32,31 @@ header .logo-container {
     top: 15px;
 }
 
-header .logo-social-links {
+.logo-social-links {
     position: absolute;
     right: 150px;
     top: 15px;
 }
 
-header .logo-social-links ul {
+.logo-social-links ul {
     display: flex;
     margin-right: 15px;
 }
 
-header .logo-social-links form {
+.logo-social-links form {
 
 }
 
-header .logo-social-links form .form-group {
+.logo-social-links form .form-group {
     margin-right: 15px;
 }
 
-header .logo-social-links ul li a {
+.logo-social-links ul li a {
     width: 100%;
     height: 100%;
 }
 
-header .logo-social-links ul li a i {
+.logo-social-links ul li a i {
     background: url("../img/social-icons.png");
     text-indent: -9999px;
     text-align: left;
@@ -62,78 +65,78 @@ header .logo-social-links ul li a i {
     text-decoration: none;
 }
 
-header .logo-social-links ul li:not(:last-child) {
+.logo-social-links ul li:not(:last-child) {
     margin-right: 15px;
 }
 
-header .logo-social-links ul .tripadvisor {
+.logo-social-links ul .tripadvisor {
     background-position: -2px -16px;
     width: 23px;
     height: 14px;
 }
 
-header .logo-social-links ul .tripadvisor:hover {
+.logo-social-links ul .tripadvisor:hover {
     background-position: -2px -0px;
     width: 23px;
     height: 14px;
 }
 
-header .logo-social-links ul .facebook {
+.logo-social-links ul .facebook {
     background-position: -12px -90px;
     width: 8px;
     height: 14px;
 }
 
-header .logo-social-links ul .facebook:hover {
+.logo-social-links ul .facebook:hover {
     background-position: -2px -90px;
     width: 8px;
     height: 14px;
 }
 
-header .logo-social-links ul .vkontakte {
+.logo-social-links ul .vkontakte {
     background-position: -2px -45px;
     width: 19px;
     height: 11px;
 }
 
-header .logo-social-links ul .vkontakte:hover {
+.logo-social-links ul .vkontakte:hover {
     background-position: -2px -32px;
     width: 19px;
     height: 11px;
 }
 
-header .logo-social-links ul .instagram {
+.logo-social-links ul .instagram {
     background-position: -2px -74px;
     width: 14px;
     height: 14px;
 }
 
-header .logo-social-links ul .instagram:hover {
+.logo-social-links ul .instagram:hover {
     background-position: -2px -58px;
     width: 14px;
     height: 14px;
 }
 
 header .navigation-bar {
-    position: absolute;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    text-align: center;
+    padding-top: 77px;
 }
 
-header .navigation-bar ul {
-    display: flex;
+header .navigation-bar > ul {
+    /*display: flex;*/
 }
 
-header .navigation-bar ul li {
+header .navigation-bar > ul > li {
     display: inline-block;
+    position: relative;
 }
 
-header .navigation-bar ul li:not(:last-child) {
+header .navigation-bar > ul > li:not(:last-child) {
     margin-right: 10px;
 }
 
-header .navigation-bar ul li a {
+header .navigation-bar > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
     padding: 5px 20px;
@@ -143,9 +146,35 @@ header .navigation-bar ul li a {
     font-weight: 500;
 }
 
+.hide-menu {
+    display: none;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 1px 6px 16px grey;
+    position: absolute;
+    top: 45px;
+    width: 199px;
+}
+
+.hide-menu li {
+    padding: 10px 0;
+}
+
+.hide-menu li:not(:last-child) {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.hide-menu li a {
+    text-decoration: none;
+    color: #8c8c8c;
+}
+
 .main-page-image {
     height: 820px;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .decoration-header {
@@ -195,38 +224,62 @@ header .navigation-bar ul li a {
 }
 
 .tours-slider .tour-single .tour-single-content {
-    padding: 40px 10px;
+    padding: 56px 36px;
     text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.tours-slider .tour-single .tour-single-content:hover p,
+.tours-slider .tour-single .tour-single-content:hover .btn {
+    opacity: 1;
 }
 
 .tours-slider .tour-single .tour-single-content span {
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     display: inline-block;
-    padding-bottom: 25px;
+    font-weight: bold;
+    height: 81px;
+    margin-bottom: 25px;
+    overflow: hidden;
 }
 
 .tours-slider .tour-single .tour-single-content P {
     color: white;
-    padding-bottom: 40px;
+    margin-bottom: 19px;
+    height: 81px;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: lighter;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.tours-slider .tour-single .tour-single-content a {
+    text-decoration: none;
+    color: white;
 }
 
 body .btn {
+    opacity: 0;
+    transition: all 0.3s;
     color: white;
     background-color: #EF8200;
-    padding: 5px 57px;
+    padding: 5px 14px;
     border-radius: 22px;
     text-transform: uppercase;
 
 }
 
 .hotels {
-    margin-top: 87px;
+    background-image: url("../../uploads/map.png");
+    background-repeat: no-repeat;
 }
 
 .hotels .hotels-container {
     max-width: 1360px;
     margin: auto;
+    padding-top: 120px;
 }
 
 .hotels .hotels-container .decoration-cont-style {
@@ -241,21 +294,21 @@ body .btn {
 }
 
 /*.hotels .hotels-container .decoration-hotels {*/
-    /*position: relative;*/
-    /*color: #1E2C37;*/
-    /*left: unset;*/
-    /*top: unset;*/
-    /*transform: unset;*/
-    /*margin-bottom: 59px;*/
+/*position: relative;*/
+/*color: #1E2C37;*/
+/*left: unset;*/
+/*top: unset;*/
+/*transform: unset;*/
+/*margin-bottom: 59px;*/
 /*}*/
 /*.hotels .hotels-container .decoration-hotels:after {*/
 
-    /*margin: auto;*/
+/*margin: auto;*/
 /*}*/
 
 .hotels .hotels-container .hotels-content {
     display: flex;
-    flex-wrap: wrap!important;
+    flex-wrap: wrap !important;
 
 }
 
@@ -265,11 +318,48 @@ body .btn {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+}
+
+.hotels .hotels-container .hotels-content .hotels-item:nth-child(2) .hotels-item-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(239,130,0,.3);
+}
+
+.hotels .hotels-container .hotels-content .hotels-item:nth-child(3) .hotels-item-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(239,130,0,.3);
+}
+
+.hotels .hotels-container .hotels-content .hotels-item:nth-child(1) .hotels-item-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,44,55,.3);
+}
+.hotels .hotels-container .hotels-content .hotels-item:nth-child(4) .hotels-item-background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,44,55,.3);
+}
+
+.hotels .hotels-container .hotels-content .hotels-item p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
 }
 
 .transport {
     background-color: #F2F2F2;
+    margin-top: 70px;
 }
+
 .transport .transport-container {
 
 }
@@ -287,6 +377,7 @@ body .btn {
     color: black;
     margin-bottom: 86px;
 }
+
 .transport .transport-container .transport-content .decoration-cont-style:after {
     left: 48%;
 }
@@ -299,6 +390,7 @@ body .btn {
     width: 410px;
     background-color: white;
 }
+
 .transport-slider .transport-slider-item:not(:last-child) {
     margin-right: 50px;
 }
@@ -307,25 +399,32 @@ body .btn {
     padding: 43px 60px 39px;
 }
 
-
 .transport-slider .transport-slider-item .transport-slider-image {
     height: 300px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .transport-slider .transport-slider-item h1 {
     font-size: 16px;
     color: #1E2C37;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
+    height: 57px;
+    overflow: hidden;
 }
+
 .transport-slider .transport-slider-item p {
     font-size: 13px;
     font-weight: 100;
-    padding-bottom: 25px;
+    margin-bottom: 25px;
+    height: 75px;
+    overflow: hidden;
 }
-.transport-slider .transport-slider-item .btn {
 
+.transport-slider .transport-slider-item .btn a {
+    text-decoration: none;
+    color: white;
 }
 
 .footer-container {
@@ -366,7 +465,7 @@ body .btn {
 }
 
 .footer-row-1 .footer-email-number .email-logo {
-    border-right: 1px solid black;
+    border-right: 1px solid #666666;
     position: relative;
 }
 
@@ -404,3 +503,323 @@ body .btn {
     font-size: 13px;
     color: #1E2C37;
 }
+
+.footer-row-2 {
+    position: relative;
+    height: 44px;
+    border-bottom: 1px solid #666666;
+}
+
+.footer-row-2 .logo-social-links {
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.footer-row-2 .logo-social-links p {
+    padding-right: 64px;
+    font-size: 13px;
+    color: #1E2C37;
+}
+
+/*SLIDER DOTS*/
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 19px;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #EF8200;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+    opacity: 1;
+    color: #EF8200;
+}
+
+.slick-dots {
+    bottom: -48px;
+}
+
+/*tour info page*/
+
+.tour-slider-container {
+    max-width: 1360px;
+    margin: auto;
+    padding-top: 60px;
+}
+
+.tour-slider-container .tour-info-slider-item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 623px;
+}
+
+.tour-info-container {
+    background-image: url("../img/tour-background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 1160px;
+    margin-top: 100px;
+}
+
+.tour-info-container .tour-info-content {
+    max-width: 1360px;
+    margin: auto;
+    padding-top: 114px;
+}
+
+.tour-info-container .tour-info-content > h1 {
+    font-size: 50px;
+    color: #445565;
+    font-weight: bold;
+}
+
+.tour-info-container .tour-info-content > p {
+    font-size: 21px;
+    color: #445565;
+    font-weight: bold;
+    padding: 33px 0 53px;
+}
+
+.days-short-description {
+
+}
+
+.days-short-description li {
+    position: relative;
+}
+
+.days-short-description li.active:after {
+    content: '';
+    height: 100px;
+    width: 10px;
+    background-color: #FF752D;
+    position: absolute;
+    top: 22px;
+    left: -20px;
+}
+
+.days-short-description li a {
+    text-decoration: none;
+    font-size: 50px;
+    color: #445565;
+    font-weight: bold;
+}
+
+.days-short-description li p {
+    font-size: 21px;
+    color: #445565;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.day-content {
+    box-shadow: 1px 1px 16px #e3e3e3;
+    padding: 10px 60px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.day-content-2,
+.day-content-3 {
+    display: none;
+}
+
+.day-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #FF752D;
+}
+
+.day-content h2 {
+    font-size: 21px;
+    color: #445565;
+    font-weight: bold;
+    padding: 20px 0 10px;
+}
+
+.day-content p {
+    font-size: 16px;
+    font-weight: lighter;
+    margin: 25px 0;
+}
+
+.tours-days-prices {
+    margin: 80px 0;
+}
+
+.tours-days-prices .tours-days-prices-container {
+    max-width: 980px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 1px 16px #e3e3e3;
+    padding: 30px;
+}
+
+.tours-days-prices .tours-days-prices-container > h1 {
+    font-size: 21px;
+    color: #445565;
+    font-weight: bold;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.table td:not(:last-child),
+.table th:not(:last-child) {
+    border-right: 1px solid #dee2e6;
+}
+
+.table th {
+    font-size: 16px;
+    color: #445565;
+    font-weight: 500;
+}
+
+.table td {
+    font-size: 21px;
+    color: #445565;
+    font-weight: 500;
+}
+
+.table td:not(:first-child) {
+    color: #FF752D;
+    font-weight: 500;
+}
+
+/*utils*/
+/************************************/
+.black-border-btm {
+    border-bottom: 3px solid black !important;
+}
+
+.orange-border-btm {
+    border-bottom: 3px solid #FF752D !important;
+}
+
+/************************************/
+/*utils*/
+
+.prises-info {
+    margin-top: 50px;
+}
+
+.prises-info h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #445565;
+    padding-bottom: 10px;
+}
+
+.prises-info ul {
+    list-style-type: disc;
+    padding-left: 15px;
+}
+
+.prises-info li {
+    font-size: 21px;
+    font-weight: 500;
+    color: #445565;
+    padding: 5px 0;
+}
+
+.tour-price-container {
+    max-width: 980px;
+    margin: auto;
+}
+
+.share-post {
+    max-width: 1360px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.share-post .share-post-navigation {
+
+}
+
+.share-post .share-post-navigation span {
+    font-size: 17px;
+    color: #445565;
+    font-weight: bold;
+}
+
+.share-post .share-post-navigation ul {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.share-post .share-post-navigation ul li {
+    display: inline-block;
+}
+
+.share-post .share-post-navigation ul li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.share-post .share-post-navigation ul li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: #FF752D;
+}
+
+.share-post-icons {
+
+}
+
+.share-post-icons span{
+    font-size: 17px;
+    color: #445565;
+    font-weight: bold;
+}
+
+.share-post-icons ul {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.share-post-icons ul li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.share-post-icons ul li:not(:last-child) {
+    padding: 0 5px;
+}
+
+.share-post-icons ul li a {
+    display: inline-block;
+    background: url("../img/socail-icons-darkBlue.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+}
+
+.share-post-icons ul li .facebook-logo {
+    background-position: -2px -27px;
+    width: 8px;
+    height: 13px;
+}
+
+.share-post-icons ul li .vkontakte-logo {
+    background-position: -2px -0px;
+    width: 17px;
+    height: 10px;
+}
+
+.share-post-icons ul li .instagram-logo {
+    background-position: -2px -12px;
+    width: 14px;
+    height: 13px;
+}
+
+

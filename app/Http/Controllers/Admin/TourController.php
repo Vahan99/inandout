@@ -7,8 +7,95 @@ use App\Tour;
 use App\Region;
 use App\TourImage;
 use App\TourType;
+use App\TourDay;
+
 class TourController extends BaseController
 {
+    public function showTourDays(Request $request, $tourId) {
+        $model = TourDay::whereTourId($tourId)->get();
+        return view('admin.tour-days.show', compact('model', 'tourId'));
+    }
+
+    public function tourDaysForm(Request $request, $tourId)
+    {
+        $formRoute = route('tour-days.create', ['tour_id' => $tourId]);
+        return view('admin.tour-days.create', compact('formRoute', 'tourId'));
+    }
+
+    public function tourDaysUpdateForm(Request $request, $tourDayId)
+    {
+        $formRoute = route('tour-days.update', ['tour_day_id' => $tourDayId]);
+        $model = TourDay::find($tourDayId);
+        return view('admin.tour-days.create', compact('formRoute', 'tourDayId', 'model'));
+    }
+
+    public function addTourDay(Request $request, $tourId)
+    {
+        $this->validate($request, [
+            'name_hy' => 'required|min:3',
+            'name_en' => 'required|min:3',
+            'name_ru' => 'required|min:3',
+            'title_hy' => 'required|min:3',
+            'title_en' => 'required|min:3',
+            'title_ru' => 'required|min:3',
+            'desc_hy' => 'required',
+            'desc_en' => 'required',
+            'desc_ru' => 'required'
+        ]);
+
+        $tourDay = new TourDay();
+        $req = $request->except('_token');
+        $tourDay->fill($req);
+        $tourDay->save();
+
+        return redirect()->route('tour-days.show', ['tour_id' => $tourId])
+            ->with(['success', 'Successfully saved to DB!']);
+    }
+
+    public function updateTourDay(Request $request, $tourDayId)
+    {
+        $this->validate($request, [
+            'name_hy' => 'required|min:3',
+            'name_en' => 'required|min:3',
+            'name_ru' => 'required|min:3',
+            'title_hy' => 'required|min:3',
+            'title_en' => 'required|min:3',
+            'title_ru' => 'required|min:3',
+            'desc_hy' => 'required',
+            'desc_en' => 'required',
+            'desc_ru' => 'required'
+        ]);
+
+        $req = $request->except('_token', 'tour_day_id');
+        $tourDay = new TourDay();
+        $tourDay = $tourDay->find($request->tour_day_id);
+        $tourDay->fill($req);
+        $tourDay->save();
+
+        return redirect()->route('tour-days.show', ['tour_id' => $tourDay->tour->id])
+            ->with(['success', 'Successfully saved to DB!']);
+    }
+
+    public function deleteTourDay(Request $request, $id)
+    {
+        TourDay::whereId($id)->delete();
+        return redirect()->back()->with(['success' => 'Tour was successfully deleted!']);
+    }
+
+//    public function createUpdateTourDays (Request $request, $id) {
+//        $formRoute =
+//        return view('admin.tour-days.form', compact('tours'));
+//    }
+
+    public function  updateTourDays ($id){
+        $formRoute = '/';
+        return view('admin.tour.update-days', compact('formRoute'));
+    }
+    public function deleteTourDays($id){
+
+        dd($id);
+    }
+
     public function show()
     {
         $model = Tour::all();

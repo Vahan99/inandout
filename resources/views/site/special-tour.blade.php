@@ -41,6 +41,7 @@
                                 </div>
                             </div>
                         </div>{{--end of container-fluid--}}
+
                         <div class="post-story">
                             {{--<h2>{{ $model->name }}</h2>--}}
                             <div class="post-story-body clearfix">
