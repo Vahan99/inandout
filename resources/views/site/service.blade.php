@@ -1,13 +1,13 @@
 @extends('site.layouts.app')
 @section('content')
-  <div id="parallax2" class="parallax">
-    <div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $image }}')"></div>
-    <div class="overlay"></div>
-    <div class="parallax-content">
-      <div class="container">
-      </div>
-    </div>
-  </div>
+  {{--<div id="parallax2" class="parallax">--}}
+    {{--<div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $image }}')"></div>--}}
+    {{--<div class="overlay"></div>--}}
+    {{--<div class="parallax-content">--}}
+      {{--<div class="container">--}}
+      {{--</div>--}}
+    {{--</div>--}}
+  {{--</div>--}}
 <div class="main">
   <h3 style="text-align:center; margin-top: 50px;">@lang('message.title-page-service')</h3>
   <div class="container">

@@ -20,4 +20,7 @@ $(document).ready(function () {
     $('.days-short-description li').not(currentActive).removeClass('active');
     currentActive.addClass('active');
   });
+
+  $('.select2-hidden-accessible').select2();
+
 });

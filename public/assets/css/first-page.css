@@ -216,7 +216,7 @@ header .navigation-bar > ul > li > a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    outline: none;
 }
 
 .tours-slider .tour-single:not(:last-child) {
@@ -353,6 +353,7 @@ body .btn {
     font-weight: bold;
     text-transform: uppercase;
     color: white;
+    text-align: center;
 }
 
 .transport {
@@ -389,6 +390,7 @@ body .btn {
 .transport-slider .transport-slider-item {
     width: 410px;
     background-color: white;
+    outline: none;
 }
 
 .transport-slider .transport-slider-item:not(:last-child) {
@@ -434,7 +436,7 @@ body .btn {
 
 .footer-row-1 {
     padding: 15px 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .footer-row-1 .footer-navigation {
@@ -507,7 +509,7 @@ body .btn {
 .footer-row-2 {
     position: relative;
     height: 44px;
-    border-bottom: 1px solid #666666;
+    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .footer-row-2 .logo-social-links {
@@ -823,3 +825,19 @@ body .btn {
 }
 
 
+.form1 .select2-container--default .select2-selection--single {
+    border: 1px solid #ebebeb;
+    border-radius: 42px;
+}
+
+.form1 .select2-container .select2-selection--single {
+    height: 40px;
+}
+
+.form1 .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 17px;
+}
+
+.form1 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+     border-radius: 42px;
+}

@@ -1,13 +1,13 @@
 @extends('site.layouts.app')
 @section('content')
-    <div id="parallax2" class="parallax">
-        <div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $image }}')"></div>
-        <div class="overlay"></div>
-        <div class="parallax-content">
-            <div class="container">
-            </div>
-        </div>
-    </div>
+    {{--<div id="parallax2" class="parallax">--}}
+    {{--<div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $image }}')"></div>--}}
+    {{--<div class="overlay"></div>--}}
+    {{--<div class="parallax-content">--}}
+    {{--<div class="container">--}}
+    {{--</div>--}}
+    {{--</div>--}}
+    {{--</div>--}}
     <div id="content">
         <div class="container">
             <div class="tabs_wrapper tabs1_wrapper">
@@ -19,14 +19,26 @@
                                     <label>@lang('message.select-region-title'):</label>
                                     <div class="select1_wrapper">
                                         <div class="select1_inner">
-                                            <select class="select2 select select2-hidden-accessible" name="slug" style="width: 100%" tabindex="-1" aria-hidden="true">
+                                            <select class="select2 select select2-hidden-accessible" name="slug"
+                                                    style="width: 100%" tabindex="-1" aria-hidden="true">
                                                 <option value="">@lang('message.select-all')</option>
                                                 @foreach($list as $region)
                                                     @if(count($region->restaurants))
                                                         <option value="{{ $region->slug }}" {{ $slug && $slug == $region->slug ? 'selected' : '' }}>{{ $region->name }}</option>
                                                     @endif
                                                 @endforeach
-                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9bvf-container"><span class="select2-selection__rendered" id="select2-9bvf-container" title="City or Airport">City or Airport</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </select>
+                                            {{--<span class="select2 select2-container select2-container--default"--}}
+                                                           {{--dir="ltr" style="width: 100%;">--}}
+                                                {{--<span class="selection">--}}
+                                                    {{--<span class="select2-selection select2-selection--single"--}}
+                                                          {{--role="combobox" aria-haspopup="true" aria-expanded="false"--}}
+                                                          {{--tabindex="0" aria-labelledby="select2-9bvf-container"><span--}}
+                                                                {{--class="select2-selection__rendered"--}}
+                                                                {{--id="select2-9bvf-container" title="City or Airport">City or Airport</span><span--}}
+                                                                {{--class="select2-selection__arrow" role="presentation"><b--}}
+                                                                    {{--role="presentation"></b></span></span></span><span--}}
+                                                        {{--class="dropdown-wrapper" aria-hidden="true"></span></span>--}}
                                         </div>
                                     </div>
                                 </div>
@@ -34,13 +46,15 @@
                                     <label for="">@lang('message.enter-place-name'):</label>
                                     <div class="input1_wrapper">
                                         <div class="input1_inner">
-                                            <input type="text" name="keywords" class="input" placeholder="@lang('message.enter-place-name')">
+                                            <input type="text" name="keywords" class="input"
+                                                   placeholder="@lang('message.enter-place-name')">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-4 col-md-2">
                                     <div class="button1_wrapper">
-                                        <button type="submit" class="btn-default btn-form1-submit">@lang('message.search')</button>
+                                        <button type="submit"
+                                                class="btn-default btn-form1-submit">@lang('message.search')</button>
                                     </div>
                                 </div>
                             </div>
@@ -56,13 +70,19 @@
                                         <div class="popular">
                                             <div class="popular_inner">
                                                 <figure>
-                                                    <img src="/uploads/{{ $restaurant->grid_image }}" alt="{{ $restaurant->name }}" class="img-responsive">
+                                                    <img src="/uploads/{{ $restaurant->grid_image }}"
+                                                         alt="{{ $restaurant->name }}" class="img-responsive">
                                                 </figure>
                                                 <div class="caption">
                                                     <div class="txt1"><span>{{ $restaurant->name }}</span></div>
-                                                    <div class="txt2"><span class="ellipsis">{!! strip_tags($restaurant->description) !!}</span></div>
+                                                    <div class="txt2"><span
+                                                                class="ellipsis">{!! strip_tags($restaurant->description) !!}</span>
+                                                    </div>
                                                     <div class="txt3 clearfix">
-                                                        <div class="right_side"><a href="{{ route('restaurant_single.index', ['slug' => $restaurant->slug]) }}" class="btn-default btn1">@lang('message.read-more')</a></div>
+                                                        <div class="right_side"><a
+                                                                    href="{{ route('restaurant_single.index', ['slug' => $restaurant->slug]) }}"
+                                                                    class="btn-default btn1">@lang('message.read-more')</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

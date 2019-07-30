@@ -815,7 +815,7 @@ header {
     display: block;
     background: #fafafa;
     padding: 30px;
-    border-bottom: 9px solid #D7733D;
+    /*border-bottom: 9px solid #D7733D;*/
     margin-bottom: 20px;
 }
 
@@ -1751,7 +1751,8 @@ header {
     overflow: hidden;
 }
 
-.popular { /*margin: 10px 0px,box-shadow: 1px 1px 1px 15px #e6e6e6*/
+.popular {
+    margin-bottom: 30px;
 }
 
 .popular .popular_inner {
@@ -1811,9 +1812,9 @@ header {
     background: #fafafa;
 }
 
-.popular .popular_inner:hover .caption {
-    border-color: #D7733D;
-}
+/*.popular .popular_inner:hover .caption {*/
+    /*border-color: #D7733D;*/
+/*}*/
 
 .popular .popular_inner .txt1 {
     font-weight: 500;
@@ -1828,6 +1829,9 @@ header {
     font-weight: bold;
     padding-right: 5px;
     color: #636363;
+    display: inline-block;
+    height: 57px;
+    overflow: hidden;
 }
 
 .popular .popular_inner:hover .txt1 span {
@@ -1844,6 +1848,9 @@ header {
     font-size: 16px;
     font-family: "Open Sans";
     font-weight: 100;
+    display: inline-block;
+    height: 95px;
+    overflow: hidden;
 }
 
 .popular .popular_inner .txt3 {
@@ -1856,6 +1863,7 @@ header {
 
 .popular .popular_inner .txt3 .right_side {
     text-align: center;
+    margin-top: 20px;
 }
 
 .popular .popular_inner .txt3 .nums {
@@ -4378,7 +4386,7 @@ h5 {
     font-size: 83px;
     font-weight: bold;
     height: 95.86px;
-    z-index: 99999;
+    z-index: 10;
     /*width: 278.585px;*/
 
 }
@@ -4619,12 +4627,13 @@ h5 {
 .drivers_page_logo {
     right: 0;
     left: 720px;
-    margin-top: 50px
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
 
-.drivers_block {
-    margin-top: 200px;
-}
+/*.drivers_block {*/
+    /*margin-top: 200px;*/
+/*}*/
 
 .drivers_back {
     background: url("../../uploads/mid_back.jpg");
@@ -4896,4 +4905,54 @@ h5 {
 .main-page-container {
     max-width: 1360px;
     margin: auto;
+}
+
+.styled-header {
+    color: #fa852b;
+    margin: auto;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.detail > a {
+    width: 30% !important;
+}
+
+.detail {
+    margin: 10px 15px 0!important;
+}
+
+.text-desc {
+    background-color: white!important;
+}
+
+.text-desc > .title {
+    color: #636363;
+}
+
+@media (min-width: 768px){
+    .overlay:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #1E2C37!important;
+        background-image: unset!important;
+        opacity: .6;
+    }
+}
+
+
+.overlay:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1E2C37!important;
+    background-image: unse!important;
+    opacity: .6;
 }

@@ -1,19 +1,19 @@
 @extends('site.layouts.app')
 @section('content')
-    <div id="parallax2" class="parallax">
-        <div class="bg2 parallax-bg bg-fixed" style="background-position: 50% -61px; background-image: url('/uploads/{{ $image }}')"></div>
-        <div class="overlay"></div>
-        <div class="parallax-content">
-            <div class="container">
-            </div>
-        </div>
-    </div>
+    {{--<div id="parallax2" class="parallax">--}}
+        {{--<div class="bg2 parallax-bg bg-fixed" style="background-position: 50% -61px; background-image: url('/uploads/{{ $image }}')"></div>--}}
+        {{--<div class="overlay"></div>--}}
+        {{--<div class="parallax-content">--}}
+            {{--<div class="container">--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
     <div class="container">
         <div class="row">
             <div id="fb-root"></div>
             <div class="[ col-md-10 col-md-offset-1 ]" style="z-index: 0;">
                 <br>
-                <h3 class="animated fadeInUp visible text-center" data-animation="fadeInUp" data-animation-delay="200">@lang('message.nav-news')</h3>
+                <h3 class="animated fadeInUp visible text-center styled-header" data-animation="fadeInUp" data-animation-delay="200">@lang('message.nav-news')</h3>
                 <br>
                 <ul class="event-list">
                     <div id="fb-root"></div>
@@ -34,7 +34,7 @@
                                 <div class="desc">{!! strip_tags($news->desc) !!}</div>
                                 <div class="detail">
                                     <a href="{{ route('view.news_page', ['slug' => $news->slug]) }}" class="btn-default
-                                    btn4">@lang('message.read-more')</a>
+                                    btn1">@lang('message.read-more')</a>
                                 </div>
                             </div>
                         </div>
