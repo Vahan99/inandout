@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
+use Torann\Currency\Currency;
 
 class IndexController extends Controller
 {
@@ -146,7 +147,15 @@ class IndexController extends Controller
             $tours = $tours->where('region_id', $request->region);
         }
         if(isset($request->range_val)) {
-            $tours = $tours->where('price', $request->range_val);
+            $usd_price = currency()->getCurrencies()['USD']['exchange_rate'];
+            if(app()->getLocale() !== 'en') {
+                $price = $usd_price * $request->range_val;
+                dd($price);
+                $tours = $tours->whereBetween('price', [0,$price]);
+            }
+            else {
+                $tours = $tours->whereBetween('price', [0,$request->range_val]);
+            }
         }
 
         $tours = $tours->paginate(6);
