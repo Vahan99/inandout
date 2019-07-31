@@ -150,7 +150,6 @@ class IndexController extends Controller
             $usd_price = currency()->getCurrencies()['USD']['exchange_rate'];
             if(app()->getLocale() !== 'en') {
                 $price = $usd_price * $request->range_val;
-                dd($price);
                 $tours = $tours->whereBetween('price', [0,$price]);
             }
             else {
