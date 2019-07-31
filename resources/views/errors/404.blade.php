@@ -11,7 +11,7 @@
     <hr>
     <div class='_1'>THE PAGE</div>
     <div class='_2'>WAS NOT FOUND</div>
-    <a class='btn' href='{{ route('view.index') }}'>BACK TO Land Of Noah</a>
+    <a class='btn' href='{{ route('view.index') }}'>Back To In & Out</a>
 </div>
 
 <style src"text/css">

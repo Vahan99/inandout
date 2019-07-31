@@ -23,8 +23,8 @@
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link type="text/css" rel="stylesheet" href="{{ asset('assets/css/default.css') }}">
 
-{{--New Links--}}
-<!--SELECT 2-->
+    {{--New Links--}}
+    <!--SELECT 2-->
     <link rel="stylesheet" href="{{asset('assets')}}/css/select2.min.css">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="{{asset('assets')}}/css/bootstrap.min.css">
@@ -43,6 +43,7 @@
     {{--<script src="{{asset('assets')}}/js/js/libs/popper.min.js"></script>--}}
     <script src="{{asset('assets')}}/js/js/libs/bootstrap.min.js"></script>
 
+    <script src="../js/range.js"></script>
 
     <!--SELECT 2-->
     <script src="{{asset('assets')}}/js/js/libs/select2.min.js"></script>

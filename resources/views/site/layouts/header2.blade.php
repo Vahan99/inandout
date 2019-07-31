@@ -31,40 +31,7 @@
                         </a>
                     </li>
                 @endif
-
-
-                    {{--<li class="nav-item dropdown">--}}
-                        {{--<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>--}}
-                        {{--<div class="dropdown-menu">--}}
-                            {{--<a class="dropdown-item" href="#">Action</a>--}}
-                            {{--<a class="dropdown-item" href="#">Another action</a>--}}
-                            {{--<a class="dropdown-item" href="#">Something else here</a>--}}
-                            {{--<div class="dropdown-divider"></div>--}}
-                            {{--<a class="dropdown-item" href="#">Separated link</a>--}}
-                        {{--</div>--}}
-                    {{--</li>--}}
             </ul>
-            {{--<form class="d-flex" action="">--}}
-                {{--<div class="form-group">--}}
-                    {{--<select class="form-control">--}}
-                        {{--@foreach(currency()->getCurrencies() as $currency)--}}
-                            {{--<option><a href="?currency={{ $currency['code'] }}">{{ $currency['code'] }}</a></option>--}}
-                        {{--@endforeach--}}
-                    {{--</select>--}}
-                {{--</div>--}}
-                {{--<div class="form-group">--}}
-                    {{--<select class="form-control">--}}
-                        {{--@foreach(LaravelLocalization::getSupportedLocales(true) as $localeCode => $properties)--}}
-                            {{--<option>--}}
-                                {{--<a rel="alternate" class="{{ $localeCode }}" hreflang="{{ $localeCode }}"--}}
-                                   {{--href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">--}}
-                                    {{--{{ title_case($properties['native']) }}--}}
-                                {{--</a>--}}
-                            {{--</option>--}}
-                        {{--@endforeach--}}
-                    {{--</select>--}}
-                {{--</div>--}}
-            {{--</form>--}}
         </div>
         <div class="navigation-bar">
             <ul>
@@ -110,14 +77,6 @@
                                 </li>
                             @endif
                         @endforeach
-                        {{--<li><a href="javascript:;">Outgoing</a></li>--}}
-                        {{--<li><a href="javascript:;">Incoming</a></li>--}}
-                        {{--<li><a href="javascript:;">Prof. Athena Halvorsion</a></li>--}}
-                        {{--<li><a href="javascript:;">Ricky Osinski IV</a></li>--}}
-                        {{--<li><a href="javascript:;">Breanna Keeling</a></li>--}}
-                        {{--<li><a href="javascript:;">Berneice West Jr.</a></li>--}}
-                        {{--<li><a href="javascript:;">teresa Dickinson</a></li>--}}
-                        {{--<li><a href="javascript:;">Luigi Welch</a></li>--}}
                     </ul>
                 </li>
                 <li><a class="nav-link" href="{{ route('drivers.index') }}">@lang('message.nav-traffick'){{--transport--}}</a></li>
@@ -128,10 +87,6 @@
                         <li><a href="{{ route('view.contact') }}">@lang('message.nav-contacts')</a></li>
                         <li><a href="{{ route('vacancy.index') }}">@lang('message.nav-job')</a></li>
                         <li><a href="{{ route('service.index') }}">@lang('message.nav-more')</a></li>
-                        {{--<li><a href="javascript:;">About us</a></li>--}}
-                        {{--<li><a href="javascript:;">Contact</a></li>--}}
-                        {{--<li><a href="javascript:;">Vacancy</a></li>--}}
-                        {{--<li><a href="javascript:;">Comments</a></li>--}}
                     </ul>
                 </li>
             </ul>
