@@ -14,7 +14,7 @@
                         <div class="tour-single-content">
                             <span>{{ $tour->name }}</span>
                             <p>{!! strip_tags($tour->desc) !!}</p>
-                            <button class="btn"><a href="{{ route('tour-single', ['slug' => $tour->slug]) }}">@lang('message.read-more')</a></button>
+                            <button class="btn btn-orange btn-animated"><a href="{{ route('tour-single', ['slug' => $tour->slug]) }}">@lang('message.read-more')</a></button>
                         </div>
                     </div>
                 @endforeach
@@ -54,7 +54,7 @@
                             <div class="transport-slider-item-content">
                                 <h1>{{ $car->name }}</h1>
                                 <p>{!! strip_tags($car->desc) !!}</p>
-                                <button class="btn">
+                                <button class="btn btn-orange">
                                     <a href="{{ route('car-single', ['slug' => $car->slug]) }}">@lang('message.read-more')
                                     </a>
                                 </button>

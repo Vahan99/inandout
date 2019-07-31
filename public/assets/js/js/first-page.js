@@ -23,4 +23,19 @@ $(document).ready(function () {
 
   $('.select2-hidden-accessible').select2();
 
+  $('.mobile-menu-btn').on('click', function (e) {
+    e.stopPropagation();
+    $('.line-2').toggleClass('opacity-0');
+    $('.line-1').toggleClass('rotate-1');
+    $('.line-3').toggleClass('rotate-3');
+
+    $('.mobile-menu').toggleClass('menu--position');
+  });
+
+  $('.menu-header').on('click',function () {
+    let currentElem = $(this).next('ul');
+    $('.hided-content').not(currentElem).slideUp(500);
+    currentElem.slideToggle(500);
+  });
+
 });

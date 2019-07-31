@@ -33,6 +33,48 @@
                 @endif
             </ul>
         </div>
+        <div class="currency-lang">
+            <div class="currency-content">
+                <div class="dropdown">
+                    <button class=" btn btn-bordered dropdown-toggle"
+                            id="dropdownMenu1"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="true">
+                        <img src="{{currency()->getCurrency()['symbol']}}" alt="">
+                        {{currency()->getCurrency()['code']}}
+                        {{--<span class="caret"></span>--}}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        @foreach(currency()->getCurrencies() as $currency)
+                            <li>
+                                <a href="?currency={{ $currency['code'] }}"><img src="{{ $currency['symbol'] }} " alt=""> {{ $currency['code'] }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+            <div class="lang-content">
+                <div class="dropdown">
+                    <button class=" btn btn-bordered dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                            style="">
+                        {{ title_case(LaravelLocalization::getCurrentLocaleNative()) }}
+                        {{--<span class="caret"></span>--}}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        @foreach(LaravelLocalization::getSupportedLocales(true) as $localeCode => $properties)
+                            <li>
+                                <a rel="alternate" class="{{ $localeCode }}" hreflang="{{ $localeCode }}"
+                                   href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ title_case($properties['native']) }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="navigation-bar">
             <ul>
                 <li>
@@ -90,6 +132,11 @@
                     </ul>
                 </li>
             </ul>
+        </div>
+        <div class="mobile-menu-btn">
+            <div class="lines line-1"></div>
+            <div class="lines line-2"></div>
+            <div class="lines line-3"></div>
         </div>
 
     </div>

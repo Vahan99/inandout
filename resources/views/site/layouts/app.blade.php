@@ -40,7 +40,7 @@
     <!--JQUERY-->
     <script src="{{asset('assets')}}/js/js/libs/jquery-3.3.1.min.js"></script>
     <!--BOOTSTRAP-->
-    {{--<script src="{{asset('assets')}}/js/js/libs/popper.min.js"></script>--}}
+    <script src="{{asset('assets')}}/js/js/libs/popper.min.js"></script>
     <script src="{{asset('assets')}}/js/js/libs/bootstrap.min.js"></script>
 
     <script src="../js/range.js"></script>
@@ -75,6 +75,54 @@
         @yield('content')
     </main>
     @include('site.layouts.footer2')
+</div>
+
+<div class="mobile-menu">
+    <ul class="menu-content">
+        <li><a class="menu-header" href="javascript:;">home</a>
+        </li>
+        <li><a class="menu-header" href="javascript:;">armenia</a>
+            <ul class="hided-content">
+                <li><a href="javascript:;">Sightseeing</a></li>
+                <li><a href="javascript:;">About Armenia</a></li>
+                <li><a href="javascript:;">Restaurant</a></li>
+                <li><a href="javascript:;">News</a></li>
+                <li><a href="javascript:;">Holiday</a></li>
+            </ul>
+        </li>
+        <li><a class="menu-header" href="javascript:;">settlement</a>
+            <ul class="hided-content">
+                <li><a href="javascript:;">Hotels</a></li>
+                <li><a href="javascript:;">Apartments</a></li>
+                <li><a href="javascript:;">Hostels</a></li>
+            </ul>
+        </li>
+        <li><a class="menu-header" href="javascript:;">tours</a>
+            <ul class="hided-content">
+                <li><a href="javascript:;">Outgoing</a></li>
+                <li><a href="javascript:;">Incoming</a></li>
+                <li><a href="javascript:;">Prof.Athena Havvorson</a></li>
+                <li><a href="javascript:;">Hostels</a></li>
+                <li><a href="javascript:;">Hostels</a></li>
+                <li><a href="javascript:;">Hostels</a></li>
+                <li><a href="javascript:;">Hostels</a></li>
+                <li><a href="javascript:;">Hostels</a></li>
+                <li><a href="javascript:;">Hostels</a></li>
+                <li><a href="javascript:;">Hostels</a></li>
+            </ul>
+        </li>
+        <li><a class="menu-header" href="javascript:;">transport</a>
+        </li>
+        <li><a class="menu-header" href="javascript:;">company</a>
+            <ul class="hided-content">
+                <li><a href="javascript:;">About Us</a></li>
+                <li><a href="javascript:;">Contact</a></li>
+                <li><a href="javascript:;">Vacancy</a></li>
+                <li><a href="javascript:;">Comments</a></li>
+            </ul>
+        </li>
+    </ul>
+
 </div>
 
 </body>

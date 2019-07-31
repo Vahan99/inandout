@@ -6,7 +6,33 @@ $(document).ready(function () {
     slidesToShow: 4,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false
+        }
+      }
+    ]
   });
   $('.hotels-slider').slick({
     dots: true,
@@ -15,7 +41,17 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        }
+      }
+    ]
   });
 
   $('.transport-slider').slick({
@@ -25,7 +61,26 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    arrows: false
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: false,
+        }
+      }
+    ]
   });
 
   $('.tour-info-slider').slick({
