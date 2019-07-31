@@ -28,7 +28,7 @@
                                 {{--region filter--}}
                                 <div class="col-sm-3 col-md-3">
                                     {{--<label>@lang('message.select-region-title'):</label>--}}
-                                    <label>Region</label>
+                                    <label>@lang('message.region')</label>
                                     <div class="select1_wrapper">
                                         <div class="select1_inner">
                                             <select class="select2 select select2-hidden-accessible" name="region" style="width: 100%" tabindex="-1" aria-hidden="true">
@@ -44,8 +44,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    {{--<label for="">@lang('message.enter_tour_name'):</label>--}}
-                                    <label>Price<span class="range_input_prices"></span></label>
+
+                                    <label>@lang('message.price')<span class="range_input_prices"></span></label>
                                     <div class="input1_wrapper">
                                         <div class="input1_inner range_input">
                                             @if(currency()->getCurrency()['code'] === 'AMD')
@@ -55,7 +55,6 @@
                                                 @else
                                                 <input name="range_val" id="tour_range" type="range" min="0" max="40000" step="1000"  class="form-control-range" />
                                             @endif
-                                            {{--<input --}}{{--id="ex15"--}}{{-- name="range_val" id="tour_range" type="range" min="300" max="500" step="10"  class="form-control-range" />--}}
                                             <div  class="text-center range_val"></div>
                                         </div>
                                     </div>

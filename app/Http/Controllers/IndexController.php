@@ -172,8 +172,6 @@ class IndexController extends Controller
     {
         $model = \App\Tour::whereSlug($slug)
             ->firstOrFail();
-//        dd($model);
-//        dd($model->id);
         $days =\App\TourDay::where('tour_id',$model->id)->get();
 
         $settings = Setting::first();
@@ -421,7 +419,7 @@ class IndexController extends Controller
         $rooms = \App\RoomType::listAll();
         $beds = \App\BedType::listAll();
         $regions = Region::get();
-//        dd($regions);
+
         if(isset($request->slug)) {
             $region = Region::whereSlug($request->slug)->firstOrFail();
             $hotels = $region->hotels();
@@ -429,7 +427,6 @@ class IndexController extends Controller
 
         if(isset($request->room)) {
             if(isset($hotels)) {
-//                dd($hotels);
                 $hotels = $hotels->with(['residence_room_types' => function($q) use ($request) {
                     $q->where('room_type_id', $request->room);
                 }]);

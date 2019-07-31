@@ -43,7 +43,7 @@
     <script src="{{asset('assets')}}/js/js/libs/popper.min.js"></script>
     <script src="{{asset('assets')}}/js/js/libs/bootstrap.min.js"></script>
 
-    <script src="../js/range.js"></script>
+    <script src="/js/range.js"></script>
 
     <!--SELECT 2-->
     <script src="{{asset('assets')}}/js/js/libs/select2.min.js"></script>
