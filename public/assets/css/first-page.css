@@ -1088,6 +1088,9 @@ body .btn.btn-bordered {
     .mobile-menu-btn {
         display: inline-block;
     }
+    header .header-container {
+        max-width: 98%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1114,6 +1117,15 @@ body .btn.btn-bordered {
     }
     .footer-row-1 .footer-email-number .email-logo {
         border-right: none;
+    }
+    .currency-lang {
+        top: 75px;
+        right: 10px;
+    }
+    .logo-social-links {
+        position: absolute;
+        right: 10px;
+        top: 26px;
     }
 }
 
