@@ -121,9 +121,9 @@
                         @endforeach
                     </ul>
                 </li>
-                <li><a class="nav-link" href="{{ route('drivers.index') }}">@lang('message.nav-traffick'){{--transport--}}</a></li>
+                <li><a class="nav-link" href="{{ route('drivers.index') }}">@lang('message.nav-traffick')</a></li>
                 <li>
-                    <a class="nav-link" href="javascript:;">Company</a>
+                    <a class="nav-link" href="javascript:;">@lang('message.nav-worldnoah')</a>
                     <ul class="hide-menu">
                         <li><a href="{{ route('about.index') }}/">@lang('message.nav-about')</a></li>
                         <li><a href="{{ route('view.contact') }}">@lang('message.nav-contacts')</a></li>

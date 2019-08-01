@@ -18,18 +18,18 @@
         </section>
         <section class="tour-info-container">
             <div class="tour-info-content">
-                <h1>{{$model->name}}{{--Armenia - Tbilisi 3 days, 2 nights from Yerevan--}}</h1>
-                <p>{!! $model->desc !!}{{--Tour agency organizes an interesting 3-day tour program in Armenia and georgia--}}</p>
+                <h1>{{$model->name}}</h1>
+                <p>{!! $model->desc !!}</p>
                 @if(count($days))
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-sm-6">
                                 <ul class="days-short-description">
                                     @foreach($days as $key => $day)
-                                    <li class="{{ !$key ? 'active' : '' }}">
-                                        <a href="javascript:;" class="days-link" data-for="day-content-{{$key}}">{{ $day->name }}</a>
-                                        <p>{{ $day->title }}</p>
-                                    </li>
+                                        <li class="{{ !$key ? 'active' : '' }}">
+                                            <a href="javascript:;" class="days-link" data-for="day-content-{{$key}}">{{ $day->name }}</a>
+                                            <p>{{ $day->title }}</p>
+                                        </li>
                                     @endforeach
                                 </ul>
                             </div>
@@ -85,13 +85,13 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="prises-info">
-                                <h1>The price includes</h1>
+                                <h1>@lang('message.the price includes')</h1>
                                 {!! $model->after_text !!}
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="prises-info">
-                                <h1>The price does not include</h1>
+                                <h1>@lang('message.the price does not include')</h1>
                                 {!! $model->exclude !!}
                             </div>
                         </div>
@@ -106,10 +106,10 @@
             <div class="share-post-navigation">
                 <span>Tags:</span>
                 <ul>
-                    <li><a href="javascript:;">Sightseeing</a></li>
-                    <li><a href="javascript:;">Restaurant</a></li>
-                    <li><a href="javascript:;">Hotels</a></li>
-                    <li><a href="javascript:;">Transport</a></li>
+                    <li><a href="javascript:;">@lang('message.nav-sightseeing')</a></li>
+                    <li><a href="javascript:;">@lang('message.nav-hotel')</a></li>
+                    <li><a href="javascript:;">@lang('message.nav-hotel-2')</a></li>
+                    <li><a href="javascript:;">@lang('message.nav-traffick')</a></li>
                 </ul>
             </div>
             <div class="share-post-icons">

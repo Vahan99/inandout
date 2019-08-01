@@ -189,5 +189,11 @@ return [
     'price-policy-without-driver' => 'Գնային քաղաքականությունը առանց վարորդի',
     'starting-place' => 'Սկսելու վայրը',
     'enter_tour_name' => 'Մուտքագրեք տուրի անվանումը',
+    'the price includes' => 'Գինը ներառում է',
+    'the price does not include' => 'Գինը չի ներառում',
+    'room-type' => 'Սենյակի տեսակը',
+    'bed-type' => 'Մահճակալի տեսակը',
+    'price' => 'Գինը',
+    'region' => 'Մարզ',
 
 ];

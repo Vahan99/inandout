@@ -188,4 +188,10 @@ return [
     'starting-place' => 'Starting point',
     'enter_tour_name' => 'Enter tour name',
 
+    'the price includes' => 'The price includes',
+    'the price does not include' => 'The price does not include',
+    'room-type' => 'Room type',
+    'bed-type' => 'Bed type',
+    'price' => 'Price',
+    'region' => 'Region',
 ];
