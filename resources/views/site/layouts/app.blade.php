@@ -79,46 +79,54 @@
 
 <div class="mobile-menu">
     <ul class="menu-content">
-        <li><a class="menu-header" href="javascript:;">home</a>
+        <li><a class="menu-header" href="{{ route('view.index') }}">@lang('message.nav-home')</a>
         </li>
-        <li><a class="menu-header" href="javascript:;">armenia</a>
+        <li><a class="menu-header" href="javascript:;">@lang('message.nav-city')</a>
             <ul class="hided-content">
-                <li><a href="javascript:;">Sightseeing</a></li>
-                <li><a href="javascript:;">About Armenia</a></li>
-                <li><a href="javascript:;">Restaurant</a></li>
-                <li><a href="javascript:;">News</a></li>
-                <li><a href="javascript:;">Holiday</a></li>
+                <li><a href="{{ route('sightseeing-places') }}">@lang('message.nav-sightseeing')</a></li>
+                <li><a href="{{ route('arm.index') }}">@lang('message.nav-city-home')</a></li>
+                <li><a href="{{ route('site.restaurants-all') }}">@lang('message.nav-hotel')</a></li>
+                <li><a href="{{ route('news.index') }}">@lang('message.nav-news')</a></li>
+                <li><a href="{{route('holiday.index')}}">@lang('message.nav-holidays')</a></li>
             </ul>
         </li>
-        <li><a class="menu-header" href="javascript:;">settlement</a>
+        <li><a class="menu-header" href="javascript:;">@lang('message.nav-city-home-2')</a>
             <ul class="hided-content">
-                <li><a href="javascript:;">Hotels</a></li>
-                <li><a href="javascript:;">Apartments</a></li>
-                <li><a href="javascript:;">Hostels</a></li>
+                <li><a href="{{ route('site.hotels-all') }}">@lang('message.nav-hotel-2')</a></li>
+                <li><a href="{{ route('site.apartments-all') }}">@lang('message.nav-homes')</a></li>
+                <li><a href="{{ route('site.hostels-all') }}">@lang('message.nav-hostel')</a></li>
             </ul>
         </li>
-        <li><a class="menu-header" href="javascript:;">tours</a>
+        <li><a class="menu-header" href="javascript:;">@lang('message.nav-excursion')</a>
             <ul class="hided-content">
-                <li><a href="javascript:;">Outgoing</a></li>
-                <li><a href="javascript:;">Incoming</a></li>
-                <li><a href="javascript:;">Prof.Athena Havvorson</a></li>
-                <li><a href="javascript:;">Hostels</a></li>
-                <li><a href="javascript:;">Hostels</a></li>
-                <li><a href="javascript:;">Hostels</a></li>
-                <li><a href="javascript:;">Hostels</a></li>
-                <li><a href="javascript:;">Hostels</a></li>
-                <li><a href="javascript:;">Hostels</a></li>
-                <li><a href="javascript:;">Hostels</a></li>
+                @foreach(\App\TourType::listTourTypes() as $type)
+                    @if(count($type->childrenTourTypes))
+                        <li {{--{{ (isset($activeParentTourType) && !is_null($activeParentTourType) && $activeParentTourType->slug == $type->slug) ? 'active' : '' }}--}}>
+                            <a href="javascript:;">{{ $type->name }}</a>
+                            <ul>
+                                @foreach ($type->childrenTourTypes as $childType)
+                                    <li {{--{{ active_link('tours', $childType->slug) }}"--}}>
+                                        <a href="{{ route('tours', ['slug' => $childType->slug]) }}">{{ $childType->name }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @else
+                        <li class="sub-menu sub-menu-2 {{ active_link('tours', $type->slug) }}">
+                            <a href="{{ route('tours', ['slug' => $type->slug]) }}">{{ $type->name }}</a>
+                        </li>
+                    @endif
+                @endforeach
             </ul>
         </li>
-        <li><a class="menu-header" href="javascript:;">transport</a>
+        <li><a class="menu-header" href="{{ route('drivers.index') }}">@lang('message.nav-traffick')</a>
         </li>
-        <li><a class="menu-header" href="javascript:;">company</a>
+        <li><a class="menu-header" href="javascript:;">@lang('message.nav-worldnoah')</a>
             <ul class="hided-content">
-                <li><a href="javascript:;">About Us</a></li>
-                <li><a href="javascript:;">Contact</a></li>
-                <li><a href="javascript:;">Vacancy</a></li>
-                <li><a href="javascript:;">Comments</a></li>
+                <li><a href="{{ route('about.index') }}">@lang('message.nav-about')</a></li>
+                <li><a href="{{ route('view.contact') }}">@lang('message.nav-contacts')</a></li>
+                <li><a href="{{ route('vacancy.index') }}">@lang('message.nav-job')</a></li>
+                <li><a href="{{ route('service.index') }}">@lang('message.nav-more')</a></li>
             </ul>
         </li>
     </ul>
