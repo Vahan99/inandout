@@ -10,7 +10,7 @@
         @if(count($tours) > 2)
             <div class="tours-slider">
                 @foreach($tours as $tour)
-                    <div class="tour-single" style="background-image: url('../uploads/{{ $tour->grid_image }}')">
+                    <div class="tour-single" style="background-image: url('{{asset('uploads/')}}/{{$tour->grid_image}}')">
                         <div class="tour-single-content">
                             <span>{{ $tour->name }}</span>
                             <p>{!! strip_tags($tour->desc) !!}</p>

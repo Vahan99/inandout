@@ -39,8 +39,8 @@ class IndexController extends Controller
             ->chunk(4, function ($q) use ($hotels) {
                 $hotels->push($q);
             });
-        $tours = Tour::with('region')->whereSightseeingPlace(0)->take(10)->inRandomOrder()->orderBy('id', 'desc')->get();
-        $cars = CarDriver::with('sliderImages')->take(10)->inRandomOrder()->orderBy('id', 'desc')->get();
+        $tours = Tour::with('region')->whereSightseeingPlace(0)->take(10)/*->inRandomOrder()*/->orderBy('id', 'desc')->get();
+        $cars = CarDriver::with('sliderImages')->take(10)->/*inRandomOrder()->*/orderBy('id', 'desc')->get();
         $settings = \App\Setting::first();
         return view('site.index2', compact('tours','cars', 'hotels','settings'));
     }
