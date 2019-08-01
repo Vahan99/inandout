@@ -4,7 +4,7 @@
 @extends('site.layouts.app')
 @section('content')
 
-<section class="main-page-image" style="background: url('{{asset('assets')}}/img/main-page-background.jpg')">
+<section class="main-page-image" style="background: url('{{asset('uploads')}}/{{ $settings->image }}')">
     <div style="background-color: rgba(30,44,55,.3);width: 100%;height: 100%">
         <h1 class="decoration-header decoration decoration-cont-style">@lang('message.aboutas-tours')</h1>
         @if(count($tours) > 2)
