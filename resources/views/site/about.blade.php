@@ -5,8 +5,8 @@
 <div id="main">
 <div id="why1" style="background-color: #fff;">
 	<div class="container">
-		<div class="d-sm-none d-md-block">
-			<h2 class="animated-logo animated fadeInUp visible contacts_page_logo" data-animation="fadeInUp" data-animation-delay="200">@lang('message.title2-page-aboutas')</h2>
+		<div class="d-block text-center animated-header">
+			<h1 class="decoration decoration-cont-style animated-about" data-animation="fadeInUp" data-animation-delay="200">@lang('message.title2-page-aboutas')</h1>
 		</div>
 	</div>
 </div>

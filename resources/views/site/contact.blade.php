@@ -13,8 +13,8 @@
 
 <div id="content" class="contacts_content">
   <div class="container">
-    <div class="d-sm-none d-md-block">
-      <h2 class="animated-logo animated fadeInUp visible contacts_page_logo" data-animation="fadeInUp" data-animation-delay="200">@lang('message.contact-head')</h2>
+    <div class="d-block text-center animated-header">
+      <h1 class="decoration decoration-cont-style animated-contact" data-animation="fadeInUp" data-animation-delay="200">@lang('message.contact-head')</h1>
     </div>
     <div class="row">
       <div class="col-sm-8 contact_content">

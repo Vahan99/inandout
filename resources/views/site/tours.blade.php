@@ -67,8 +67,8 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="d-sm-none d-md-block">
-                            <h2 class="animated-logo animated fadeInUp visible tours_page_logo " data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-tours')</h2>
+                        <div class="d-block text-center animated-header">
+                            <h1 class="decoration decoration-cont-style" data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-tours')</h1>
                         </div>
                         <div id="tabs-1">
                             <div class="row">
@@ -76,13 +76,13 @@
                             @if(!isset(request()->search))
                                 {{--<h3 style="text-align:center; color:#024768;">{{ $model->name }} </h3>--}}
                                 @endif
-                                <div class="">
+
                                     @if(count($tours))
                                         @foreach($tours as $key => $tour)
                                         @if(($key > 1) && ($key % 3) == 0)
                                             <div style="display: block; clear: both; height: 10px"></div>
                                         @endif
-                                        <div class="col-sm-4">
+                                        <div class="col-md-6 col-lg-4">
                                             <div class="popular">
                                                 <div class="popular_inner">
                                                     <figure>
@@ -107,7 +107,7 @@
                                         <br>
                                         <h4 class="text-center">@lang('message.result-not-found')</h4>
                                     @endif
-                                </div>
+
                             </div>
                         </div>
                     </div>

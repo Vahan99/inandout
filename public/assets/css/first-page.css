@@ -18,6 +18,7 @@ header {
     background-color: white;
     z-index: 100;
     top: 0;
+    box-shadow: 1px 1px 16px #d9d9d9;
 }
 
 header .header-container {
@@ -321,7 +322,7 @@ body .btn.btn-bordered {
     border-radius: 22px;
     text-transform: uppercase;
     font-size: 14px;
-    border: 1px solid #B3B3B3;
+    border: 1px solid #EF8200;
 }
 
 .btn-animated {
@@ -349,6 +350,23 @@ body .btn.btn-bordered {
 
 .hotels .hotels-container .decoration-cont-style:after {
     left: 44%;
+}
+
+.animated-header {
+    margin-bottom: 45px;
+}
+
+.animated-header .animated-about:after {
+    left: 30%;
+}
+
+.animated-header .animated-contact:after {
+    left: 40%;
+}
+
+.animated-header h1 {
+    color: black;
+    display: inline-block;
 }
 
 /*.hotels .hotels-container .decoration-hotels {*/
@@ -619,7 +637,7 @@ body .btn.btn-bordered {
 }
 
 .tour-info-container {
-    background-image: url("../img/tour-background.png");
+    background-image: url("../../img/tour-background.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -760,6 +778,10 @@ body .btn.btn-bordered {
 
 .orange-border-btm {
     border-bottom: 3px solid #FF752D !important;
+}
+
+.color-orange {
+    color: #FF752D;
 }
 
 /************************************/
@@ -985,6 +1007,10 @@ body .btn.btn-bordered {
     text-decoration: none;
     font-size: 18px;
     color: white;
+}
+
+.share-post-navigation a {
+    color: #EF8200;
 }
 
 @media only screen and (max-width: 1400px) {

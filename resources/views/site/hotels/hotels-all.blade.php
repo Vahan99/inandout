@@ -108,7 +108,7 @@
                                         @if(($key > 1) && ($key % 3) == 0)
                                             <div style="display: block; clear: both; height: 10px"></div>
                                         @endif
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-12 col-md-6 col-lg-4">
                                             <div class="popular">
                                                 <div class="popular_inner">
                                                     <figure>

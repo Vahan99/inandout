@@ -73,8 +73,8 @@
             </form>
 
             {{--add image with header--}}
-            <div class="d-sm-none d-md-block">
-                <h2 class="animated-logo animated fadeInUp visible drivers_page_logo " data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-cars')</h2>
+            <div class="d-block text-center animated-header">
+                <h1 class="decoration decoration-cont-style" data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-cars')</h1>
             </div>
             {{--<div class="d-none d-md-none text-center"><h2>@lang('message.aboutas-cars')</h2></div>--}}
             @if(count($model))
@@ -84,7 +84,7 @@
                             @if(($key > 1) && ($key % 3) == 0)
                                 <div style="display: block; clear: both; height: 10px"></div>
                             @endif
-                            <div class="col-sm-4 drivers_block">
+                            <div class="col-md-6 col-lg-4 drivers_block">
                                 <div class="popular">
                                     <div class="popular_inner">
                                         <figure>

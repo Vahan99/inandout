@@ -4379,11 +4379,11 @@ h5 {
 
 .animated-logo {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
     font-size: 83px;
     font-weight: bold;
-    height: 95.86px;
-    z-index: 10;
+    /*height: 95.86px;*/
+    /*z-index: 10;*/
     /*width: 278.585px;*/
 
 }
@@ -4655,8 +4655,9 @@ h5 {
 /*Hotels Page(Hotels)*/
 .hotels_page_logo {
     right: 0;
-    left: 780px;
-    margin: 70px 0px 160px 0px;
+    /*left: 780px;*/
+    /*margin: 70px 0px 160px 0px;*/
+    margin: 33px 0 83px 0;
 }
 
 .hotels_main_pic {
