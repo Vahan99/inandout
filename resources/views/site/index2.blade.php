@@ -50,7 +50,7 @@
                 <div class="transport-slider">
                     @foreach($cars as $car)
                         <div class="transport-slider-item">
-                            <div class="transport-slider-image" style="background-image: url('/uploads/{{ $car->grid_image }}')"></div>
+                            <div class="transport-slider-image" style="background-image: url('{{ asset('uploads/'.$car->grid_image) }}')"></div>
                             <div class="transport-slider-item-content">
                                 <h1>{{ $car->name }}</h1>
                                 <p>{!! strip_tags($car->desc) !!}</p>
