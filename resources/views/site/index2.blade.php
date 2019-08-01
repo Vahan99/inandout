@@ -4,13 +4,13 @@
 @extends('site.layouts.app')
 @section('content')
 
-<section class="main-page-image" style="background: url('{{asset('assets')}}/img/main-page-background.jpg')">
+<section class="main-page-image" style="background: url('{{asset('uploads')}}/{{ $settings->image }}')">
     <div style="background-color: rgba(30,44,55,.3);width: 100%;height: 100%">
         <h1 class="decoration-header decoration decoration-cont-style">@lang('message.aboutas-tours')</h1>
         @if(count($tours) > 2)
             <div class="tours-slider">
                 @foreach($tours as $tour)
-                    <div class="tour-single" style="background-image: url('../uploads/{{ $tour->grid_image }}')">
+                    <div class="tour-single" style="background-image: url('{{asset('uploads/')}}/{{$tour->grid_image}}')">
                         <div class="tour-single-content">
                             <span>{{ $tour->name }}</span>
                             <p>{!! strip_tags($tour->desc) !!}</p>
@@ -50,7 +50,7 @@
                 <div class="transport-slider">
                     @foreach($cars as $car)
                         <div class="transport-slider-item">
-                            <div class="transport-slider-image" style="background-image: url('/uploads/{{ $car->grid_image }}')"></div>
+                            <div class="transport-slider-image" style="background-image: url('{{ asset('uploads/'.$car->grid_image) }}')"></div>
                             <div class="transport-slider-item-content">
                                 <h1>{{ $car->name }}</h1>
                                 <p>{!! strip_tags($car->desc) !!}</p>

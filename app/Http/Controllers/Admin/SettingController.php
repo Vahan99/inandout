@@ -17,8 +17,11 @@ class SettingController extends BaseController
     {
         $model = Setting::first();
         $req = $request->all();
-        if($request->file('image')) {
+
+        if($model->image && file_exists(public_path('uploads/'.$model->image))) {
             unlink(public_path('uploads/') . $model->image);
+            $req['image'] = $this->fileUpload($request->file('image'), public_path('uploads/'))[0];
+        }else{
             $req['image'] = $this->fileUpload($request->file('image'), public_path('uploads/'))[0];
         }
         $model->update($req);
