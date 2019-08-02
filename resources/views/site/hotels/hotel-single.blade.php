@@ -46,48 +46,49 @@
                                         {!! $model->description !!}
                                     </p>
                                 </div>
-                            @if($model->meta_data)
-                                    <br>
-                                    <br>
-                                    <h5 class="text-center">@lang('message.apartment-price-policy-title')</h5>
-                                    <table class="table table-bordered" id="">
-                                        <thead>
-                                        <tr id="datefield">
-                                            <th class="text-center">@lang('message.hotel-room-type-title')</th>
+                                @if($model->data)
+                                    @if($model->meta_data)
+                                        <br>
+                                        <br>
+                                        <h5 class="text-center">@lang('message.apartment-price-policy-title')</h5>
+                                        <table class="table table-bordered" id="">
+                                            <thead>
+                                            <tr id="datefield">
+                                                <th class="text-center">@lang('message.hotel-room-type-title')</th>
+                                                @if(isset($model) && $model->meta_data[0])
+                                                    @foreach($model->meta_data[0]['dates'] as $date)
+                                                        <th class="text-center">
+                                                            {{ $date }}
+                                                        </th>
+                                                    @endforeach
+                                                @endif
+                                            </tr>
+                                            </thead>
+                                            <tbody>
                                             @if(isset($model) && $model->meta_data[0])
-                                                @foreach($model->meta_data[0]['dates'] as $date)
-                                                    <th class="text-center">
-                                                        {{ $date }}
-                                                    </th>
+                                                @foreach($model->meta_data[0]['data'] as $row => $data)
+                                                    <tr class="tr-row text-center">
+                                                    @foreach($data as $key => $value)
+                                                        @if($key === 0)
+                                                                <td class="text-center">
+                                                                    {{ \App\RoomType::find($value) ? \App\RoomType::find($value) ->name : ''}}
+                                                                </td>
+                                                            @else
+                                                                <td class="text-center">
+                                                                    <a class="color-orange" href="{{ route('reserve-hotel', ['residence_id' => $model->id, 'row' => $row, 'key' => $key]) }}">
+                                                                        {{ currency($value, 'AMD', currency()->getUserCurrency()) }}
+                                                                    </a>
+                                                                </td>
+                                                            @endif
+                                                        @endforeach
+                                                    </tr>
                                                 @endforeach
                                             @endif
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        @if(isset($model) && $model->meta_data[0])
-                                            @foreach($model->meta_data[0]['data'] as $row => $data)
-                                                <tr class="tr-row text-center">
-                                                @foreach($data as $key => $value)
-                                                    @if($key === 0)
-                                                            <td class="text-center">
-                                                                {{ \App\RoomType::find($value) ? \App\RoomType::find($value) ->name : ''}}
-                                                            </td>
-                                                        @else
-                                                            <td class="text-center">
-                                                                <a class="color-orange" href="{{ route('reserve-hotel', ['residence_id' => $model->id, 'row' => $row, 'key' => $key]) }}">
-                                                                    {{ currency($value, 'AMD', currency()->getUserCurrency()) }}
-                                                                </a>
-                                                            </td>
-                                                        @endif
-                                                    @endforeach
-                                                </tr>
-                                            @endforeach
-                                        @endif
-                                        </tbody>
-                                    </table>
-                                @endif
-                                <div class="post-story-body clearfix text-center">
-                                    @if($model->amenity_data)
+                                            </tbody>
+                                        </table>
+                                    @endif
+                                    <div class="post-story-body clearfix text-center">
+                                        @if($model->amenity_data)
                                         <table class="table-responsive table table-bordered" id="">
                                             <thead>
                                             <tr>
@@ -118,7 +119,8 @@
                                             </tbody>
                                         </table>
                                     @endif
-                            </div>
+                                    </div>
+                                @endif
                             </div>
                             {!! $model->after_text !!}
                             <div class="post-story-tags clearfix">
@@ -139,5 +141,7 @@
     <meta property="og:description"   content="{!! strip_tags($model->description) !!}" />
     <meta name="keywords"             content="{{ $model->name }}" />
     <meta name="description"          content="{!! strip_tags($model->description) !!}" />
-    <meta property="og:image"         content="{{ URL::to('/') }}/uploads/{{ $model->images[0]->image }}" />
+    @if($model->images()->count())
+        <meta property="og:image"         content="{{ URL::to('/') }}/uploads/{{ $model->images[0]->image }}" />
+    @endif
 @endpush
