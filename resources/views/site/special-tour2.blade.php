@@ -6,7 +6,6 @@
 
 @section('content')
     <main>
-        <div class="empty-div"></div>
         <section class="tour-slider-container">
             <div class="tour-info-slider">
                 @if(count($model->slider_images))
@@ -23,7 +22,7 @@
                 @if(count($days))
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-12 col-md-6">
                                 <ul class="days-short-description">
                                     @foreach($days as $key => $day)
                                         <li class="{{ !$key ? 'active' : '' }}">
@@ -33,11 +32,11 @@
                                     @endforeach
                                 </ul>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-12 col-md-6">
                                 @foreach($days as $key => $day)
                                     <div class="day-content day-content-{{$key}}" @if($key) style="display: none;" @endif>
                                         <h1>{{ $day->name }}</h1>
-                                        <h2>{{ $day->title }}</h2>
+                                        <h3>{{ $day->title }}</h3>
                                         <p>{!! $day->desc !!}</p>
                                     </div>
                                 @endforeach
@@ -51,7 +50,7 @@
         <section class="tours-days-prices">
             <div class="tours-days-prices-container">
                 <h1>@lang('message.aboutas-min-title2')</h1>
-                <table class="table">
+                <table class="table table-responsive-sm">
                     <thead>
                     <tr>
                         <th scope="col" class="black-border-btm">{{ $head_texts['num_of_person_' . $lang] }}</th>

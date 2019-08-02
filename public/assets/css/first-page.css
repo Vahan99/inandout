@@ -515,6 +515,10 @@ body .btn.btn-bordered {
     color: white;
 }
 
+.footer {
+    box-shadow: 1px 1px 16px #ececec;
+}
+
 .footer-container {
     max-width: 1360px;
     margin: auto;
@@ -675,7 +679,7 @@ body .btn.btn-bordered {
 }
 
 .days-short-description {
-
+    margin-bottom: 50px;
 }
 
 .days-short-description li {
@@ -724,7 +728,7 @@ body .btn.btn-bordered {
     color: #FF752D;
 }
 
-.day-content h2 {
+.day-content h3 {
     font-size: 21px;
     color: #445565;
     font-weight: bold;
@@ -1023,6 +1027,10 @@ body .btn.btn-bordered {
     color: #EF8200;
 }
 
+.range_input:after {
+    display: none!important;
+}
+
 @media only screen and (max-width: 1400px) {
     header .header-container {
         max-width: 950px;
@@ -1046,6 +1054,15 @@ body .btn.btn-bordered {
     }
     .transport .transport-container .transport-content {
         max-width: 950px;
+    }
+    .tour-slider-container {
+        max-width: 98%;
+    }
+    .tour-info-container .tour-info-content {
+        max-width: 98%;
+    }
+    .share-post {
+        max-width: 98%;
     }
 }
 
@@ -1086,6 +1103,21 @@ body .btn.btn-bordered {
     }
     .animated-header .animated-hotels:after {
         left: 50%;
+    }
+    .tour-info-container .tour-info-content > h1 {
+        font-size: 35px;
+    }
+    .days-short-description li a {
+        font-size: 35px;
+    }
+    .day-content h1 {
+        font-size: 35px;
+    }
+    .tours-days-prices .tours-days-prices-container {
+        max-width: 98%;
+    }
+    .tour-slider-container .tour-info-slider-item {
+        height: 415px;
     }
 }
 
@@ -1169,6 +1201,27 @@ body .btn.btn-bordered {
     .animated-header .animated-hotels:after {
         left: 50%;
     }
+    .tour-info-container .tour-info-content > h1 {
+         font-size: 27px;
+     }
+    .days-short-description li a {
+        font-size: 27px;
+    }
+    .day-content h1 {
+        font-size: 27px;
+    }
+    .day-content h3 {
+        font-size: 18px;
+    }
+    .day-content {
+        padding: 10px 15px;
+    }
+    .share-post {
+        flex-wrap: wrap;
+    }
+    .tour-slider-container .tour-info-slider-item {
+        height: 300px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1186,5 +1239,12 @@ body .btn.btn-bordered {
     .blog_content {
         max-width: 96%;
         margin: auto;
+    }
+    .days-short-description li.active:after {
+        height: 59px;
+        top: 16px;
+    }
+    .tour-slider-container .tour-info-slider-item {
+        height: 236px;
     }
 }

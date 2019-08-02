@@ -1,7 +1,7 @@
 @php
     $settings = \App\Setting::first();
 @endphp
-<footer>
+<footer class="footer">
     <div class="footer-container">
         <div class="footer-row-1">
             <div class="container-fluid">
