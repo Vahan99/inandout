@@ -251,10 +251,11 @@ header .navigation-bar > ul > li > a {
 .tours-slider {
     max-width: 1360px;
     margin: auto;
-    position: absolute;
-    top: 84%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /*position: absolute;*/
+    /*top: 84%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    margin-top: -294px;
 }
 
 .tours-slider .tour-single {
