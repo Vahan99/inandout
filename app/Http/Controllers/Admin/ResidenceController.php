@@ -50,7 +50,6 @@ class ResidenceController extends BaseController
         $req['slug'] = str_slug($req['name_en']);
         $req['amenities'] = json_encode($request->amenities);
         $req['grid_image'] = $this->fileUpload($request->file('grid_image'), public_path('uploads/'))[0];
-//        dd($request->bed_type);
         $id = Residence::create($req)->id;
         if($req['room_type'] && count($req['room_type'])>1) {
             foreach($req['room_type'] as $key => $room_id){
@@ -59,8 +58,6 @@ class ResidenceController extends BaseController
                     'room_type_id' => $room_id
                 ]);
             }
-//            dd($req['room_type']);
-
         }
         if($req['bed_type']) {
             foreach($req['bed_type'] as $key => $bed_id){
