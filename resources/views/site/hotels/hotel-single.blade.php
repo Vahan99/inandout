@@ -21,10 +21,10 @@
                                                             {{--@foreach($model->images as $image)--}}
                                                                 {{--<li style="width: 1132px;">--}}
                                                                     {{--<div class="sl1">--}}
-                                                                        {{--<div class="sl1_inner">--}}
-                                                                            {{--<img src="/uploads/{{ $image->image }}"--}}
-                                                                                 {{--alt="{{ $model->name }}" class="img-responsive">--}}
-                                                                        {{--</div>--}}
+                                                                        <div class="sl1_inner">
+                                                                            <img src="/uploads/{{ $model->grid_image }}"
+                                                                                 class="img-responsive">
+                                                                        </div>
                                                                     {{--</div>--}}
                                                                 {{--</li>--}}
                                                             {{--@endforeach--}}
@@ -44,6 +44,7 @@
                                 <div class="post-story-body clearfix">
                                     <p>
                                         {!! $model->description !!}
+
                                     </p>
                                 </div>
                                 @if($model->data)
