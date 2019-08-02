@@ -29,15 +29,15 @@
         @if(count($hotels))
             <div class="hotels-slider">
                 @foreach($hotels as $hotel)
-                    <a href="javascript:;" class="hotels-content">
+                    <div class="hotels-content">
                         @foreach($hotel as $h)
-                            <div class="hotels-item" style="background-image: url('/uploads/{{ $h->grid_image }}')">
-                                <div class="hotels-item-background">
-                                    <p>{{$h->name}}</p>
-                                </div>
-                            </div>
+                            <a href="{{ route('hotel-single', ['slug' => $h->slug]) }}" class="hotels-item" style="background-image: url('/uploads/{{ $h->grid_image }}')">
+                                    <div class="hotels-item-background">
+                                        <p>{{$h->name}}</p>
+                                    </div>
+                            </a>
                         @endforeach
-                    </a>
+                    </div>
                 @endforeach
             </div>
         @endif
