@@ -74,7 +74,7 @@
 
             {{--add image with header--}}
             <div class="d-block text-center animated-header">
-                <h1 class="decoration decoration-cont-style" data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-cars')</h1>
+                <h1 class="decoration decoration-cont-style animated-drivers" data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-cars')</h1>
             </div>
             {{--<div class="d-none d-md-none text-center"><h2>@lang('message.aboutas-cars')</h2></div>--}}
             @if(count($model))

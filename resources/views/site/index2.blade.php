@@ -7,25 +7,26 @@
 <section class="main-page-image" style="background: url('{{asset('uploads')}}/{{ $settings->image }}')">
     <div style="background-color: rgba(30,44,55,.3);width: 100%;height: 100%">
         <h1 class="decoration-header decoration decoration-cont-style">@lang('message.aboutas-tours')</h1>
-        @if(count($tours) > 2)
-            <div class="tours-slider">
-                @foreach($tours as $tour)
-                    <div class="tour-single" style="background-image: url('{{asset('uploads/')}}/{{$tour->grid_image}}')">
-                        <div class="tour-single-content">
-                            <span>{{ $tour->name }}</span>
-                            <p>{!! strip_tags($tour->desc) !!}</p>
-                            <button class="btn btn-orange btn-animated"><a href="{{ route('tour-single', ['slug' => $tour->slug]) }}">@lang('message.read-more')</a></button>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        @endif
+
     </div>
+    @if(count($tours) > 2)
+        <div class="tours-slider">
+            @foreach($tours as $tour)
+                <div class="tour-single" style="background-image: url('{{asset('uploads/')}}/{{$tour->grid_image}}')">
+                    <div class="tour-single-content">
+                        <span>{{ $tour->name }}</span>
+                        <p>{!! strip_tags($tour->desc) !!}</p>
+                        <button class="btn btn-orange btn-animated"><a href="{{ route('tour-single', ['slug' => $tour->slug]) }}">@lang('message.read-more')</a></button>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    @endif
 </section>
 <section class="hotels">
     <div class="hotels-container">
         <h1 class="decoration decoration-cont-style">@lang('message.aboutas-hotels')</h1>
-        @if(count($hotels) > 2)
+        @if(count($hotels))
             <div class="hotels-slider">
                 @foreach($hotels as $hotel)
                     <a href="javascript:;" class="hotels-content">

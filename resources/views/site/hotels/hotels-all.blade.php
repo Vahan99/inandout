@@ -70,8 +70,8 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="d-sm-none d-md-block">
-                            <h2 class="animated-logo animated fadeInUp visible hotels_page_logo " data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-hotels')</h2>
+                        <div class="d-block text-center animated-header">
+                            <h1 class="decoration decoration-cont-style animated-hotels" data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-hotels')</h1>
                         </div>
                         @if(count($hotels))
                             <div class="row">

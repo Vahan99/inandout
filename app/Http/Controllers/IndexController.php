@@ -42,6 +42,7 @@ class IndexController extends Controller
         $tours = Tour::with('region')->whereSightseeingPlace(0)->take(20)/*->inRandomOrder()*/->orderBy('id', 'desc')->get();
         $cars = CarDriver::with('sliderImages')->take(10)->/*inRandomOrder()->*/orderBy('id', 'desc')->get();
         $settings = \App\Setting::first();
+
         return view('site.index2', compact('tours','cars', 'hotels','settings'));
     }
 

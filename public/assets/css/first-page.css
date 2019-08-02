@@ -241,6 +241,7 @@ header .navigation-bar > ul > li > a {
     content: '';
     position: absolute;
     background-image: url("../img/decoration-logo.png");
+    background-repeat: no-repeat;
     width: 384px;
     height: 69px;
     left: 11%;
@@ -250,10 +251,11 @@ header .navigation-bar > ul > li > a {
 .tours-slider {
     max-width: 1360px;
     margin: auto;
-    position: absolute;
-    top: 84%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    /*position: absolute;*/
+    /*top: 84%;*/
+    /*left: 50%;*/
+    /*transform: translate(-50%, -50%);*/
+    margin-top: -294px;
 }
 
 .tours-slider .tour-single {
@@ -361,8 +363,15 @@ body .btn.btn-bordered {
 }
 
 .animated-header .animated-contact:after {
-    left: 40%;
+    left: 45%;
 }
+.animated-header .animated-hotels:after {
+    left: 45%;
+}
+.animated-header .animated-drivers:after {
+    left: 65%;
+}
+
 
 .animated-header h1 {
     color: black;
@@ -1063,6 +1072,22 @@ body .btn.btn-bordered {
 
 }
 
+@media only screen and (max-width: 1024px){
+    .decoration-cont-style {
+        font-size: 45px;
+    }
+    .decoration:after {
+        background-image: url("../img/decoration-middle.png");
+        width: 222px;
+        height: 42px;
+        left: 25%;
+        top: 61%;
+    }
+    .animated-header .animated-hotels:after {
+        left: 50%;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .tours-slider {
         max-width:98%;
@@ -1127,11 +1152,38 @@ body .btn.btn-bordered {
         right: 10px;
         top: 26px;
     }
+    .footer-row-2 .logo-social-links {
+        left: 52%;
+    }
+    .decoration-cont-style {
+        font-size: 22px;
+    }
+    .decoration:after {
+        background-image: url("../img/decoration-small.png");
+        width: 222px;
+        height: 42px;
+        left: 25%;
+        top: 61%;
+    }
+    .animated-header .animated-hotels:after {
+        left: 50%;
+    }
 }
 
 @media only screen and (max-width: 400px) {
     .transport-slider .transport-slider-item:not(:last-child) {
         /* margin-right: 11px; */
+        margin: auto;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    .footer-row-2 .logo-social-links p {
+        padding-right: 27px;
+    }
+    .blog_content {
+        max-width: 96%;
         margin: auto;
     }
 }

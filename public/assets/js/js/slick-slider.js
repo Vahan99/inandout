@@ -1,11 +1,10 @@
 $(document).ready(function () {
   $('.tours-slider').slick({
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 1,
-    adaptiveHeight: true,
     arrows: false,
     responsive: [
       {
