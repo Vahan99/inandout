@@ -32,6 +32,10 @@ $(document).ready(function () {
     $('.mobile-menu').toggleClass('menu--position');
   });
 
+  $('.hide-menu').on('click',function (e) {
+    e.stopPropagation();
+  });
+
   $('.menu-header').on('click',function () {
     let currentElem = $(this).next('ul');
     $('.hided-content').not(currentElem).slideUp(500);
