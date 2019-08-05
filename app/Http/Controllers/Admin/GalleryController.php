@@ -17,12 +17,15 @@ class GalleryController extends BaseController
 
     public function edit(Request $request)
     {
-        // dd($request->file());
         $pages = array_keys($request->file());
         foreach ($pages as $key => $page) {
             $model = Gallery::wherePage($page)->first();
-            unlink(public_path('uploads/') . $model->image);
-            $model->image = $this->fileUpload($request->file($page), public_path('uploads'))[0];
+            if($model && file_exists(public_path('uploads/') . $model->image)){
+                unlink(public_path('uploads/') . $model->image);
+                $model->image = $this->fileUpload($request->file($page), public_path('uploads'))[0];
+            }else{
+                $model->image = $this->fileUpload($request->file($page), public_path('uploads'))[0];
+            }
             $model->save();
         }
 

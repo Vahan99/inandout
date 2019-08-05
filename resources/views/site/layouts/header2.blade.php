@@ -3,33 +3,35 @@
         <a href="/" class="logo-container"></a>
         <div class="logo-social-links selects d-flex">
             <ul>
-                @if(!is_null($settings->tripadvisor))
-                    <li>
-                        <a href="{{ $settings->tripadvisor }}">
-                            <i class="tripadvisor"></i>
-                        </a>
-                    </li>
-                @endif
-                @if(!is_null($settings->facebook))
-                    <li>
-                        <a href="{{ $settings->facebook }}">
-                            <i class="facebook"></i>
-                        </a>
-                    </li>
-                @endif
-                @if(!is_null($settings->vk))
-                    <li>
-                        <a href="{{ $settings->vk }}">
-                            <i class="vkontakte"></i>
-                        </a>
-                    </li>
-                @endif
-                @if(!is_null($settings->instagram))
+                @if($settings)
+                    @if(!is_null($settings->tripadvisor))
+                        <li>
+                            <a href="{{ $settings->tripadvisor }}">
+                                <i class="tripadvisor"></i>
+                            </a>
+                        </li>
+                    @endif
+                    @if(!is_null($settings->facebook))
+                        <li>
+                            <a href="{{ $settings->facebook }}">
+                                <i class="facebook"></i>
+                            </a>
+                        </li>
+                    @endif
+                    @if(!is_null($settings->vk))
+                        <li>
+                            <a href="{{ $settings->vk }}">
+                                <i class="vkontakte"></i>
+                            </a>
+                        </li>
+                    @endif
+                    @if(!is_null($settings->instagram))
                     <li>
                         <a href="{{ $settings->instagram }}">
                             <i class="instagram"></i>
                         </a>
                     </li>
+                @endif
                 @endif
             </ul>
         </div>
@@ -128,7 +130,7 @@
                         <li><a href="{{ route('about.index') }}/">@lang('message.nav-about')</a></li>
                         <li><a href="{{ route('view.contact') }}">@lang('message.nav-contacts')</a></li>
                         <li><a href="{{ route('vacancy.index') }}">@lang('message.nav-job')</a></li>
-                        <li><a href="{{ route('service.index') }}">@lang('message.nav-more')</a></li>
+                        <li><a href="{{ route('service.index') }}">@lang('message.title-page-service')</a></li>
                     </ul>
                 </li>
             </ul>

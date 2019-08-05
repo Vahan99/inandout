@@ -7,40 +7,36 @@
                     <div class="blog_content" style="margin-top: 50px">
                         <div class="post post-full">
                             <div class="clearfix"></div>
-                            {{--<div class="post-header">--}}
-                                {{--<div class="post-slide">--}}
-                                    {{--<div id="sl1">--}}
-                                        {{--<a class="sl1_prev" href="#"></a>--}}
-                                        {{--<a class="sl1_next" href="#"></a>--}}
-                                        {{--<div class="sl1_pagination"></div>--}}
-                                        {{--<div class="carousel-box">--}}
-                                            {{--<div class="inner">--}}
-                                                {{--<div class="carousel main">--}}
-                                                    {{--<div class="caroufredsel_wrapper">--}}
-                                                        {{--<ul>--}}
-                                                            {{--@foreach($model->images as $image)--}}
-                                                                {{--<li style="width: 1132px;">--}}
-                                                                    {{--<div class="sl1">--}}
+                            <div class="post-header">
+                                <div class="post-slide">
+                                    <div id="sl1">
+                                        <a class="sl1_prev" href="#"></a>
+                                        <a class="sl1_next" href="#"></a>
+                                        <div class="sl1_pagination"></div>
+                                        <div class="carousel-box">
+                                            <div class="inner">
+                                                <div class="carousel main">
+                                                    <div class="caroufredsel_wrapper">
+                                                        <ul>
+                                                            @foreach($model->images as $image)
+                                                                <li style="width: 1132px;">
+                                                                    <div class="sl1">
                                                                         <div class="sl1_inner">
-                                                                            <img src="/uploads/{{ $model->grid_image }}"
-                                                                                 class="img-responsive">
+                                                                            <img src="{{ asset('uploads/'.$image->image )}}" class="img-responsive">
                                                                         </div>
-                                                                    {{--</div>--}}
-                                                                {{--</li>--}}
-                                                            {{--@endforeach--}}
-                                                        {{--</ul>--}}
-                                                    {{--</div>--}}
-                                                {{--</div>--}}
-                                            {{--</div>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
+                                                                    </div>
+                                                                </li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="post-story">
                                 <h3 class="hch">{{ $model->name }}</h3>
-                                {{--<div class="post-story-info margin-top">--}}
-                                    {{--<div class="date12 col-md-offset-5">@lang('message.residence-desc')</div>--}}
-                                {{--</div>--}}
                                 <div class="post-story-body clearfix">
                                     <p>
                                         {!! $model->description !!}

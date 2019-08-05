@@ -91,7 +91,7 @@ return [
     //restaurant
     'title-page-restaurant' => 'Ռեստորաններ',
     //service
-    'title-page-service' => 'Կարծիքներ',
+    'title-page-service' => 'Կարծիք',
 
     'hotel' => 'Հյուրանոց|Հյուրանոցներ',
     //apartment

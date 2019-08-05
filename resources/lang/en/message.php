@@ -93,7 +93,7 @@ return [
     //restaurant
     'title-page-restaurant' => 'Restaurants',
     //service
-    'title-page-service' => 'Comments',
+    'title-page-service' => 'Services',
     //apartment
     'table-name' => 'Name',
     'table-qty' => 'Qty',

@@ -4,7 +4,7 @@
 @extends('site.layouts.app')
 @section('content')
 
-<section class="main-page-image" style="background: url('{{asset('uploads')}}/{{ $settings->image }}')">
+<section class="main-page-image" @if($settings)style="background-image: url('{{asset('uploads')}}/{{ $settings->image }}')"@endif>
     <div style="background-color: rgba(30,44,55,.3);width: 100%;height: 100%">
         <h1 class="decoration-header decoration decoration-cont-style">@lang('message.aboutas-tours')</h1>
 

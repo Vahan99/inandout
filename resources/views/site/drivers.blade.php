@@ -9,10 +9,10 @@
 
     <div class="container-fluid drivers_back">
     <div class="container drivers_container">
-        <div class="row">
+        <div>
         <br>
 
-        <div {{--class="col-md-12--}}">
+        <div {{--class="col-md-12--}}>
             <form action="{{ route('drivers.index') }}" method="get" class="form1">
                 <div class="row">
                     <div class="{{--col-sm-12--}} col-md-2">

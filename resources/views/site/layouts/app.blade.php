@@ -126,7 +126,7 @@
                 <li><a href="{{ route('about.index') }}">@lang('message.nav-about')</a></li>
                 <li><a href="{{ route('view.contact') }}">@lang('message.nav-contacts')</a></li>
                 <li><a href="{{ route('vacancy.index') }}">@lang('message.nav-job')</a></li>
-                <li><a href="{{ route('service.index') }}">@lang('message.nav-more')</a></li>
+                <li><a href="{{ route('service.index') }}">@lang('message.title-page-service')</a></li>
             </ul>
         </li>
     </ul>

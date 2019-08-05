@@ -84,9 +84,11 @@
                                         <div class="col-sm-12 col-md-6 col-lg-4">
                                             <div class="popular">
                                                 <div class="popular_inner">
-                                                    <figure>
-                                                        <img src="/uploads/{{ $hotel->grid_image }}" alt="{{ $hotel->name }}" class="img-responsive">
-                                                    </figure>
+                                                    @if($hotel->grid_image)
+                                                        <figure>
+                                                            <img src="{{ asset('uploads/'. $hotel->grid_image) }}" alt="{{ $hotel->name }}" class="img-responsive">
+                                                        </figure>
+                                                    @endif
                                                     <div class="caption">
                                                         <div class="txt1"><span>{{ $hotel->name }}</span></div>
                                                         <div class="txt2"><span class="ellipsis">{!! strip_tags($hotel->description) !!}</span></div>
