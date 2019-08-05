@@ -59,8 +59,9 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-row-3 text-center pb-2 pt-2">
+        <div class="footer-row-3">
             <p style="color: #1E2C37;font-size: 12px">All Rights Reserved - 2019</p>
+            <h1> Powered by <a href="https://mgplab.com/" target="_blank">Megapolis[Lab]</a></h1>
         </div>
     </div>
 </footer>
