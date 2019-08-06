@@ -1,6 +1,7 @@
 @php
     $settings = \App\Setting::first();
 @endphp
+{{--@extends('site.layouts.header2')--}}
 @extends('site.layouts.app')
 @section('content')
     {{----}}

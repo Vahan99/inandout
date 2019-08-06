@@ -41,15 +41,25 @@
                         @php($i++)
                             <tr>
                                 <td style="width: 50%">
-                                	<div class="col-md-4">
+                                	<div class="col-md-3">
                                     	<input type="text" class="form-control name_en" placeholder="Enter name EN" name="name_en{{ $i }}" required value="{{ $data['name']['en'] }}">
                                 	</div>
-                                	<div class="col-md-4">
+                                	<div class="col-md-3">
                                     	<input type="text" class="form-control name_ru" placeholder="Enter name RU" name="name_ru{{ $i }}" required value="{{ $data['name']['ru'] }}">
                                 	</div>
-                                	<div class="col-md-4">
+                                	<div class="col-md-3">
                                     	<input type="text" class="form-control name_hy" placeholder="Enter name HY" name="name_hy{{ $i }}" required value="{{ $data['name']['hy'] }}">
                                 	</div>
+                                    <div class="col-md-3">
+                                        <select class="multi_select" name="room_types" multiple>
+                                            <option>Superior Room</option>
+                                            <option>Executive Room</option>
+                                            <option>Pacific Room</option>
+                                            <option>Deluxe Suite</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <td>
                                 </td>
                                 <td>
                                 	<div class="col-md-3">
@@ -75,7 +85,7 @@
                                                 type="text" 
                                                 class="form-control text" 
                                                 @if(($data['qty'] !== 'v') && ($data['qty'] !== 'x'))
-                                                value="{{ $data['qty'] }}"
+                                                    value={{ $data['qty'] }}
                                                 @else
                                                 'readonly'
                                                 @endif>
@@ -96,6 +106,7 @@
 </div>
 @endsection
 @push('scripts')
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <script type="text/javascript">
     $.ajaxSetup({
         headers: {
@@ -136,7 +147,7 @@
         		hy: $(el).find('.name_hy').val(),
         		en: $(el).find('.name_en').val()
         	};
-    	
+    	    var select = $(el).find('.multi_select');
         	if(qty === 'text') {
                 validate = true;
                 qty = $(el).find('.text').val();
@@ -153,7 +164,7 @@
         });
 
         $('#form').validate({
-            submitHandler: function() {
+            submitHandler: function(e) {
                 console.log(validate);
                 if(validate) {
                     $.ajax({

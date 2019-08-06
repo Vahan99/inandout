@@ -15,9 +15,9 @@
     .top1_wrapper .currency {
         border-right: 0;
     }
-    .fixed-nav img, header img {
-        width: 60%;
-    }
+    /*.fixed-nav img, header img {*/
+        /*width: 60%;*/
+    /*}*/
 
     .navbar_ .navbar-toggle {
         margin-top: 20px;

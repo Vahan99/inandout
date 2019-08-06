@@ -39,9 +39,19 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
             Route::get('delete-tour-type/{id}', 'Admin\TourController@deleteTourType')->name('tour.delete-tour-type');
             Route::get('update-tour-type/{id}', 'Admin\TourController@updateTourType')->name('tour.update-tour-type');
             Route::post('update-tour-type-post/{id}', 'Admin\TourController@updateTourTypePost')->name('tour.update-tour-type-post');
-            
+            Route::get('create-update-tour-days/{id}', 'Admin\TourController@createUpdateTourDays')->name('tour.create-tour-days');
+            Route::get('update-tour-days/{id}','Admin\TourController@updateTourDays')->name('tour.update-days');
+            Route::get('delete-tour-days/{id}','Admin\TourController@deleteTourDays')->name('tour.delete-days');
+
             // ajax route
             Route::post('ge-children-tour-types', 'Admin\TourController@getChildrenTourTypes')->name('get_children_tour_types');
+
+            Route::get('tour-days/{tour_id}', 'Admin\TourController@showTourDays')->name('tour-days.show');
+            Route::get('tour-days/form/{tour_id}', 'Admin\TourController@tourDaysForm')->name('tour-days.form');
+            Route::get('tour-days/update_form/{tour_day_id}', 'Admin\TourController@tourDaysUpdateForm')->name('tour-days.update-form');
+            Route::post('tour-days/create/{tour_id}', 'Admin\TourController@addTourDay')->name('tour-days.create');
+            Route::post('tour-days/update/{tour_day_id}', 'Admin\TourController@updateTourDay')->name('tour-days.update');
+            Route::get('tour-days/delete/{tour_day_id}', 'Admin\TourController@deleteTourDay')->name('tour-days.delete');
         });
         Route::group(['prefix' => 'restaurant'], function () {
             Route::get('index', 'Admin\RestaurantController@show')->name('restaurant.show');

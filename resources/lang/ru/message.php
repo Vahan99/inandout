@@ -187,6 +187,13 @@ return [
     'price-policy-with-driver' => 'Ценовая политика с водителем',
     'price-policy-without-driver' => 'Ценовая политика без водителя',
     'starting-place' => 'Начальная точка',
-    'enter_tour_name' => 'Введите название тура'
+    'enter_tour_name' => 'Введите название тура',
+    'the price includes' => 'Цена включает',
+    'the price does not include' => 'Цена не включает',
+    'room-type' => 'Тип номера',
+    'bed-type' => 'Тип кровати',
+    'price' => 'Цена',
+    'region' => 'Область',
+
 ];
 

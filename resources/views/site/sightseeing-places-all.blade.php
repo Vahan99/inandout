@@ -34,50 +34,50 @@
 }
 </style>
 
-@if(isset($region) && isset($region->slider_images))
-    <div id="sl1">
-        <a class="sl1_prev" href="#"></a>
-        <a class="sl1_next" href="#"></a>
-        <div class="sl1_pagination"></div>
-        <div class="carousel-box">
-            <div class="inner">
-                <div class="carousel main">
-                    <ul>
-                        @foreach($region->slider_images as $image)
-                            <li>
-                                <div class="sl1">
-                                    <div class="sl1_inner">
-                                        <img src="/uploads/{{ $image }}" alt="{{ $region->name }}" class="img-responsive">
-                                    </div>
-                                </div>
-                            </li>
-                        @endforeach
-                    </ul>
-                    <div class="sl-desc container">
-                        <div class="sl-desc-overlay"></div>
-                        <div class="col-md-10 col-md-offset-1">
-                            <div class="content">
-                                <div class="txt1 animated fadeIn visible" data-animation="fadeIn" data-animation-delay="100">{{ $region->name }}</div>
-                                <div class="txt3 animated fadeIn visible" data-animation="fadeIn" data-animation-delay="200">
-                                    {!! $region->description !!}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-@else
-    <div id="parallax2" class="parallax">
-        <div class="bg2 parallax-bg bg-fixed" style="background-position: 50% -61px; background-image: url('./uploads/{{ $image }}')"></div>
-        <div class="overlay"></div>
-        <div class="parallax-content">
-            <div class="container">
-            </div>
-        </div>
-    </div>
-@endif
+{{--@if(isset($region) && isset($region->slider_images))--}}
+    {{--<div id="sl1">--}}
+        {{--<a class="sl1_prev" href="#"></a>--}}
+        {{--<a class="sl1_next" href="#"></a>--}}
+        {{--<div class="sl1_pagination"></div>--}}
+        {{--<div class="carousel-box">--}}
+            {{--<div class="inner">--}}
+                {{--<div class="carousel main">--}}
+                    {{--<ul>--}}
+                        {{--@foreach($region->slider_images as $image)--}}
+                            {{--<li>--}}
+                                {{--<div class="sl1">--}}
+                                    {{--<div class="sl1_inner">--}}
+                                        {{--<img src="/uploads/{{ $image }}" alt="{{ $region->name }}" class="img-responsive">--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</li>--}}
+                        {{--@endforeach--}}
+                    {{--</ul>--}}
+                    {{--<div class="sl-desc container">--}}
+                        {{--<div class="sl-desc-overlay"></div>--}}
+                        {{--<div class="col-md-10 col-md-offset-1">--}}
+                            {{--<div class="content">--}}
+                                {{--<div class="txt1 animated fadeIn visible" data-animation="fadeIn" data-animation-delay="100">{{ $region->name }}</div>--}}
+                                {{--<div class="txt3 animated fadeIn visible" data-animation="fadeIn" data-animation-delay="200">--}}
+                                    {{--{!! $region->description !!}--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--@else--}}
+    {{--<div id="parallax2" class="parallax">--}}
+        {{--<div class="bg2 parallax-bg bg-fixed" style="background-position: 50% -61px; background-image: url('./uploads/{{ $image }}')"></div>--}}
+        {{--<div class="overlay"></div>--}}
+        {{--<div class="parallax-content">--}}
+            {{--<div class="container">--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    {{--</div>--}}
+{{--@endif--}}
 
 <div id="content">
     <div class="container">
@@ -89,7 +89,7 @@
                             <div class="col-sm-3 col-md-3">
                                 <label>@lang('message.select-region-title'):</label>
                                 <div class="select1_wrapper">
-                                    <div class="select1_inner">
+                                    {{--<div class="select1_inner">--}}
                                         <select class="select2 select select2-hidden-accessible" name="slug" style="width: 100%" tabindex="-1" aria-hidden="true">
                                             <option value="">@lang('message.select-all')</option>
                                             @foreach($list as $region)
@@ -97,8 +97,9 @@
                                                 <option value="{{ $region->slug }}" {{ $slug && $slug == $region->slug ? 'selected' : '' }}>{{ $region->name }}</option>
                                                 @endif
                                             @endforeach
-                                        </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9bvf-container"><span class="select2-selection__rendered" id="select2-9bvf-container" title="City or Airport">City or Airport</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                    </div>
+                                        </select>
+                                        {{--<span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9bvf-container"><span class="select2-selection__rendered" id="select2-9bvf-container" title="City or Airport">City or Airport</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>--}}
+                                    {{--</div>--}}
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-3">
@@ -123,7 +124,7 @@
                                 @if(($key > 1) && ($key % 3) == 0)
                                     <div style="display: block; clear: both; height: 10px"></div>
                                 @endif
-                                <div class="col-sm-4">
+                                <div class="col-md-6 col-lg-4">
                                     <div class="popular">
                                         <div class="popular_inner">
                                             <figure>

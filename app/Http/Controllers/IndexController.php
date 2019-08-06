@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\RoomType;
 use App\Setting;
 use App\Tour;
 use App\CarDriver;
@@ -16,16 +17,33 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
+use Torann\Currency\Currency;
 
 class IndexController extends Controller
 {
+//    public function index()
+//    {
+//        $hotels = Residence::with('images')->where('residence_type',20)->inRandomOrder()->take(10)->orderBy('id', 'desc')->get();
+//        $tours = Tour::with('region')->whereSightseeingPlace(0)->take(10)->inRandomOrder()->orderBy('id', 'desc')->get();
+//        $cars = CarDriver::with('sliderImages')->take(10)->inRandomOrder()->orderBy('id', 'desc')->get();
+//        $settings = \App\Setting::first();
+//        return view('site.index', compact('tours','cars', 'hotels','settings'));
+//    }
     public function index()
     {
-        $hotels = Residence::with('images')->where('residence_type',20)->inRandomOrder()->take(10)->orderBy('id', 'desc')->get();
-        $tours = Tour::with('region')->whereSightseeingPlace(0)->take(10)->inRandomOrder()->orderBy('id', 'desc')->get();
-        $cars = CarDriver::with('sliderImages')->take(10)->inRandomOrder()->orderBy('id', 'desc')->get();
+        $hotels = collect();
+        Residence::with('images')
+            ->where('residence_type',20)
+            /*->inRandomOrder()*/
+            ->orderBy('id', 'desc')
+            ->chunk(4, function ($q) use ($hotels) {
+                $hotels->push($q);
+            });
+        $tours = Tour::with('region')->whereSightseeingPlace(0)->take(20)/*->inRandomOrder()*/->orderBy('id', 'desc')->get();
+        $cars = CarDriver::with('sliderImages')->take(10)->/*inRandomOrder()->*/orderBy('id', 'desc')->get();
         $settings = \App\Setting::first();
-        return view('site.index', compact('tours','cars', 'hotels','settings'));
+
+        return view('site.index2', compact('tours','cars', 'hotels','settings'));
     }
 
     public function contact()
@@ -130,7 +148,14 @@ class IndexController extends Controller
             $tours = $tours->where('region_id', $request->region);
         }
         if(isset($request->range_val)) {
-            $tours = $tours->where('price', $request->range_val);
+            $usd_price = currency()->getCurrencies()['USD']['exchange_rate'];
+            if(app()->getLocale() !== 'en') {
+                $price = $usd_price * $request->range_val;
+                $tours = $tours->whereBetween('price', [0,$price]);
+            }
+            else {
+                $tours = $tours->whereBetween('price', [0,$request->range_val]);
+            }
         }
 
         $tours = $tours->paginate(6);
@@ -148,8 +173,10 @@ class IndexController extends Controller
     {
         $model = \App\Tour::whereSlug($slug)
             ->firstOrFail();
+        $days =\App\TourDay::where('tour_id',$model->id)->get();
+
         $settings = Setting::first();
-        return view('site.special-tour', compact('model', 'settings'));
+        return view('site.special-tour2', compact('model', 'settings','days'));
     }
 
     public function carSingle($slug)
@@ -389,32 +416,45 @@ class IndexController extends Controller
 
     public function hotelsAll(Request $request)
     {
-        if($request->slug) {
-            $slug = $request->slug;
-            $region = \App\Region::whereSlug($request->slug)->first();
-            $hotels = \App\Residence::where([
-                ['region_id', '=', $region->id],
-                ['residence_type', '=', \App\Residence::residence_type_hotel]
-            ])->orderBy('id', 'desc')->paginate(6);
-            $hotels->appends(['slug' => $request->slug]);
-        } else {
-            $hotels = \App\Residence::whereResidenceType(\App\Residence::residence_type_hotel)->orderBy('id', 'desc')->paginate(6);
-            $slug = false;
-        }
-
-        if($request->keywords) {
-            $hotels = \App\Residence::where([['name_en', 'like', '%' . $request->keywords . '%'], ['residence_type', '=', \App\Residence::residence_type_hotel]])
-                ->orWhere([['name_ru', 'like', '%' . $request->keywords . '%'], ['residence_type', '=', \App\Residence::residence_type_hotel]])
-                ->orWhere([['name_hy', 'like', '%' . $request->keywords . '%'], ['residence_type', '=', \App\Residence::residence_type_hotel]])
-                ->orderBy('id', 'desc')->paginate(6);
-
-            $hotels->appends(['keywords' => $request->keywords]);
-        }
-
-        $list = \App\Region::with('hotels')->orderBy('id', 'desc')->get();
         $image = \App\Gallery::wherePage('hotel')->firstOrFail()->image;
-        return view('site.hotels.hotels-all', compact(/*'region',*/ 'hotels', 'list', 'slug', 'image'));
+        $rooms = \App\RoomType::listAll();
+        $beds = \App\BedType::listAll();
+        $regions = Region::get();
+
+        if(isset($request->slug)) {
+            $region = Region::whereSlug($request->slug)->firstOrFail();
+            $hotels = $region->hotels();
+        }
+
+        if(isset($request->room)) {
+            if(isset($hotels)) {
+                $hotels = $hotels->with(['residence_room_types' => function($q) use ($request) {
+                    $q->where('room_type_id', $request->room);
+                }]);
+            } else {
+                $hotels = RoomType::findOrFail($request->room)->hotels();
+            }
+        }
+
+        if(isset($request->bed)) {
+            if(isset($hotels)) {
+                $hotels = $hotels->with(['resbedtypes' => function($q) use ($request) {
+                    $q->where('bed_type_id', $request->bed);
+                }]);
+            } else {
+                $hotels = BedType::whereSlug($request->bed)->firstOrFail()->hotels()->paginate(6);
+            }
+        }
+
+        if(!isset($hotels)) {
+            $hotels = Residence::whereResidenceType(Residence::residence_type_hotel);
+        }
+
+        $slug = $request->slug;
+        $hotels = $hotels->paginate(6);
+        return view('site.hotels.hotels-all', compact('hotels', 'rooms', 'image','beds', 'regions','slug'));
     }
+
     public function hostelsAll(Request $request)
         {
             if($request->slug) {

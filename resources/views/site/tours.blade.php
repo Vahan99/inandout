@@ -28,7 +28,7 @@
                                 {{--region filter--}}
                                 <div class="col-sm-3 col-md-3">
                                     {{--<label>@lang('message.select-region-title'):</label>--}}
-                                    <label>Region</label>
+                                    <label>@lang('message.region')</label>
                                     <div class="select1_wrapper">
                                         <div class="select1_inner">
                                             <select class="select2 select select2-hidden-accessible" name="region" style="width: 100%" tabindex="-1" aria-hidden="true">
@@ -38,13 +38,14 @@
                                                         <option value="{{ $item->id }}">{{ $item[$item->lang]}}</option>
                                                     @endforeach
                                                 @endif
-                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9bvf-container"><span class="select2-selection__rendered" id="select2-9bvf-container" title="city or airport">@lang('message.city-airport')</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            </select>
+                                            {{--<span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-9bvf-container"><span class="select2-selection__rendered" id="select2-9bvf-container" title="city or airport">@lang('message.city-airport')</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>--}}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    {{--<label for="">@lang('message.enter_tour_name'):</label>--}}
-                                    <label>Price<span class="range_input_prices"></span></label>
+
+                                    <label>@lang('message.price')<span class="range_input_prices"></span></label>
                                     <div class="input1_wrapper">
                                         <div class="input1_inner range_input">
                                             @if(currency()->getCurrency()['code'] === 'AMD')
@@ -54,7 +55,6 @@
                                                 @else
                                                 <input name="range_val" id="tour_range" type="range" min="0" max="40000" step="1000"  class="form-control-range" />
                                             @endif
-                                            {{--<input --}}{{--id="ex15"--}}{{-- name="range_val" id="tour_range" type="range" min="300" max="500" step="10"  class="form-control-range" />--}}
                                             <div  class="text-center range_val"></div>
                                         </div>
                                     </div>
@@ -66,8 +66,8 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="d-sm-none d-md-block">
-                            <h2 class="animated-logo animated fadeInUp visible tours_page_logo " data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-tours')</h2>
+                        <div class="d-block text-center animated-header">
+                            <h1 class="decoration decoration-cont-style" data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-tours')</h1>
                         </div>
                         <div id="tabs-1">
                             <div class="row">
@@ -75,13 +75,13 @@
                             @if(!isset(request()->search))
                                 {{--<h3 style="text-align:center; color:#024768;">{{ $model->name }} </h3>--}}
                                 @endif
-                                <div class="">
+
                                     @if(count($tours))
                                         @foreach($tours as $key => $tour)
                                         @if(($key > 1) && ($key % 3) == 0)
                                             <div style="display: block; clear: both; height: 10px"></div>
                                         @endif
-                                        <div class="col-sm-4">
+                                        <div class="col-md-6 col-lg-4">
                                             <div class="popular">
                                                 <div class="popular_inner">
                                                     <figure>
@@ -106,7 +106,7 @@
                                         <br>
                                         <h4 class="text-center">@lang('message.result-not-found')</h4>
                                     @endif
-                                </div>
+
                             </div>
                         </div>
                     </div>

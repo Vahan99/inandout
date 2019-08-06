@@ -56,6 +56,14 @@
     {!! Form::label('residence_type') !!}
     {!! Form::select('residence_type', App\Residence::residenceList(), $model ? $model->residence_type : null, ['class' => 'form-control','required']) !!}
 </div>
+<div class="form-group">
+    {!! Form::label('room_type') !!}
+    {!! Form::select('room_type', App\RoomType::listAll(), $model ? $model->room_type : null, ['multiple'=>'multiple', 'class' => 'form-control',/*'required',*/ 'name' => 'room_type[]']) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('bed_type') !!}
+    {!! Form::select('bed_type', App\BedType::listAll(), $model ? $model->bed_type : null, ['multiple'=>'multiple', 'class' => 'form-control',/*'required',*/ 'name' => 'bed_type[]']) !!}
+</div>
 
 <div class="form-group">
     {!! Form::label('grid_image', 'Grid Image 360x240') !!}

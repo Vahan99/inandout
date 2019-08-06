@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\ResBedType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\BaseController;
 use App\Residence;
 use App\ResidenceImage;
 use App\Region;
+use App\ResidenceRoomType;
 
 class ResidenceController extends BaseController
 {
@@ -49,14 +51,32 @@ class ResidenceController extends BaseController
         $req['amenities'] = json_encode($request->amenities);
         $req['grid_image'] = $this->fileUpload($request->file('grid_image'), public_path('uploads/'))[0];
         $id = Residence::create($req)->id;
+        if($req['room_type'] && count($req['room_type'])>1) {
+            foreach($req['room_type'] as $key => $room_id){
+                ResidenceRoomType::create([
+                    'residence_id' => $id,
+                    'room_type_id' => $room_id
+                ]);
+            }
+        }
+        if($req['bed_type']) {
+            foreach($req['bed_type'] as $key => $bed_id){
+                ResBedType::create([
+                    'residence_id' => $id,
+                    'bed_type_id' => $bed_id
+                ]);
+            }
+        }
 
-        $images = $this->fileUpload($request->file('image'), public_path('uploads/'));
+        if($request->image !== null) {
+            $images = $this->fileUpload($request->file('image'), public_path('uploads/'));
 
-        foreach ($images as $image) {
-            ResidenceImage::create([
-                'residence_id' => $id,
-                'image' => $image
-            ]);
+            foreach ($images as $image) {
+                ResidenceImage::create([
+                    'residence_id' => $id,
+                    'image' => $image
+                ]);
+            }
         }
 
         if ($request->residence_type == Residence::residence_type_hotel) {
@@ -82,8 +102,10 @@ class ResidenceController extends BaseController
         $req = $request->all();
         $req['amenities'] = json_encode($request->amenities);
 
-        if(isset($req['grid_image'])) {
+        if(isset($req['grid_image']) && file_exists(public_path('uploads/'.$model->grid_image))) {
             unlink(public_path() . '/uploads/' . $model->grid_image);
+            $req['grid_image'] = $this->fileUpload($request->grid_image, public_path('uploads/'))[0];
+        }else {
             $req['grid_image'] = $this->fileUpload($request->grid_image, public_path('uploads/'))[0];
         }
         
@@ -150,6 +172,7 @@ class ResidenceController extends BaseController
     public function createUpdateAmenities(Request $request, $id) 
     {
         $model = Residence::findOrFail($id);
+
         if($model->residence_type == Residence::residence_type_apartment) {
             $showUrl = route('apartment.show');
         } elseif($model->residence_type == Residence::residence_type_hotel) {
@@ -157,8 +180,11 @@ class ResidenceController extends BaseController
         } else {
             $showUrl = route('hostel.show');
         }
+
+//
         return view('admin.residence.amenities', compact('model', 'showUrl'));
     }
+
     public function deleteAmenities(Request $request, $id)
     {
         $model = Residence::findOrFail($id);

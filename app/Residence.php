@@ -68,6 +68,15 @@ class Residence extends Model
         return $this->hasMany(ResidenceImage::class, 'residence_id', 'id');
     }
 
+    public function residence_room_types() {
+        return $this->hasMany(ResidenceRoomType::class,'residence_id','id');
+    }
+
+    public function resbedtypes(){
+        return $this->hasMany('App\ResBedType');
+    }
+
+
     public function getNameAttribute()
     {
         $name = 'name_' . \App::getLocale();

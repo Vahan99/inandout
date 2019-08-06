@@ -20,7 +20,7 @@
               <h2 style="text-align:center; color:#fa852b;">
                 <b>@lang('message.title-page-holiday')</b></h2>
                 <hr>
-                <section class="content col-md-9 col-sm-12 col-xs-12" style="text-align:center !important;">
+                <section class="content col-md-9 col-sm-12 col-xs-12">
                   <div class="text-image">
                     {!! $model->desc !!}
                   </div>

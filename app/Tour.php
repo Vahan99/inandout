@@ -73,6 +73,10 @@ class Tour extends Model
         return $this->$name;
     }
 
+    public function tour_days(){
+        return $this->hasMany(TourDay::class, 'tour_id', 'id');
+    }
+
     public function getDescAttribute()
     {
         $desc = 'desc_'.\App::getLocale();

@@ -106,7 +106,7 @@ body {
     display: inline-block;
     margin: 0 10px;
     vertical-align: middle;
-    vertical-align: -webkit-baseline-middle;
+    /*vertical-align: -webkit-baseline-middle;*/
 }
 
 .social .trip_o a:hover .social .trip_o {
@@ -125,7 +125,7 @@ body {
     -o-transition: all 0.3s ease-out;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    /*background-position: center;*/
 }
 
 .social li .tripadvisor {
@@ -274,7 +274,7 @@ body {
 
 .lang1 .dropdown-toggle {
     border: none;
-    padding: 0;
+    /*padding: 0;*/
     background: none !important;
     outline: none;
     display: block;
@@ -304,7 +304,7 @@ body {
 
 .currency .dropdown-toggle .caret, .lang1 .dropdown-toggle .caret {
     display: inline-block;
-    width: 3.5px;
+    width: 4px;
     height: 3px;
     /*border: none;*/
     background: url(../images/arr0.png);
@@ -313,7 +313,7 @@ body {
 
 .lang1 .dropdown-menu {
     min-width: 100%;
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     left: -1px;
     right: -1px;
@@ -370,8 +370,8 @@ header {
 /* ============================= slider ====================== */
 #slider_wrapper {
     position: relative;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 #slider_inner {
@@ -379,8 +379,8 @@ header {
 
 #slider {
     position: relative;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .slider_pagination {
@@ -416,7 +416,7 @@ header {
 #slider .carousel.main {
     position: relative;
     overflow: hidden;
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     margin-right: -30px;
 }
@@ -434,7 +434,6 @@ header {
 #slider .carousel-box ul li {
     float: left;
     display: inline-block;
-    padding: 0px 0px 0px 0px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -530,7 +529,7 @@ header {
 .sm_slider .carousel.main {
     position: relative;
     overflow: hidden;
-    margin: 0;
+    /*margin: 0;*/
     padding: 0;
     margin-right: -30px;
 }
@@ -548,7 +547,7 @@ header {
 .sm_slider .carousel-box ul li {
     float: left;
     display: inline-block;
-    padding: 0px 0px 0px 0px;
+    /*padding: 0px 0px 0px 0px;*/
     position: relative;
     width: 300px;
     overflow: hidden;
@@ -655,7 +654,6 @@ header {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    margin-right: 0px;
 }
 
 #sl1 .caroufredsel_wrapper {
@@ -671,7 +669,6 @@ header {
 #sl1 .carousel-box ul li {
     float: left;
     display: inline-block;
-    padding: 0px 0px 0px 0px;
     position: relative;
     width: 300px;
     overflow: hidden;
@@ -815,7 +812,7 @@ header {
     display: block;
     background: #fafafa;
     padding: 30px;
-    border-bottom: 9px solid #D7733D;
+    /*border-bottom: 9px solid #D7733D;*/
     margin-bottom: 20px;
 }
 
@@ -1672,7 +1669,7 @@ header {
     position: relative;
     padding-top: 20px;
     padding-bottom: 70px;
-    background: url("/uploads/mid_back.jpg") no-repeat;
+    background: url("../../uploads/mid_back.jpg") no-repeat;
 }
 
 /* ============================= popular ====================== */
@@ -1751,7 +1748,8 @@ header {
     overflow: hidden;
 }
 
-.popular { /*margin: 10px 0px,box-shadow: 1px 1px 1px 15px #e6e6e6*/
+.popular {
+    margin-bottom: 30px;
 }
 
 .popular .popular_inner {
@@ -1811,9 +1809,9 @@ header {
     background: #fafafa;
 }
 
-.popular .popular_inner:hover .caption {
-    border-color: #D7733D;
-}
+/*.popular .popular_inner:hover .caption {*/
+    /*border-color: #D7733D;*/
+/*}*/
 
 .popular .popular_inner .txt1 {
     font-weight: 500;
@@ -1828,6 +1826,9 @@ header {
     font-weight: bold;
     padding-right: 5px;
     color: #636363;
+    display: inline-block;
+    height: 57px;
+    overflow: hidden;
 }
 
 .popular .popular_inner:hover .txt1 span {
@@ -1844,6 +1845,9 @@ header {
     font-size: 16px;
     font-family: "Open Sans";
     font-weight: 100;
+    display: inline-block;
+    height: 95px;
+    overflow: hidden;
 }
 
 .popular .popular_inner .txt3 {
@@ -1856,6 +1860,7 @@ header {
 
 .popular .popular_inner .txt3 .right_side {
     text-align: center;
+    margin-top: 20px;
 }
 
 .popular .popular_inner .txt3 .nums {
@@ -2605,7 +2610,7 @@ h4 {
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 18px;
-    color: #1cbbb4;
+    color: #ef8200;
     background: none;
     line-height: 1.1;
     padding: 15px 0 10px;
@@ -4374,11 +4379,11 @@ h5 {
 
 .animated-logo {
     position: relative;
-    display: inline-block;
+    /*display: inline-block;*/
     font-size: 83px;
     font-weight: bold;
-    height: 95.86px;
-    z-index: 99999;
+    /*height: 95.86px;*/
+    /*z-index: 10;*/
     /*width: 278.585px;*/
 
 }
@@ -4438,7 +4443,7 @@ h5 {
 
 /*Single Tour page*/
 .tour_content_bg {
-    background: url("/uploads/mid_back.jpg") left no-repeat;
+    background: url("../../uploads/mid_back.jpg") left no-repeat;
     width: 1350px;
 }
 
@@ -4619,12 +4624,13 @@ h5 {
 .drivers_page_logo {
     right: 0;
     left: 720px;
-    margin-top: 50px
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
 
-.drivers_block {
-    margin-top: 200px;
-}
+/*.drivers_block {*/
+    /*margin-top: 200px;*/
+/*}*/
 
 .drivers_back {
     background: url("../../uploads/mid_back.jpg");
@@ -4649,8 +4655,9 @@ h5 {
 /*Hotels Page(Hotels)*/
 .hotels_page_logo {
     right: 0;
-    left: 780px;
-    margin: 70px 0px 160px 0px;
+    /*left: 780px;*/
+    /*margin: 70px 0px 160px 0px;*/
+    margin: 33px 0 83px 0;
 }
 
 .hotels_main_pic {
@@ -4668,7 +4675,7 @@ h5 {
     width: 1920px;
     height: 460px;
     margin: 10px auto;
-    background-image: url("/uploads/tours_page.jpg");
+    background-image: url("../../uploads/tours_page.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4691,7 +4698,7 @@ h5 {
     width: 1920px;
     height: 460px;
     margin: 10px auto;
-    background-image: url("/uploads/contact_us.png");
+    background-image: url("../../uploads/contact_us.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4718,7 +4725,7 @@ h5 {
     width: 1920px;
     height: 460px;
     margin: 10px auto;
-    background-image: url("/uploads/about.jpg");
+    background-image: url("../../uploads/about.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -4836,7 +4843,7 @@ h5 {
         left: 0;
         width: 100%;
         text-align: center;
-        margin: 30px 0px;
+        margin: 30px 0;
     }
 
     .contact_content > p {
@@ -4847,7 +4854,6 @@ h5 {
     .contact_content > h3 {
         width: 100% !important;
         text-align: center;
-        font-size:
     }
 
     .price_includes {
@@ -4896,4 +4902,54 @@ h5 {
 .main-page-container {
     max-width: 1360px;
     margin: auto;
+}
+
+.styled-header {
+    color: #fa852b;
+    margin: auto;
+    font-size: 30px;
+    margin-top: 50px;
+}
+
+.detail > a {
+    width: 30% !important;
+}
+
+.detail {
+    margin: 10px 15px 0!important;
+}
+
+.text-desc {
+    background-color: white!important;
+}
+
+.text-desc > .title {
+    color: #636363;
+}
+
+@media (min-width: 768px){
+    .overlay:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #1E2C37!important;
+        background-image: unset!important;
+        opacity: .6;
+    }
+}
+
+
+.overlay:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #1E2C37!important;
+    background-image: unset!important;
+    opacity: .6;
 }

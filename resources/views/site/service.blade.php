@@ -1,13 +1,13 @@
 @extends('site.layouts.app')
 @section('content')
-  <div id="parallax2" class="parallax">
-    <div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $image }}')"></div>
-    <div class="overlay"></div>
-    <div class="parallax-content">
-      <div class="container">
-      </div>
-    </div>
-  </div>
+  {{--<div id="parallax2" class="parallax">--}}
+    {{--<div class="bg2 parallax-bg" style="background-image: url('/uploads/{{ $image }}')"></div>--}}
+    {{--<div class="overlay"></div>--}}
+    {{--<div class="parallax-content">--}}
+      {{--<div class="container">--}}
+      {{--</div>--}}
+    {{--</div>--}}
+  {{--</div>--}}
 <div class="main">
   <h3 style="text-align:center; margin-top: 50px;">@lang('message.title-page-service')</h3>
   <div class="container">
@@ -18,7 +18,7 @@
               @if(count($model))
               @foreach($model as $service)
               <div class="post-story">
-                <h5 style="color: #1cbbb4">{{ $service->name }}</h5>
+                <h5 style="color: #ef8200">{{ $service->name }}</h5>
                   <div class="post-story-body clearfix">
                     <p>{!! $service->desc !!}</p>
                   </div>

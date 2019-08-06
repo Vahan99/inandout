@@ -12,9 +12,15 @@ class RoomType extends Model
     	'name_ru'
     ];
 
-    public static function listAll($id)
+
+    public static function listAll($id = 'id')
     {
         return array_to_list(self::all(), 'name_'.\App::getLocale(), $id);
+    }
+
+    public function residence_room_types()
+    {
+        return $this->hasMany('\App\ResidenceRoomTypes');
     }
 
     public function getNameAttribute()
