@@ -994,12 +994,12 @@ header {
 
 .select2-container--default .select2-results__option[aria-selected=true] {
     background: #fff;
-    color: #62c7bf;
+    color: #D7733D;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background: #fff;
-    /*color: #62c7bf;*/
+    /*color: #D7733D;*/
     color: #d7733d;
 }
 
@@ -3869,10 +3869,11 @@ h5 {
 }
 
 #ajax-contact-form .form-control:focus {
-    color: #1cbbb4;
-    border-color: #1cbbb4;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(28, 187, 180, .3);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(28, 187, 180, .3);
+    color: #D7733D;
+    border-color: #D7733D;
+    box-shadow: none;
+    /*-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(28, 187, 180, .3);*/
+    /*box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(28, 187, 180, .3);*/
 }
 
 #ajax-contact-form textarea.form-control {
