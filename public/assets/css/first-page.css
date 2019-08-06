@@ -179,6 +179,23 @@ header .navigation-bar > ul > li > a {
     position: relative;
 }
 
+.currency-lang .dropdown-menu {
+    border-radius: 10px;
+    border: none;
+}
+
+.currency-lang .dropdown-menu li  {
+    padding: 5px 0;
+}
+
+.currency-lang .dropdown-menu li a {
+    color: #8c8c8c;
+}
+
+.currency-lang .dropdown-menu li:not(:last-child)  {
+    border-bottom: 1px solid #ebebeb;
+}
+
 /*.currency-lang .lang-content:before {*/
 /*content: '';*/
 /*background-image: url("../../uploads/globus_icon.png");*/
