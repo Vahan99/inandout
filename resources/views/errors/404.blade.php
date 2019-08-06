@@ -1,241 +1,128 @@
- <div id="clouds">
-    <div class="cloud x1"></div>
-    <div class="cloud x1_5"></div>
-    <div class="cloud x2"></div>
-    <div class="cloud x3"></div>
-    <div class="cloud x4"></div>
-    <div class="cloud x5"></div>
-</div>
-<div class='c'>
-    <div class='_404'>404</div>
-    <hr>
-    <div class='_1'>THE PAGE</div>
-    <div class='_2'>WAS NOT FOUND</div>
-    <a class='btn' href='{{ route('view.index') }}'>Back To In & Out</a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<style src"text/css">
-	
-@import url(https://fonts.googleapis.com/css?family=opensans:500);
-body{
-                background: #00a99d;
-                color:#fff;
-                font-family: 'Open Sans', sans-serif;
-                max-height:700px;
-                overflow: hidden;
-            }
-            .c{
-                text-align: center;
-                display: block;
-                position: relative;
-                width:80%;
-                margin:100px auto;
-            }
-            ._404{
-                font-size: 220px;
-                position: relative;
-                display: inline-block;
-                z-index: 2;
-                height: 250px;
-                letter-spacing: 15px;
-            }
-            ._1{
-                text-align:center;
-                display:block;
-                position:relative;
-                letter-spacing: 12px;
-                font-size: 4em;
-                line-height: 80%;
-            }
-            ._2{
-                text-align:center;
-                display:block;
-                position: relative;
-                font-size: 20px;
-            }
-            .text{
-                font-size: 70px;
-                text-align: center;
-                position: relative;
-                display: inline-block;
-                margin: 19px 0px 0px 0px;
-                /* top: 256.301px; */
-                z-index: 3;
-                width: 100%;
-                line-height: 1.2em;
-                display: inline-block;
-            }
-           
-
-            .btn{
-                background-color: rgb( 255, 255, 255 );
-                position: relative;
-                display: inline-block;
-                width: 358px;
-                padding: 5px;
-                z-index: 5;
-                font-size: 25px;
-                margin:0 auto;
-                color: #00a99d;
-                text-decoration: none;
-                margin-right: 10px
-            }
-            .right{
-                float:right;
-                width:60%;
-            }
-            
-            hr{
-                padding: 0;
-                border: none;
-                border-top: 5px solid #fff;
-                color: #fff;
-                text-align: center;
-                margin: 0px auto;
-                width: 420px;
-                height:10px;
-                z-index: -10;
-            }
-            
-            hr:after {
-                content: "\2022";
-                display: inline-block;
-                position: relative;
-                top: -0.75em;
-                font-size: 2em;
-                padding: 0 0.2em;
-                background: #00a99d;
-            }
-            
-            .cloud {
-                width: 350px; height: 120px;
-
-                background: #FFF;
-                background: linear-gradient(top, #FFF 100%);
-                background: -webkit-linear-gradient(top, #FFF 100%);
-                background: -moz-linear-gradient(top, #FFF 100%);
-                background: -ms-linear-gradient(top, #FFF 100%);
-                background: -o-linear-gradient(top, #FFF 100%);
-
-                border-radius: 100px;
-                -webkit-border-radius: 100px;
-                -moz-border-radius: 100px;
-
-                position: absolute;
-                margin: 120px auto 20px;
-                z-index:-1;
-                transition: ease 1s;
-            }
-
-            .cloud:after, .cloud:before {
-                content: '';
-                position: absolute;
-                background: #FFF;
-                z-index: -1
-            }
-
-            .cloud:after {
-                width: 100px; height: 100px;
-                top: -50px; left: 50px;
-
-                border-radius: 100px;
-                -webkit-border-radius: 100px;
-                -moz-border-radius: 100px;
-            }
-
-            .cloud:before {
-                width: 180px; height: 180px;
-                top: -90px; right: 50px;
-
-                border-radius: 200px;
-                -webkit-border-radius: 200px;
-                -moz-border-radius: 200px;
-            }
-            
-            .x1 {
-                top:-50px;
-                left:100px;
-                -webkit-transform: scale(0.3);
-                -moz-transform: scale(0.3);
-                transform: scale(0.3);
-                opacity: 0.9;
-                -webkit-animation: moveclouds 15s linear infinite;
-                -moz-animation: moveclouds 15s linear infinite;
-                -o-animation: moveclouds 15s linear infinite;
-            }
-            
-            .x1_5{
-                top:-80px;
-                left:250px;
-                -webkit-transform: scale(0.3);
-                -moz-transform: scale(0.3);
-                transform: scale(0.3);
-                -webkit-animation: moveclouds 17s linear infinite;
-                -moz-animation: moveclouds 17s linear infinite;
-                -o-animation: moveclouds 17s linear infinite; 
-            }
-
-            .x2 {
-                left: 250px;
-                top:30px;
-                -webkit-transform: scale(0.6);
-                -moz-transform: scale(0.6);
-                transform: scale(0.6);
-                opacity: 0.6; 
-                -webkit-animation: moveclouds 25s linear infinite;
-                -moz-animation: moveclouds 25s linear infinite;
-                -o-animation: moveclouds 25s linear infinite;
-            }
-
-            .x3 {
-                left: 250px; bottom: -70px;
-
-                -webkit-transform: scale(0.6);
-                -moz-transform: scale(0.6);
-                transform: scale(0.6);
-                opacity: 0.8; 
-
-                -webkit-animation: moveclouds 25s linear infinite;
-                -moz-animation: moveclouds 25s linear infinite;
-                -o-animation: moveclouds 25s linear infinite;
-            }
-
-            .x4 {
-                left: 470px; botttom: 20px;
-
-                -webkit-transform: scale(0.75);
-                -moz-transform: scale(0.75);
-                transform: scale(0.75);
-                opacity: 0.75;
-
-                -webkit-animation: moveclouds 18s linear infinite;
-                -moz-animation: moveclouds 18s linear infinite;
-                -o-animation: moveclouds 18s linear infinite;
-            }
-
-            .x5 {
-                left: 200px; top: 300px;
-
-                -webkit-transform: scale(0.5);
-                -moz-transform: scale(0.5);
-                transform: scale(0.5);
-                opacity: 0.8; 
-
-                -webkit-animation: moveclouds 20s linear infinite;
-                -moz-animation: moveclouds 20s linear infinite;
-                -o-animation: moveclouds 20s linear infinite;
-            }
-
-            @-webkit-keyframes moveclouds {
-                0% {margin-left: 1000px;}
-                100% {margin-left: -1000px;}
-            }
-            @-moz-keyframes moveclouds {
-                0% {margin-left: 1000px;}
-                100% {margin-left: -1000px;}
-            }
-            @-o-keyframes moveclouds {
-                0% {margin-left: 1000px;}
-                100% {margin-left: -1000px;}
-            }
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404 HTML Template by Colorlib</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:200" rel="stylesheet">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+</head>
+<style>
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    #notfound {
+        position: relative;
+        height: 100vh;
+    }
+    #notfound .notfound {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .notfound {
+        max-width: 767px;
+        width: 100%;
+        line-height: 1.4;
+        text-align: center;
+        padding: 15px;
+    }
+    .notfound .notfound-404 {
+        position: relative;
+        height: 220px;
+    }
+    .notfound .notfound-404 h1 {
+        font-family: 'Kanit', sans-serif;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 186px;
+        font-weight: 200;
+        margin: 0px;
+        background: linear-gradient(130deg, #ffa34f, #ff6f68);
+        color:transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        text-transform: uppercase;
+    }
+    .notfound h2 {
+        font-family: 'Kanit', sans-serif;
+        font-size: 33px;
+        font-weight: 200;
+        text-transform: uppercase;
+        margin-top: 0px;
+        margin-bottom: 25px;
+        letter-spacing: 3px;
+    }
+    .notfound p {
+        font-family: 'Kanit', sans-serif;
+        font-size: 16px;
+        font-weight: 200;
+        margin-top: 0px;
+        margin-bottom: 25px;
+    }
+    .notfound a {
+        font-family: 'Kanit', sans-serif;
+        color: #ff6f68;
+        font-weight: 200;
+        text-decoration: none;
+        border-bottom: 1px dashed #ff6f68;
+        border-radius: 2px;
+    }
+    .notfound-social>a {
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        font-size: 14px;
+        color: #ff6f68;
+        border: 1px solid #efefef;
+        border-radius: 50%;
+        margin: 3px;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+    }
+    .notfound-social>a:hover {
+        color: #fff;
+        background-color: #ff6f68;
+        border-color: #ff6f68;
+    }
+    @media only screen and (max-width: 480px) {
+        .notfound .notfound-404 {
+            position: relative;
+            height: 168px;
+        }
+        .notfound .notfound-404 h1 {
+            font-size: 142px;
+        }
+        .notfound h2 {
+            font-size: 22px;
+        }
+    }
 </style>
+<body>
+<div id="notfound">
+    <div class="notfound">
+        <div class="notfound-404">
+            <h1>404</h1>
+        </div>
+        <h2>Oops! Nothing was found</h2>
+        <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable. <a href="{{ route('view.index') }}">Return to homepage</a></p>
+    </div>
+</div>
+</body>
+</html>
