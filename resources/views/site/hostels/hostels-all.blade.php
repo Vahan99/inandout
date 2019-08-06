@@ -34,7 +34,7 @@
                                 <div class="col-md-3">
                                     <label for="">@lang('message.enter-place-name'):</label>
                                     <div class="input1_wrapper">
-                                        <div class="input1_inner">
+                                        <div class="input1_inner_search">
                                             <input type="text" name="keywords" class="input" placeholder="@lang('message.enter-place-name')">
                                         </div>
                                     </div>

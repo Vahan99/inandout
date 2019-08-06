@@ -709,11 +709,11 @@
         }
 
         /*.nav li.active > a {*/
-        /*color: #1cbbb4;*/
+        /*color: #D7733D;*/
         /*}*/
 
         .font-green {
-            color: #1cbbb4;
+            color: #D7733D;
         }
 
         .popular .popular_inner .txt2 {
