@@ -36,7 +36,7 @@ return [
     'nav-more' => 'Комментарии',
 
     'title-welcome' => 'Բարի Գալուստ',
-    'title-land' => 'Land of Noah',
+    'title-land' => 'Inandout',
     'title-tour' => 'Տուրիստական գործակալություն',
 
     'title-news' => 'Последние Обновления',

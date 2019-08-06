@@ -37,7 +37,7 @@ return [
     'nav-more' => 'Կարծիքներ',
     'title-hotels' => 'Վերջին Թարմացումներ',
     'title-welcome' => 'Բարի Գալուստ',
-    'title-land' => 'Land of Noah',
+    'title-land' => 'Inandout',
     'title-tour' => 'Տուրիստական գործակալություն',
     'tour-plan' => 'Տուրի ծրագիրը',
     //about-armenia

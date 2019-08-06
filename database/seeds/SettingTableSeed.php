@@ -18,9 +18,9 @@ class SettingTableSeed extends Seeder
                 'vk' => 'https://vk.com/',
                 'instagram' => 'https://www.instagram.com/',
                 'image' => 'slider.jpg',
-                'title_hy' => "<p>Բարի գալուստ</p><p>Նոյի Երկիր</p>",
-                'title_en' => "<p>Welcome to</p><p>Land of Noah</p>",
-                'title_ru' => "<p>Добро пожаловать на</p><p>Землю Ноя</p>",
+                'title_hy' => "<p>Բարի գալուստ</p><p>Inandout</p>",
+                'title_en' => "<p>Welcome to</p><p>Inandout</p>",
+                'title_ru' => "<p>Добро пожаловать на</p><p>Inandout</p>",
                 'slug' => 'setting',
                 'keywords' => '',
                 'keywords_desc' => ''
