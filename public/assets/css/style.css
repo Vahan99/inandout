@@ -3031,7 +3031,7 @@ h5 {
     text-transform: uppercase; /*background: #00a99d;*/
     position: relative;
     text-align: center;
-    width: 50%;
+    /*width: 50%;*/
     border-radius: 25px; /*box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset; moz-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset; -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset;*/
     transition: .3s;
 }
@@ -4916,9 +4916,9 @@ h5 {
     margin-top: 50px;
 }
 
-.detail > a {
-    width: 30% !important;
-}
+/*.detail > a {*/
+    /*width: 30% !important;*/
+/*}*/
 
 .detail {
     margin: 10px 15px 0!important;
