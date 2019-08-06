@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BedTypeSeeder::class);
         $this->call(RegionImagesTableSeeder::class);
         $this->call(PageTableSeeder::class);
-        $this->call(TourTypesTableSeeder::class);
+//        $this->call(TourTypesTableSeeder::class);
 //        $this->call(ToursTableSeeder::class);
 //        $this->call(TourImagesTableSeeder::class);
         $this->call(VehicleTypeTableSeeder::class);
