@@ -5,8 +5,8 @@
             <div class="col-sm-12">
                 <section class="tour-slider-container">
                     <div class="tour-info-slider">
-                        @if($model->sliderImages()->count())
-                            @foreach($model->sliderImages as $image)
+                        @if($model->images()->count())
+                            @foreach($model->images as $image)
                                 <div class="tour-info-slider-item"
                                      style="background-image: url({{ asset('uploads/'.$image->name )}})"></div>
                             @endforeach
