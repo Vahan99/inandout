@@ -176,9 +176,9 @@
             cursor: pointer;
         }
         .bootstrap-datetimepicker-widget .btn[data-action=togglePeriod] {
-            background-color: #1cbbb4;
+            background-color: #D7733D;
         }
-        .bootstrap-datetimepicker-widget table td span.active, .bootstrap-datetimepicker-widget table td.active,.bootstrap-datetimepicker-widget table td.active:hover{background-color:#1cbbb4 !important;}
+        .bootstrap-datetimepicker-widget table td span.active, .bootstrap-datetimepicker-widget table td.active,.bootstrap-datetimepicker-widget table td.active:hover{background-color:#D7733D !important;}
         .bootstrap-datetimepicker-widget table td.today:before{content:'';display:inline-block;border:solid transparent;border-width:0 0 7px 7px;border-bottom-color:red !important;border-top-color:rgba(0,0,0,0.2);position:absolute;bottom:4px;right:4px}
     </style>
 @endpush
