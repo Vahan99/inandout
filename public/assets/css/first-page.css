@@ -87,20 +87,16 @@ header .logo-container {
 
 .logo-social-links ul .tripadvisor:hover {
     background-position: -2px -0px;
-    width: 23px;
-    height: 14px;
 }
 
 .logo-social-links ul .facebook {
-    background-position: -12px -90px;
+    background-position: -11px -90px;
     width: 8px;
     height: 14px;
 }
 
 .logo-social-links ul .facebook:hover {
     background-position: -2px -90px;
-    width: 8px;
-    height: 14px;
 }
 
 .logo-social-links ul .vkontakte {
@@ -111,8 +107,6 @@ header .logo-container {
 
 .logo-social-links ul .vkontakte:hover {
     background-position: -2px -32px;
-    width: 19px;
-    height: 11px;
 }
 
 .logo-social-links ul .instagram {
@@ -123,8 +117,6 @@ header .logo-container {
 
 .logo-social-links ul .instagram:hover {
     background-position: -2px -58px;
-    width: 14px;
-    height: 14px;
 }
 
 header .navigation-bar {
