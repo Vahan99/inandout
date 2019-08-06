@@ -104,12 +104,22 @@
                     <a class="nav-link" href="javascript:;">@lang('message.nav-excursion')</a>
                     <ul class="hide-menu hide-menu-armenia">
                         @foreach(\App\TourType::listTourTypes() as $type)
-                            <li>
-                                <a class="nav-link-second" href="javascript:;">{{ $type->name }}</a>
-                                <ul class="hide-menu-lvl-2">
-                                    <li><a href="">something</a></li>
-                                </ul>
-                            </li>
+                            @if(count($type->childrenTourTypes))
+                                <li>
+                                    <a class="nav-link-second" href="javascript:;">{{ $type->name }}</a>
+                                    <ul class="hide-menu-lvl-2">
+                                        @foreach($type->childrenTourTypes as  $childType)
+                                            <li>
+                                                <a href="{{ route('tours', ['slug' => $childType->slug]) }}">{{ $childType->name }}</a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                @else
+                                <li>
+                                    <a href="{{ route('tours', ['slug' => $type->slug]) }}">{{ $type->name }}</a>
+                                </li>
+                            @endif
                         @endforeach
                     </ul>
                 </li>
