@@ -5,13 +5,12 @@
 @endphp
 @section('content')
 
-    <div class="drivers_main_pic"></div>
+    <div class="drivers_main_pic" style="background-image: url('/uploads/{{ $model->images }}')"></div>
 
     <div class="container-fluid drivers_back">
     <div class="container drivers_container">
         <div>
         <br>
-
         <div {{--class="col-md-12--}}>
             <form action="{{ route('drivers.index') }}" method="get" class="form1">
                 <div class="row">
