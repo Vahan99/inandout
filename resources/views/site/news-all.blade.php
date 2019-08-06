@@ -46,7 +46,7 @@
                                     </a>
                                 </li>
                                 <li class="twitter" style="width: 34%">
-                                    <a class="share customer" href="https://twitter.com/share?url={{ route('view.news_page', ['slug' => $news->slug]) }}&amp;text=Land Of Noah">
+                                    <a class="share customer" href="https://twitter.com/share?url={{ route('view.news_page', ['slug' => $news->slug]) }}&amp;text=Inandout">
                                         <span class="fa fa-twitter"></span>
                                     </a>
                                 </li>

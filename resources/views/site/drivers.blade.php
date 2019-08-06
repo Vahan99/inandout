@@ -58,7 +58,7 @@
                     <div class="col-md-3">
                         <label for="">@lang('message.model-name'):</label>
                         <div class="input1_wrapper">
-                            <div class="input1_inner">
+                            <div class="input1_inner_2">
                                 <input type="text" name="keywords" class="input" placeholder="@lang('message.enter-model-name')">
                             </div>
                         </div>

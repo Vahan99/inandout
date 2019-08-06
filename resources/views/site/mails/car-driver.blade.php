@@ -36,7 +36,7 @@
                         <tr>
                             <td align="left">
                                 <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
-                                    <img src="http://landofnoah.com/assets/images/logo.png" alt="" class="text-center" style="display: block; margin: auto;">
+                                    <img src="http://inandout.am/assets/img/In&Out-logo.png" alt="" class="text-center" style="display: block; margin: auto;">
                                     <tbody>
                                     <tr>
                                         <td width="100%">
@@ -105,7 +105,7 @@
                                             <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
                                                 <tbody>
                                                 <tr>
-                                                    <td align="center" valign="middle" width="100%" style="border-top:1px solid #d9d9d9;padding:12px 0px 20px 0px;text-align:center;color:#4c4c4c;font-weight:200;font-size:12px;line-height:18px">@lang('message.respectfully') Land Of Noah
+                                                    <td align="center" valign="middle" width="100%" style="border-top:1px solid #d9d9d9;padding:12px 0px 20px 0px;text-align:center;color:#4c4c4c;font-weight:200;font-size:12px;line-height:18px">@lang('message.respectfully') Inandout
                                                     </td>
                                                 </tr>
                                                 </tbody>
