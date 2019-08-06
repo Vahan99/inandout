@@ -8,6 +8,14 @@ $(document).ready(function () {
 
   });
 
+  $('.nav-link-second').on('click',function (e) {
+    e.stopPropagation();
+    const nextElement = $(this).next('ul');
+    $('.hide-menu-lvl-2').not(nextElement).slideUp(500);
+    nextElement.slideToggle(500);
+
+  });
+
   $(document).on('click',function () {
     $('.hide-menu').slideUp();
   });
@@ -41,5 +49,7 @@ $(document).ready(function () {
     $('.hided-content').not(currentElem).slideUp(500);
     currentElem.slideToggle(500);
   });
+
+
 
 });

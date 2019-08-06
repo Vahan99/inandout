@@ -229,6 +229,10 @@ header .navigation-bar > ul > li > a {
     border-radius: 10px;
 }
 
+.hide-menu-lvl-2 {
+    display: none;
+}
+
 .hide-menu li {
     padding: 10px 0;
 }
@@ -646,9 +650,8 @@ body .btn.btn-bordered {
 }
 
 .footer-row-2 .logo-social-links {
-    top: 50%;
-    left: 55%;
-    transform: translate(-50%, -50%);
+    top: 23%;
+    left: 37%;
 }
 
 .footer-row-2 .logo-social-links p {
