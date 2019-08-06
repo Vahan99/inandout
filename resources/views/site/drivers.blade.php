@@ -5,7 +5,7 @@
 @endphp
 @section('content')
 
-    <div class="drivers_main_pic" style="background-image: url('/uploads/{{ $model->images }}')"></div>
+    <div class="drivers_main_pic" style="background-image: url('/uploads/{{ $image }}')"></div>
 
     <div class="container-fluid drivers_back">
     <div class="container drivers_container">
