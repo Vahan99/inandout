@@ -92,7 +92,7 @@ return [
     //restaurant
     'title-page-restaurant' => 'Рестораны',
     //service
-    'title-page-service' => 'Комментарии',
+    'title-page-service' => 'Сервис',
     //apartment
     'apartment' => 'Апартамент|Апартаменты',
     'table-name' => 'Имя',

@@ -4,47 +4,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
+                    <section class="tour-slider-container">
+                        <div class="tour-info-slider">
+                            @if($model->sliderImages()->count())
+                                @foreach($model->sliderImages as $image)
+                                    <div class="tour-info-slider-item" style="background-image: url({{ asset('uploads/'.$image->name )}})"></div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </section>
                     <div class="blog_content">
                         <div class="post post-full">
-                            <div class="post-header">
-                                @if(count($model->sliderImages))
-                                    <div class="post-slide">
-                                        <div id="sl1">
-                                            <a class="sl1_prev hidden" href="#"></a>
-                                            <a class="sl1_next hidden" href="#"></a>
-                                            <div class="sl1_pagination hidden"></div>
-                                            <div class="carousel-box">
-                                                <div class="inner">
-                                                    <div class="carousel main">
-                                                        <div class="caroufredsel_wrapper">
-                                                            <ul>
-                                                                @foreach($model->sliderImages as $image)
-                                                                    <li>
-                                                                        <div class="sl1">
-                                                                            <div class="sl1_inner">
-                                                                                <img src="/uploads/{{ $image->name }}"
-                                                                                     alt="{{ $model->name }}" class="img-responsive">
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                @endforeach
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            @endif
                         </div>
                         <div class="post-story">
                             <h2>{{ $model->name }}</h2>
                             <div class="post-story-body clearfix">
                                 {!! $model->desc !!}
                             </div>
-
-
                             @if($model->amenity_data)
                                 <div class="post-story-body clearfix text-center">
                                     {{--                        <b style="font-size:18px;">@lang('message.residence-properties')</b>--}}

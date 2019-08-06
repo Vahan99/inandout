@@ -140,6 +140,16 @@ header .navigation-bar > ul {
 header .navigation-bar > ul > li {
     display: inline-block;
     position: relative;
+    border-radius: 40px;
+    transition: all .3s;
+}
+
+header .navigation-bar > ul > li:hover {
+    background-color: #EF8200;
+}
+
+header .navigation-bar > ul > li:hover > a {
+    color: white;
 }
 
 header .navigation-bar > ul > li:not(:last-child) {
@@ -170,13 +180,13 @@ header .navigation-bar > ul > li > a {
 }
 
 /*.currency-lang .lang-content:before {*/
-    /*content: '';*/
-    /*background-image: url("../../uploads/globus_icon.png");*/
-    /*height: 13px;*/
-    /*width: 13px;*/
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: -15px;*/
+/*content: '';*/
+/*background-image: url("../../uploads/globus_icon.png");*/
+/*height: 13px;*/
+/*width: 13px;*/
+/*position: absolute;*/
+/*top: 0;*/
+/*left: -15px;*/
 /*}*/
 
 .currency-lang .currency-content:focus {
@@ -192,6 +202,22 @@ header .navigation-bar > ul > li > a {
     outline: none;
 }
 
+.hide-menu-armenia {
+    left: -36px;
+}
+
+.hide-menu-place {
+    left: 7px;
+}
+
+.hide-menu-tours {
+    left: -33px;
+}
+
+.hide-menu-company {
+    left: -30px;
+}
+
 .hide-menu {
     display: none;
     padding: 10px;
@@ -200,6 +226,11 @@ header .navigation-bar > ul > li > a {
     position: absolute;
     top: 45px;
     width: 199px;
+    border-radius: 10px;
+}
+
+.hide-menu-lvl-2 {
+    display: none;
 }
 
 .hide-menu li {
@@ -213,6 +244,12 @@ header .navigation-bar > ul > li > a {
 .hide-menu li a {
     text-decoration: none;
     color: #8c8c8c;
+    transition: .3s;
+}
+
+.hide-menu li a:hover {
+    text-decoration: none;
+    color: #EF8200;
 }
 
 .main-page-image {
@@ -314,7 +351,16 @@ body .btn.btn-orange {
     padding: 5px 14px;
     border-radius: 22px;
     text-transform: uppercase;
+    transition: .4s;
+}
 
+body .btn.btn-orange:hover {
+    box-shadow: 1px 1px 16px #b8b7b7;
+    background-color: white;
+    color: #EF8200;
+}
+body .btn.btn-orange:hover a {
+    color: #EF8200;
 }
 
 body .btn.btn-bordered {
@@ -333,7 +379,7 @@ body .btn.btn-bordered {
 }
 
 .hotels {
-    background-image: url("../../uploads/map.png");
+    background-image: url("../../uploads/mid_back.jpg");
     background-repeat: no-repeat;
 }
 
@@ -365,13 +411,14 @@ body .btn.btn-bordered {
 .animated-header .animated-contact:after {
     left: 45%;
 }
+
 .animated-header .animated-hotels:after {
     left: 45%;
 }
+
 .animated-header .animated-drivers:after {
     left: 65%;
 }
-
 
 .animated-header h1 {
     color: black;
@@ -603,15 +650,28 @@ body .btn.btn-bordered {
 }
 
 .footer-row-2 .logo-social-links {
-    top: 50%;
-    left: 55%;
-    transform: translate(-50%, -50%);
+    top: 23%;
+    left: 37%;
 }
 
 .footer-row-2 .logo-social-links p {
     padding-right: 64px;
     font-size: 13px;
     color: #1E2C37;
+}
+
+.footer-row-3 {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer-row-3 h1 {
+    font-size: 13px;
+}
+
+.footer-row-3 h1 a {
+    font-size: 13px;
+    color: #EF8200;
 }
 
 /*SLIDER DOTS*/
@@ -1002,7 +1062,7 @@ body .btn.btn-bordered {
 
 }
 
-.mobile-menu .menu-content > li > a  {
+.mobile-menu .menu-content > li > a {
     text-decoration: none;
     font-size: 22px;
     color: #EF8200;
@@ -1028,39 +1088,48 @@ body .btn.btn-bordered {
 }
 
 .range_input:after {
-    display: none!important;
+    display: none !important;
 }
 
 @media only screen and (max-width: 1400px) {
     header .header-container {
         max-width: 950px;
     }
+
     header .navigation-bar > ul > li > a {
         font-size: 14px;
     }
+
     header .logo-container {
         width: 120px;
         height: 42px;
         left: 10px;
     }
+
     .tours-slider {
         max-width: 950px;
     }
+
     .hotels .hotels-container {
         max-width: 950px;
     }
+
     .hotels .hotels-container .hotels-content .hotels-item {
         height: 318px;
     }
+
     .transport .transport-container .transport-content {
         max-width: 950px;
     }
+
     .tour-slider-container {
         max-width: 98%;
     }
+
     .tour-info-container .tour-info-content {
         max-width: 98%;
     }
+
     .share-post {
         max-width: 98%;
     }
@@ -1070,30 +1139,53 @@ body .btn.btn-bordered {
     .footer-navigation {
         justify-content: center;
     }
+
     .footer-email-number {
-        justify-content: center!important;
-    }.footer-row-2 .logo-social-links {
-         top: 50%;
-         left: 89%;
-         transform: translate(-50%, -50%);
-         width: 100%;
-     }
+        justify-content: center !important;
+    }
+
+    .footer-row-2 .logo-social-links {
+        top: 50%;
+        left: 89%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
     header .navigation-bar > ul > li > a {
         font-size: 12px;
     }
+
     header .navigation-bar > ul > li:not(:last-child) {
         margin-right: 0;
     }
+
     .hide-menu li a {
         font-size: 13px;
     }
 
+    .hide-menu-armenia {
+        left: -45px;
+    }
+
+    .hide-menu-place {
+        left: -14px;
+    }
+
+    .hide-menu-tours {
+        left: -41px;
+    }
+
+    .hide-menu-company {
+        left: -44px;
+    }
+
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
     .decoration-cont-style {
         font-size: 45px;
     }
+
     .decoration:after {
         background-image: url("../img/decoration-middle.png");
         width: 222px;
@@ -1101,21 +1193,27 @@ body .btn.btn-bordered {
         left: 25%;
         top: 61%;
     }
+
     .animated-header .animated-hotels:after {
         left: 50%;
     }
+
     .tour-info-container .tour-info-content > h1 {
         font-size: 35px;
     }
+
     .days-short-description li a {
         font-size: 35px;
     }
+
     .day-content h1 {
         font-size: 35px;
     }
+
     .tours-days-prices .tours-days-prices-container {
         max-width: 98%;
     }
+
     .tour-slider-container .tour-info-slider-item {
         height: 415px;
     }
@@ -1123,29 +1221,36 @@ body .btn.btn-bordered {
 
 @media only screen and (max-width: 991px) {
     .tours-slider {
-        max-width:98%;
+        max-width: 98%;
     }
+
     .hotels .hotels-container {
-        max-width:98%;
+        max-width: 98%;
     }
+
     /*.hotels .hotels-container .hotels-content .hotels-item {*/
-        /*height: 318px;*/
+    /*height: 318px;*/
     /*}*/
     .transport .transport-container .transport-content {
-        max-width:98%;
+        max-width: 98%;
     }
+
     .hotels .hotels-container .hotels-content .hotels-item p {
         font-size: 21px;
     }
+
     .transport-slider .transport-slider-item:not(:last-child) {
         margin-right: 11px;
     }
+
     .navigation-bar {
         display: none;
     }
+
     .mobile-menu-btn {
         display: inline-block;
     }
+
     header .header-container {
         max-width: 98%;
     }
@@ -1155,42 +1260,54 @@ body .btn.btn-bordered {
     .decoration-cont-style {
         font-size: 41px;
     }
+
     .transport-slider .transport-slider-item .transport-slider-image {
         height: 185px;
     }
+
     .transport-slider .transport-slider-item .transport-slider-item-content {
         padding: 22px 11px 19px;
     }
+
     body .btn.btn-orange {
         font-size: 13px;
     }
+
     .hotels .hotels-container .hotels-content .hotels-item {
         height: 189px;
     }
+
     .footer-navigation {
-        display: block!important;
+        display: block !important;
     }
+
     .footer-email-number {
-        display: block!important;
+        display: block !important;
     }
+
     .footer-row-1 .footer-email-number .email-logo {
         border-right: none;
     }
+
     .currency-lang {
         top: 75px;
         right: 10px;
     }
+
     .logo-social-links {
         position: absolute;
         right: 10px;
         top: 26px;
     }
+
     .footer-row-2 .logo-social-links {
         left: 52%;
     }
+
     .decoration-cont-style {
         font-size: 22px;
     }
+
     .decoration:after {
         background-image: url("../img/decoration-small.png");
         width: 222px;
@@ -1198,27 +1315,35 @@ body .btn.btn-bordered {
         left: 25%;
         top: 61%;
     }
+
     .animated-header .animated-hotels:after {
         left: 50%;
     }
+
     .tour-info-container .tour-info-content > h1 {
-         font-size: 27px;
-     }
+        font-size: 27px;
+    }
+
     .days-short-description li a {
         font-size: 27px;
     }
+
     .day-content h1 {
         font-size: 27px;
     }
+
     .day-content h3 {
         font-size: 18px;
     }
+
     .day-content {
         padding: 10px 15px;
     }
+
     .share-post {
         flex-wrap: wrap;
     }
+
     .tour-slider-container .tour-info-slider-item {
         height: 300px;
     }
@@ -1236,14 +1361,17 @@ body .btn.btn-bordered {
     .footer-row-2 .logo-social-links p {
         padding-right: 27px;
     }
+
     .blog_content {
         max-width: 96%;
         margin: auto;
     }
+
     .days-short-description li.active:after {
         height: 59px;
         top: 16px;
     }
+
     .tour-slider-container .tour-info-slider-item {
         height: 236px;
     }

@@ -3033,6 +3033,11 @@ h5 {
     text-align: center;
     width: 50%;
     border-radius: 25px; /*box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset; moz-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset; -webkit-box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset;*/
+    transition: .3s;
+}
+
+.btn-default.btn1:hover {
+    box-shadow: 1px 1px 16px #b8b7b7;
 }
 
 .btn-default.btn1:hover {

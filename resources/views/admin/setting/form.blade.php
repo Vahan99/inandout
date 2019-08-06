@@ -46,7 +46,9 @@
 </div>
 <div class="row no-padding">
     <div class="col-md-4">
-        <img src="/uploads/{{ $model->image }}" alt="" class="img-responsive thumbnail">
+        @if($model)
+            <img src="/uploads/{{ $model->image }}" alt="" class="img-responsive thumbnail">
+        @endif
         <div class="form-group">
             {!! Form::file('image[]') !!}
         </div>  

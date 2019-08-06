@@ -1,7 +1,7 @@
 @php
     $settings = \App\Setting::first();
 @endphp
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="am">
 <head>
     <title>InAndOut</title>
@@ -52,11 +52,10 @@
     <script src="{{asset('assets')}}/js/googlemap.js"></script>
 
 
-
     {{--Bootstrap slider--}}
 
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -87,32 +86,36 @@
                     <ul class="social clearfix">
                         @if(!is_null($settings->tripadvisor))
                             <li class="trip_o">
-                                <a href="{{ $settings->tripadvisor }}" class="tripadvisor" style="background-image: url({{ ('../uploads/tripadvisor.png') }})" target="_blank">
+                                <a href="{{ $settings->tripadvisor }}" class="tripadvisor"
+                                   style="background-image: url({{ ('../uploads/tripadvisor.png') }})" target="_blank">
                                 </a>
                             </li>
                         @endif
                         @if(!is_null($settings->facebook))
                             <li class="face_o">
-                                <a href="{{ $settings->facebook }}" class="facebook" style="background-image: url({{ ('../uploads/face.png') }})" target="_blank">
+                                <a href="{{ $settings->facebook }}" class="facebook"
+                                   style="background-image: url({{ ('../uploads/face.png') }})" target="_blank">
                                 </a>
                             </li>
                         @endif
                         @if(!is_null($settings->vk))
                             <li class="vk_o">
-                                <a href="{{ $settings->vk }}" class="vk" style="background-image: url({{ ('../uploads/vk.png') }})" target="_blank">
+                                <a href="{{ $settings->vk }}" class="vk"
+                                   style="background-image: url({{ ('../uploads/vk.png') }})" target="_blank">
                                 </a>
                             </li>
                         @endif
                         @if(!is_null($settings->instagram))
                             <li class="insta_o">
-                                <a href="{{ $settings->instagram }}" class="instagram" style="background-image: url({{ ('../uploads/instagram.png') }})" target="_blank">
+                                <a href="{{ $settings->instagram }}" class="instagram"
+                                   style="background-image: url({{ ('../uploads/instagram.png') }})" target="_blank">
 
                                 </a>
                             </li>
                         @endif
                     </ul>
                 </div>
-                <div >
+                <div>
 
                 </div>
                 <div class="currency" style="width:100px !important;">
@@ -123,15 +126,15 @@
                                 aria-haspopup="true"
                                 aria-expanded="true">
                             {{--@php--}}
-                                {{--if(app()->getLocale() === 'en') {--}}
-                                    {{--echo currency()->getCurrencies()['USD']['code'];--}}
-                                 {{--}--}}
-                                 {{--elseif(app()->getLocale() === 'ru') {--}}
-                                  {{--echo currency()->getCurrencies()['RUB']['code'];--}}
-                                 {{--}--}}
-                                 {{--else {--}}
-                                    {{--echo currency()->getCurrencies()['AMD']['code'];--}}
-                                 {{--}--}}
+                            {{--if(app()->getLocale() === 'en') {--}}
+                            {{--echo currency()->getCurrencies()['USD']['code'];--}}
+                            {{--}--}}
+                            {{--elseif(app()->getLocale() === 'ru') {--}}
+                            {{--echo currency()->getCurrencies()['RUB']['code'];--}}
+                            {{--}--}}
+                            {{--else {--}}
+                            {{--echo currency()->getCurrencies()['AMD']['code'];--}}
+                            {{--}--}}
                             {{--@endphp--}}
                             {{currency()->getCurrency()['code']}}
                             <span class="caret"></span>
@@ -677,11 +680,11 @@
                 <!--/.row-->
             </div>
         </div>
-@endif
+    @endif
     <style>
         .currency .dropdown-toggle:before {
             {{--content: "{{ currency()->getCurrency()['symbol'] }}";--}}
-content: "";
+ content: "";
             background: url("{{currency()->getCurrency()['symbol']}}") 0 0 no-repeat;
             display: inline-block;
             width: 18px;
@@ -699,7 +702,7 @@ content: "";
             width: 18px;
             height: 12px;
             {{--background: url(/assets/images/flag_{{ \App::getLocale() }}.png) 0 0 no-repeat;--}}
-background: url(/uploads/globus_icon.png) 0 0 no-repeat;
+ background: url(/uploads/globus_icon.png) 0 0 no-repeat;
             vertical-align: top;
             margin-top: 3px;
             margin-right: 5px;
