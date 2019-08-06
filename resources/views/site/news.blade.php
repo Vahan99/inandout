@@ -8,7 +8,7 @@
                         @if($model->images()->count())
                             @foreach($model->images as $image)
                                 <div class="tour-info-slider-item"
-                                     style="background-image: url({{ asset('uploads/'.$image->name )}})"></div>
+                                     style="background-image: url({{ asset('uploads/'.$image->image )}})"></div>
                             @endforeach
                         @endif
                     </div>
