@@ -4,37 +4,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
+                    <section class="tour-slider-container">
+                        <div class="tour-info-slider">
+                            @if(count($model->images))
+                                @foreach($model->images as $image)
+                                    <div class="tour-info-slider-item"
+                                         style="background-image: url({{ asset('uploads/'.$image->image )}})"></div>
+                                @endforeach
+                            @endif
+                        </div>
+                    </section>
                     <div class="blog_content" style="margin-top: 50px">
                         <div class="post post-full">
                             <div class="clearfix"></div>
-                            <div class="post-header">
-                                <div class="post-slide">
-                                    <div id="sl1">
-                                        <a class="sl1_prev" href="#"></a>
-                                        <a class="sl1_next" href="#"></a>
-                                        <div class="sl1_pagination"></div>
-                                        <div class="carousel-box">
-                                            <div class="inner">
-                                                <div class="carousel main">
-                                                    <div class="caroufredsel_wrapper">
-                                                        <ul>
-                                                            @foreach($model->images as $image)
-                                                                <li style="width: 1132px;">
-                                                                    <div class="sl1">
-                                                                        <div class="sl1_inner">
-                                                                            <img src="{{ asset('uploads/'.$image->image )}}" class="img-responsive">
-                                                                        </div>
-                                                                    </div>
-                                                                </li>
-                                                            @endforeach
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="post-story">
                                 <h3 class="hch">{{ $model->name }}</h3>
                                 <div class="post-story-body clearfix">
@@ -65,14 +47,15 @@
                                             @if(isset($model) && $model->meta_data[0])
                                                 @foreach($model->meta_data[0]['data'] as $row => $data)
                                                     <tr class="tr-row text-center">
-                                                    @foreach($data as $key => $value)
-                                                        @if($key === 0)
+                                                        @foreach($data as $key => $value)
+                                                            @if($key === 0)
                                                                 <td class="text-center">
                                                                     {{ \App\RoomType::find($value) ? \App\RoomType::find($value) ->name : ''}}
                                                                 </td>
                                                             @else
                                                                 <td class="text-center">
-                                                                    <a class="color-orange" href="{{ route('reserve-hotel', ['residence_id' => $model->id, 'row' => $row, 'key' => $key]) }}">
+                                                                    <a class="color-orange"
+                                                                       href="{{ route('reserve-hotel', ['residence_id' => $model->id, 'row' => $row, 'key' => $key]) }}">
                                                                         {{ currency($value, 'AMD', currency()->getUserCurrency()) }}
                                                                     </a>
                                                                 </td>
@@ -86,42 +69,43 @@
                                     @endif
                                     <div class="post-story-body clearfix text-center">
                                         @if($model->amenity_data)
-                                        <table class="table-responsive table table-bordered" id="">
-                                            <thead>
-                                            <tr>
-                                                <th style="text-align: center; font-size: 16px" colspan="2">@lang('message.residence-properties')</th>
-                                                {{--                                 <th style="text-align: center">@lang('message.table-qty')</th>--}}
-                                            </tr>
-                                            </thead>
-                                            <tbody id="append-place">
-                                            @foreach($model->amenity_data as $key => $data)
+                                            <table class="table-responsive table table-bordered" id="">
+                                                <thead>
                                                 <tr>
-                                                    <td style="width: 80%">
-                                                        {{ $data['name'][\app::getlocale()] }}
-                                                    </td>
-                                                    <td>
-                                                        @if($data['qty'] == 'v')
-                                                            <i class="fa fa-check text-success"></i>
-                                                        @endif
-                                                        @if($data['qty'] == 'x')
-                                                            <i class="fa text-danger">&#xf00d;</i>
-                                                            {{--<i class="fa fa-remove text-danger"></i>--}}
-                                                        @endif
-                                                        @if(($data['qty'] !== 'v') && ($data['qty'] !== 'x'))
-                                                            {{ $data['qty'] }}
-                                                        @endif
-                                                    </td>
+                                                    <th style="text-align: center; font-size: 16px"
+                                                        colspan="2">@lang('message.residence-properties')</th>
+                                                    {{--                                 <th style="text-align: center">@lang('message.table-qty')</th>--}}
                                                 </tr>
-                                            @endforeach
-                                            </tbody>
-                                        </table>
-                                    @endif
+                                                </thead>
+                                                <tbody id="append-place">
+                                                @foreach($model->amenity_data as $key => $data)
+                                                    <tr>
+                                                        <td style="width: 80%">
+                                                            {{ $data['name'][\app::getlocale()] }}
+                                                        </td>
+                                                        <td>
+                                                            @if($data['qty'] == 'v')
+                                                                <i class="fa fa-check text-success"></i>
+                                                            @endif
+                                                            @if($data['qty'] == 'x')
+                                                                <i class="fa text-danger">&#xf00d;</i>
+                                                                {{--<i class="fa fa-remove text-danger"></i>--}}
+                                                            @endif
+                                                            @if(($data['qty'] !== 'v') && ($data['qty'] !== 'x'))
+                                                                {{ $data['qty'] }}
+                                                            @endif
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        @endif
                                     </div>
                                 @endif
                             </div>
                             {!! $model->after_text !!}
                             <div class="post-story-tags clearfix">
-                                <div class="tags_wrapper"><b>Address</b>: <a>{{ $model->address }}</a> </div>
+                                <div class="tags_wrapper"><b>Address</b>: <a>{{ $model->address }}</a></div>
                             </div>
                             @include('site.partials.social-share')
                         </div>
@@ -132,13 +116,13 @@
     </div>
 @endsection
 @push('social-meta')
-    <meta property="og:url"           content="{{ url()->current() }}" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="{{ $model->name }}" />
-    <meta property="og:description"   content="{!! strip_tags($model->description) !!}" />
-    <meta name="keywords"             content="{{ $model->name }}" />
-    <meta name="description"          content="{!! strip_tags($model->description) !!}" />
+    <meta property="og:url" content="{{ url()->current() }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{ $model->name }}"/>
+    <meta property="og:description" content="{!! strip_tags($model->description) !!}"/>
+    <meta name="keywords" content="{{ $model->name }}"/>
+    <meta name="description" content="{!! strip_tags($model->description) !!}"/>
     @if($model->images()->count())
-        <meta property="og:image"         content="{{ URL::to('/') }}/uploads/{{ $model->images[0]->image }}" />
+        <meta property="og:image" content="{{ URL::to('/') }}/uploads/{{ $model->images[0]->image }}"/>
     @endif
 @endpush

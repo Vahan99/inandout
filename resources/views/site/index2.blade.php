@@ -9,7 +9,7 @@
         <h1 class="decoration-header decoration decoration-cont-style">@lang('message.aboutas-tours')</h1>
 
     </div>
-    @if(count($tours) > 2)
+    @if(count($tours))
         <div class="tours-slider">
             @foreach($tours as $tour)
                 <div class="tour-single" style="background-image: url('{{asset('uploads/')}}/{{$tour->grid_image}}')">
