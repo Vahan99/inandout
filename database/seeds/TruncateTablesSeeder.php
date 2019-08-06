@@ -37,5 +37,6 @@ class TruncateTablesSeeder extends Seeder
         DB::table('news')->truncate();
         DB::table('news_images')->truncate();
         DB::table('currencies')->truncate();
+        DB::table('bed_types')->truncate();
     }
 }

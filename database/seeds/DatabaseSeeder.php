@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
 //        $this->call(CarDriverSliderImagesTableSeeder::class);
 //        $this->call(NewsTableSeeder::class);
 //        $this->call(NewsImagesTableSeeder::class);
-        $this->call(ResidenceTableSeeder::class);
+//        $this->call(ResidenceTableSeeder::class);
 //        $this->call(ResidenceImagesTableSeeder::class);
 //        $this->call(RestaurantsTableSeeder::class);
 //        $this->call(RestaurantImagesTableSeeder::class);
