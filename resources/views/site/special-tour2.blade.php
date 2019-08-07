@@ -111,14 +111,14 @@
                     <li><a href="javascript:;">@lang('message.nav-traffick')</a></li>
                 </ul>
             </div>
-            <div class="share-post-icons">
-                <span>Share Post:</span>
-                <ul>
-                    <li><a href="javascript" class="facebook-logo"></a></li>
-                    <li><a href="javascript" class="vkontakte-logo"></a></li>
-                    <li><a href="javascript" class="instagram-logo"></a></li>
-                </ul>
-            </div>
+            {{--<div class="share-post-icons">--}}
+                {{--<span>Share Post:</span>--}}
+                {{--<ul>--}}
+                    {{--<li><a href="javascript" class="facebook-logo"></a></li>--}}
+                    {{--<li><a href="javascript" class="vkontakte-logo"></a></li>--}}
+                    {{--<li><a href="javascript" class="instagram-logo"></a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
 
         </section>
     </main>
