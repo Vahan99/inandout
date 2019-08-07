@@ -89,7 +89,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-image: linear-gradient(to bottom right,#00a99d,#264417);
+            background-image: linear-gradient(to bottom right,#D7733D,#264417);
             opacity: .6;
         }
         .event-list {
@@ -348,7 +348,7 @@
                 right: 0;
                 bottom: 0;
                 left: 0;
-                background-image: linear-gradient(to bottom right,#00a99d,#264417);
+                background-image: linear-gradient(to bottom right,#D7733D,#264417);
                 opacity: .6;
             }
         }

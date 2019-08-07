@@ -9,11 +9,11 @@
             color: #0066cc;
         }
         .button-color {
-            background-color: #00a99d;
+            background-color: #D7733D;
         }
         @media screen and (min-width: 500px) {
             .banner-color {
-                background-color: #00a99d;
+                background-color: #D7733D;
             }
             .orange-color {
                 color: #eb681f;
@@ -64,14 +64,14 @@
                                                                     <h3>@lang('message.your-order')</h3>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.reserve-form-name')</span> {{ $model->name }}</p>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.car-price')</span> {{ $data['price']}} AMD</p>
-{{--                                                                    <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.address')</span> {{ $model->address }}</p>--}}
+                                                                    <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.address')</span> {{ $model->address }}</p>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.duration')</span> {{ $data['duration']}}</p>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.other-notes')</span> {{ $data['other_notes'] }}</p>
 
 
                                                                     <h3>@lang('message.your-contact')</h3>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.phone')</span> {{$data['phone']}}</p>
-                                                                    {{--<p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.address')</span> {{$data['address']}}</p>--}}
+                                                                    <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.address')</span> {{$data['address']}}</p>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.city')</span> {{$data['city']}}</p>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;"><span class="orange-color">@lang('message.email')</span> {{$data['email']}}</p>
 
