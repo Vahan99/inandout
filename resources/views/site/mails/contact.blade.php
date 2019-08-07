@@ -21,6 +21,9 @@
                 background-color: #eb681f;
             }
         }
+        .content-info h2, h3, p{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +62,7 @@
                                                         <table border="0" cellspacing="0" cellpadding="0" style="font-weight:200;font-family:Helvetica,Arial,sans-serif" width="100%">
                                                             <tbody>
                                                             <tr>
-                                                                <td align="center" width="100%" style="padding: 0 15px;text-align: justify;color: rgb(76, 76, 76);font-size: 12px;line-height: 18px;">
+                                                                <td align="center" width="100%" style="padding: 0 15px;text-align: justify;color: rgb(76, 76, 76);font-size: 12px;line-height: 18px;" class="content-info">
                                                                     <h3>Կոնտակտային տվյալներ</h3>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;">@lang('message.contact-name') {{$data['name']}}</p>
                                                                     <p style="margin: 10px 0 15px 0;font-size: 15px;">@lang('message.email') {{$data['email']}}</p>

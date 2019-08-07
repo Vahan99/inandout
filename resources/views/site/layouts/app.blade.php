@@ -68,6 +68,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 </head>
 <body>
+@include('site.partials.modal')
 <div class="all-content">
     @include('site.layouts.header2')
     <main>
