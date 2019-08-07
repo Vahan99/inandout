@@ -1,7 +1,7 @@
 @extends('site.layouts.app')
 @section('content')
 
-<div class="aboutus_main_pic"></div>
+<div class="aboutus_main_pic" style="background-image: url('/uploads/{{ $model->images }}')"></div>
 <div id="main">
 <div id="why1" style="background-color: #fff;">
 	<div class="container">
