@@ -9,11 +9,11 @@
             color: #0066cc;
         }
         .button-color {
-            background-color: #00a99d;
+            background-color: #D7733D;
         }
         @media screen and (min-width: 500px) {
             .banner-color {
-                background-color: #00a99d;
+                background-color: #D7733D;
             }
             .orange-color {
                 color: #eb681f;

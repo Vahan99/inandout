@@ -110,10 +110,10 @@
                             <label class="col-md-6">@lang('message.starting-point') <span style="color: red;">*</span></label>
                             <div class="col-md-6">
                                 <span class="red">
-                                    <input type="text" class="form-control" value="" name="starting_place" placeholder="{{ trans('message.enter-starting-point') }}">
+                                    <input type="date" class="form-control" value="" name="starting_place" placeholder="{{ trans('message.enter-starting-point') }}">
                                 </span>
                                 <div class="input-group date" id="time" >
-                                    <input type="text" class="form-control" value="" name="starting_time" placeholder="{{ trans('message.starting-time') }}">
+                                    <input type="date" class="form-control" value="" name="starting_time" placeholder="{{ trans('message.starting-time') }}">
                                     <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>

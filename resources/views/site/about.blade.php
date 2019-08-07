@@ -27,30 +27,30 @@
 </div>
 
 @if(count(\App\Team::all()))
-{{--<div id="team1">--}}
-	{{--<div class="container">--}}
-		{{--<h2 class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="200">@lang('message.our-team')</h2>--}}
-		{{--<br>--}}
-		{{--<div class="row">--}}
-			{{--@foreach(\App\Team::all() as $employee)--}}
-			{{--<div class="col-sm-3">--}}
-				{{--<div class="thumb3 animated flipInY visible" data-animation="flipInY" data-animation-delay="300">--}}
-					{{--<div class="thumbnail clearfix">--}}
-						{{--<figure class="">--}}
-							{{--<img src="/uploads/{{ $employee->image }}" alt="" class="img-responsive">--}}
-							{{--<div class="over">{{ $employee->rank }}</div>--}}
-						{{--</figure>--}}
-						{{--<div class="caption">--}}
-							{{--<div class="txt1">{{ $employee->name }}</div>--}}
-							{{--<div class="txt2">{!! $employee->desc !!}</div>--}}
-						{{--</div>--}}
-					{{--</div>--}}
-				{{--</div>--}}
-			{{--</div>--}}
-			{{--@endforeach--}}
-		{{--</div>--}}
-	{{--</div>--}}
-{{--</div>--}}
+<div id="team1">
+	<div class="container">
+		<h2 class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="200">@lang('message.our-team')</h2>
+		<br>
+		<div class="row">
+			@foreach(\App\Team::all() as $employee)
+			<div class="col-sm-3">
+				<div class="thumb3 animated flipInY visible" data-animation="flipInY" data-animation-delay="300">
+					<div class="thumbnail clearfix">
+						<figure class="" style="overflow: hidden">
+							<img src="/uploads/{{ $employee->image }}" alt="" class="img-responsive" style="height: 250px">
+							<div class="over">{{ $employee->rank }}</div>
+						</figure>
+						<div class="caption">
+							<div class="txt1">{{ $employee->name }}</div>
+							<div class="txt2">{!! $employee->desc !!}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			@endforeach
+		</div>
+	</div>
+</div>
 </div>
 @endif
 @endsection

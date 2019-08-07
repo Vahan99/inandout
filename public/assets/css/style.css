@@ -449,7 +449,7 @@ header {
 }
 
 .slider .slider_inner span p {
-    background: #00a99d;
+    background: #D7733D;
     background: rgba(0, 169, 157, 0.56);
     padding: 5px 15px;
     display: table;
@@ -714,7 +714,7 @@ header {
     border: none;
     border-radius: 0;
     background: none;
-    background: #00a99d;
+    background: #D7733D;
 }
 
 .tabs_tabs .ui-tabs-nav li {
@@ -736,7 +736,7 @@ header {
 .tabs_tabs .ui-tabs-nav .ui-tabs-anchor {
     color: #ffffff;
     padding: 13px 30px 14px 60px;
-    background: #00a99d;
+    background: #D7733D;
     float: none;
     display: block;
 }
@@ -751,7 +751,7 @@ header {
 }
 
 .tabs_tabs .ui-tabs-nav li.flights a {
-    background: url(../images/flights.png) 20px center no-repeat #00a99d;
+    background: url(../images/flights.png) 20px center no-repeat #D7733D;
 }
 
 .tabs_tabs .ui-tabs-nav li.ui-tabs-active.flights a {
@@ -1285,12 +1285,12 @@ header {
 }
 
 .breadcrumbs1 a {
-    color: #00a99d;
+    color: #D7733D;
     text-decoration: none;
 }
 
 .breadcrumbs1 a:hover {
-    color: #00a99d;
+    color: #D7733D;
     text-decoration: underline;
 }
 
@@ -1579,7 +1579,7 @@ header {
 }
 
 .star_rating_wrapper .title {
-    background: #00a99d;
+    background: #D7733D;
     position: relative;
     font-weight: 700;
     color: #fff;
@@ -2471,7 +2471,7 @@ header {
 
 .sub-menu li a:hover {
     text-decoration: none;
-    color: #00a99d;
+    color: #D7733D;
 }
 
 .sub-menu-1 > ul {
@@ -3011,7 +3011,7 @@ h5 {
 
 .btn-default.btn0:hover {
     color: #fff;
-    background: #00a99d;
+    background: #D7733D;
 }
 
 .btn-default.btn1 {
@@ -3028,7 +3028,7 @@ h5 {
     -webkit-border-radius: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    text-transform: uppercase; /*background: #00a99d;*/
+    text-transform: uppercase; /*background: #D7733D;*/
     position: relative;
     text-align: center;
     /*width: 50%;*/
@@ -3094,7 +3094,7 @@ h5 {
 
 .btn-default.btn3:hover {
     color: #fff;
-    background: #00a99d;
+    background: #D7733D;
 }
 
 .btn-default.btn4 {
@@ -3112,7 +3112,7 @@ h5 {
     margin-top: 0px;
     margin-bottom: 0px;
     text-transform: uppercase;
-    background: #00a99d;
+    background: #D7733D;
     position: relative;
     text-align: center;
     box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.2) inset;
@@ -3465,8 +3465,7 @@ h5 {
 }
 
 .thumb3 .thumbnail figure .over {
-    background: #D7733D;
-    background: rgba(28, 187, 180, 0.8);
+    background-color: #D7733D;
     position: absolute;
     left: 0;
     bottom: 0;

@@ -1,5 +1,14 @@
 @extends('site.layouts.app')
 @section('content')
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ dump($error) }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 {{ Form::open(['route' => 'send.residence.mail', 'method' => 'post', 'files' => true,'id']) }}
 <div id="content">
     <div class="container">
@@ -50,14 +59,14 @@
                             <li class="{{ $errors->has('city') ? 'error-li' : ''}}" style="list-style-type: none">{{ $errors->first('city') }}</li>
                         </div>
                     </div>
-                    {{--<div class="clearfix"></div>--}}
-                    {{--<div class="input2_wrapper">--}}
-                        {{--<label class="col-md-5" style="padding-left:0;padding-top:12px;">@lang('message.reserve-form-address')<span style="color:red;">*</span></label>--}}
-                        {{--<div class="col-md-7" style="padding-right:0;padding-left:0;">--}}
-                            {{--<input type="text" class="form-control {{ $errors->has('address') ? 'error-input' : ''}}" value="{{ old('address') }}" spellcheck="false" name="address">--}}
-                            {{--<li class="{{ $errors->has('address') ? 'error-li' : ''}}" style="list-style-type: none">{{ $errors->first('address') }}</li>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+                    <div class="clearfix"></div>
+                    <div class="input2_wrapper">
+                        <label class="col-md-5" style="padding-left:0;padding-top:12px;">@lang('message.reserve-form-address')<span style="color:red;">*</span></label>
+                        <div class="col-md-7" style="padding-right:0;padding-left:0;">
+                            <input type="text" class="form-control {{ $errors->has('address') ? 'error-input' : ''}}" value="{{ old('address') }}" spellcheck="false" name="address">
+                            <li class="{{ $errors->has('address') ? 'error-li' : ''}}" style="list-style-type: none">{{ $errors->first('address') }}</li>
+                        </div>
+                    </div>
 
                 </div>
                 <div class="col-md-4"></div>
