@@ -9,7 +9,7 @@
   }
 </style>
 
-<div class="contacts_main_pic"></div>
+<div class="contacts_main_pic" style="background-image: url('/uploads/{{ $model->images }}')"></div>
 
 <div id="content" class="contacts_content">
   <div class="container">
