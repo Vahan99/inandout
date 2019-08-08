@@ -27,7 +27,7 @@
                                         {!! $model->description !!}
                                     </p>
                                 </div>
-                                @if(isset($model->meta_data))
+                                @if($model->meta_data)
                                     @php
                                         $head_texts = $model->meta_data['head_texts'];
                                         $lang = \App::getLocale();

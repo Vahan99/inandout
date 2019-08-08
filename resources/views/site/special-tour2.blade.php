@@ -46,7 +46,7 @@
                 @endif
             </div>
         </section>
-        @if(isset($model->meta_data))
+        @if($model->meta_data)
         <section class="tours-days-prices">
             <div class="tours-days-prices-container">
                 <h1>@lang('message.aboutas-min-title2')</h1>
@@ -111,14 +111,14 @@
                     <li><a href="javascript:;">@lang('message.nav-traffick')</a></li>
                 </ul>
             </div>
-            {{--<div class="share-post-icons">--}}
-                {{--<span>Share Post:</span>--}}
-                {{--<ul>--}}
-                    {{--<li><a href="javascript" class="facebook-logo"></a></li>--}}
-                    {{--<li><a href="javascript" class="vkontakte-logo"></a></li>--}}
-                    {{--<li><a href="javascript" class="instagram-logo"></a></li>--}}
-                {{--</ul>--}}
-            {{--</div>--}}
+            <div class="share-post-icons">
+                <span>Share Post:</span>
+                <ul>
+                    <li><a href="javascript" class="facebook-logo"></a></li>
+                    <li><a href="javascript" class="vkontakte-logo"></a></li>
+                    <li><a href="javascript" class="instagram-logo"></a></li>
+                </ul>
+            </div>
 
         </section>
     </main>
