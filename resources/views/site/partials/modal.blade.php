@@ -29,6 +29,6 @@
 </div><!-- /.modal -->
 
 <script>
-    $('#myModal').modal('show');
+    $('#myModal').mo('display', 'block');
 </script>
 @endif
