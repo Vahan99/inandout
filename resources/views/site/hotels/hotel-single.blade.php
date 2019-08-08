@@ -26,7 +26,7 @@
                                     </p>
                                 </div>
                                 @if($model->data)
-                                    @if($model->meta_data)
+                                    @if(isset($model->meta_data))
                                         <br>
                                         <br>
                                         <h5 class="text-center">@lang('message.apartment-price-policy-title')</h5>
@@ -68,7 +68,7 @@
                                         </table>
                                     @endif
                                     <div class="post-story-body clearfix text-center">
-                                        @if($model->amenity_data)
+                                        @if(isset($model->amenity_data))
                                             <table class="table-responsive table table-bordered" id="">
                                                 <thead>
                                                 <tr>
