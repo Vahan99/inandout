@@ -49,16 +49,18 @@
                                             @foreach($model->meta_data[0]['data'] as $row => $data)
                                                 <tr class="tr-row text-center">
                                                     @foreach($data as $key => $value)
-                                                        @if($key === 0)
-                                                            <td class="text-center">
-                                                                {{ \App\RoomType::find($value) ? \App\RoomType::find($value) ->name : ''}}
-                                                            </td>
-                                                        @else
-                                                            <td class="text-center">
-                                                                <a href="{{ route('reserve-hotel', ['residence_id' => $model->id, 'row' => $row, 'key' => $key]) }}">
-                                                                    {{ currency($value, 'AMD', currency()->getUserCurrency()) }}
-                                                                </a>
-                                                            </td>
+                                                        @if(!is_null($value))
+                                                            @if($key === 0)
+                                                                <td class="text-center">
+                                                                    {{ \App\RoomType::find($value) ? \App\RoomType::find($value) ->name : ''}}
+                                                                </td>
+                                                            @else
+                                                                <td class="text-center">
+                                                                    <a href="{{ route('reserve-hotel', ['residence_id' => $model->id, 'row' => $row, 'key' => $key]) }}">
+                                                                        {{ currency($value, 'AMD', currency()->getUserCurrency()) }}
+                                                                    </a>
+                                                                </td>
+                                                            @endif
                                                         @endif
                                                     @endforeach
                                                 </tr>

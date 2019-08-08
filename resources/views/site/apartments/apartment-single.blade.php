@@ -49,6 +49,11 @@
                                             </thead>
                                             <tbody>
                                             @foreach($model->meta_data['data'] as $key => $data)
+                                                @if(
+                                                    !is_null($data['duration'])&&
+                                                    !is_null($data['price'])&&
+                                                    !is_null($data['interval'])
+                                                )
                                                 <tr>
                                                     <td>
                                                         {{ $data['duration'] }} {{ listOfTimeIntervals($data['duration'], $data['interval']) }}
@@ -57,6 +62,7 @@
                                                         <a href="{{ route('reserve-residence', ['residence_id' => $model->id, 'key' => $key, 'type' => \App\Residence::residence_type_apartment]) }}">{{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}</a>
                                                     </td>
                                                 </tr>
+                                                @endif
                                             @endforeach
                                             </tbody>
                                         </table>
