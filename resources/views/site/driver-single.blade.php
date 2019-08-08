@@ -57,7 +57,6 @@
                                 </div>
                             @endif
 
-
                             <div style="margin-top: 20px; margin-bottom: 20px; width: 100%">
                             @if($model->meta_data)
                                     @if($model->with_driver)
@@ -81,29 +80,36 @@
                                         </thead>
                                         <tbody>
                                             @foreach($model->meta_data as $key => $data)
-                                            <tr>
-                                                <td>
-                                                    {{ $data['duration'] }} {{ listOfTimeIntervals($data['duration'], $data['interval']) }}
-                                                </td>
-                                                @if($model->with_driver)
+                                             @if(
+                                                !is_null($data['duration'])&&
+                                                !is_null($data['one_way'])&&
+                                                !is_null($data['two_way'])&&
+                                                !is_null($data['interval'])
+                                                )
+                                                <tr>
                                                     <td>
-                                                        <a href="{{ route('reserve-car', ['driver_id' => $model->id, 'key' => $key, 'type' => 'one_way']) }}">
-                                                            {{ currency($data['one_way'], 'AMD', currency()->getUserCurrency()) }}
-                                                        </a>
+                                                        {{ $data['duration'] }} {{ listOfTimeIntervals($data['duration'], $data['interval']) }}
                                                     </td>
-                                                    <td>
-                                                        <a href="{{ route('reserve-car', ['driver_id' => $model->id, 'key' => $key, 'type' => 'two_way']) }}">
-                                                            {{ currency($data['two_way'], 'AMD', currency()->getUserCurrency()) }}
-                                                        </a>
-                                                    </td>
-                                                @else
-                                                    <td>
-                                                        <a href="{{ route('reserve-car', ['driver_id' => $model->id,'key' => $key, 'type' => 'price']) }}">
-                                                            {{ currency($data['price'], currency()->getUserCurrency()) }}
-                                                        </a>
-                                                    </td>
-                                                @endif
-                                            </tr>
+                                                    @if($model->with_driver)
+                                                        <td>
+                                                            <a href="{{ route('reserve-car', ['driver_id' => $model->id, 'key' => $key, 'type' => 'one_way']) }}">
+                                                                {{ currency($data['one_way'], 'AMD', currency()->getUserCurrency()) }}
+                                                            </a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="{{ route('reserve-car', ['driver_id' => $model->id, 'key' => $key, 'type' => 'two_way']) }}">
+                                                                {{ currency($data['two_way'], 'AMD', currency()->getUserCurrency()) }}
+                                                            </a>
+                                                        </td>
+                                                    @else
+                                                        <td>
+                                                            <a href="{{ route('reserve-car', ['driver_id' => $model->id,'key' => $key, 'type' => 'price']) }}">
+                                                                {{ currency($data['price'], currency()->getUserCurrency()) }}
+                                                            </a>
+                                                        </td>
+                                                    @endif
+                                                </tr>
+                                            @endif
                                         @endforeach
                                         </tbody>
                                     </table>

@@ -291,6 +291,14 @@ class TourController extends BaseController
     }
     public function createUpdateDataSave(Request $request)
     {
+
+        $this->validate($request, [
+            'data.data' => 'required',
+            'duration' => 'required'
+        ]);
+
+//        print_r($request->all());die;
+
         if($request->ajax()) {
             $model = Tour::findOrFail($request->id);
             $model->update([

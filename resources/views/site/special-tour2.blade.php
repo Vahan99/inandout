@@ -60,6 +60,7 @@
                     </thead>
                     <tbody>
                     @foreach($model->meta_data['data'] as $key => $data)
+                        @if(!is_null($data['name']))
                         <tr>
                             <td>
                                 {{ $data['name'] }}
@@ -75,6 +76,7 @@
                                 </a>
                             </td>
                         </tr>
+                        @endif
                     @endforeach
                     </tbody>
                 </table>
