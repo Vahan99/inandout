@@ -25,7 +25,7 @@
 
                                     </p>
                                 </div>
-                                @if($model->data)
+                                @if(isset($model->data))
                                     @if(isset($model->meta_data))
                                         <br>
                                         <br>

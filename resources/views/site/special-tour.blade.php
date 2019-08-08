@@ -57,7 +57,7 @@
     <div id="content">
         <div class="container-fluid">
             <div class="container w_wt_table">
-                @if($model->meta_data)
+                @if(isset($model->meta_data))
                     <div class="table_wrapper">
                     <div class="post-story-body clearfix text-center">
                         {{--<h5 class="--}}{{--font-green--}}{{-- text-center first_row">@lang('message.aboutas-min-title2')</h5>--}}

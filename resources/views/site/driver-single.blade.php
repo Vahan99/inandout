@@ -21,7 +21,7 @@
                             <div class="post-story-body clearfix">
                                 {!! $model->desc !!}
                             </div>
-                            @if($model->amenity_data)
+                            @if(isset($model->amenity_data))
                                 <div class="post-story-body clearfix text-center">
                                     {{--                        <b style="font-size:18px;">@lang('message.residence-properties')</b>--}}
                                     @if($model->amenity_data)
