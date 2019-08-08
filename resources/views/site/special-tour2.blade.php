@@ -46,7 +46,7 @@
                 @endif
             </div>
         </section>
-        @if($model->meta_data)
+        @if(isset($model->meta_data))
         <section class="tours-days-prices">
             <div class="tours-days-prices-container">
                 <h1>@lang('message.aboutas-min-title2')</h1>
