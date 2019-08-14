@@ -65,11 +65,13 @@ class CarDriverController extends BaseController
     {
         $model = CarDriver::find($id);
         $req = $request->all();
-        if(isset($req['grid_image']) && file_exists(public_path('uploads/'.$model->grid_image))) {
-            unlink(public_path() . '/uploads/' . $model->grid_image);
-            $req['grid_image'] = $this->fileUpload($request->grid_image, public_path('uploads/'))[0];
-        }else{
-            $req['grid_image'] = $this->fileUpload($request->grid_image, public_path('uploads/'))[0];
+        if($model->grid_image){
+            if(isset($req['grid_image']) && file_exists(public_path('uploads/'.$model->grid_image))) {
+                unlink(public_path() . '/uploads/' . $model->grid_image);
+                $req['grid_image'] = $this->fileUpload($request->grid_image, public_path('uploads/'))[0];
+            }else{
+                $req['grid_image'] = $this->fileUpload($request->grid_image, public_path('uploads/'))[0];
+            }
         }
 
         $req['with_driver'] = isset($req['with_driver']);
