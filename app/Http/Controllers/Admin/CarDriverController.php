@@ -79,7 +79,7 @@ class CarDriverController extends BaseController
         if($req['with_driver'] != $model->with_driver) {
             $model['data'] = '';
         }
-
+        dd($req);
         $model->update($req);
         $images = $this->fileUpload($request->file('image'), public_path('uploads/'));
 
