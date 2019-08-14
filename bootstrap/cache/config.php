@@ -194,7 +194,7 @@
       'ru' => 'Russian',
     ),
     'fallback_locale' => 'en',
-    'key' => 'base64:aeaFWwnMXUi6BCNVjC+0sxJH9gpRECHOWzHBVzFYMyA=',
+    'key' => 'base64:d+mFw5P9IKOEoylHYsYoCqDT0KFJwcBgJUBO6tgLiKo=',
     'cipher' => 'AES-256-CBC',
     'log' => 'single',
     'log_level' => 'debug',
@@ -429,16 +429,16 @@
   'mail' => 
   array (
     'driver' => 'smtp',
-    'host' => 'smtp.mailtrap.io',
-    'port' => '2525',
+    'host' => 'smtp.gmail.com',
+    'port' => '587',
     'from' => 
     array (
-      'address' => 'hello@example.com',
+      'address' => 'inandouttour@gmail.com',
       'name' => 'Example',
     ),
-    'encryption' => NULL,
-    'username' => NULL,
-    'password' => NULL,
+    'encryption' => 'tls',
+    'username' => 'inandouttour@gmail.com',
+    'password' => '198119912019',
     'sendmail' => '/usr/sbin/sendmail -bs',
     'markdown' => 
     array (
