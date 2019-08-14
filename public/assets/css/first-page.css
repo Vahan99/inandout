@@ -80,43 +80,43 @@ header .logo-container {
 }
 
 .logo-social-links ul .tripadvisor {
-    background-position: -2px -16px;
+    background-position: -2px -0px;
     width: 24px;
     height: 14px;
 }
 
 .logo-social-links ul .tripadvisor:hover {
-    background-position: -2px -0px;
+    background-position: -2px -16px;
 }
 
 .logo-social-links ul .facebook {
-    background-position: -11px -90px;
+    background-position: -2px -90px;
     width: 8px;
     height: 14px;
 }
 
 .logo-social-links ul .facebook:hover {
-    background-position: -2px -90px;
+    background-position: -11px -90px;
 }
 
 .logo-social-links ul .vkontakte {
-    background-position: -2px -45px;
+    background-position: -2px -32px;
     width: 19px;
     height: 11px;
 }
 
 .logo-social-links ul .vkontakte:hover {
-    background-position: -2px -32px;
+    background-position: -2px -45px;
 }
 
 .logo-social-links ul .instagram {
-    background-position: -2px -74px;
+    background-position: -2px -57px;
     width: 14px;
     height: 14px;
 }
 
 .logo-social-links ul .instagram:hover {
-    background-position: -2px -57px;
+    background-position: -2px -74px;
 }
 
 header .navigation-bar {
@@ -152,8 +152,8 @@ header .navigation-bar > ul > li > a {
     text-decoration: none;
     text-transform: uppercase;
     padding: 5px 20px;
-    color: #EF8200;
-    border: 1px solid #EF8200;
+    color: #1f2b37;
+    border: 1px solid #1f2b37;
     border-radius: 40px;
     font-weight: 500;
 }
@@ -379,7 +379,7 @@ body .btn.btn-bordered {
     border-radius: 22px;
     text-transform: uppercase;
     font-size: 14px;
-    border: 1px solid #EF8200;
+    border: 1px solid #1f2b37;
 }
 
 .btn-animated {

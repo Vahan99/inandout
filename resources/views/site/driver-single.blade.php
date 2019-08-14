@@ -17,8 +17,8 @@
                         <div class="post post-full">
                         </div>
                         <div class="post-story">
-                            <h2>{{ $model->name }}</h2>
                             <div class="post-story-body clearfix">
+                                {{ $model->name }}
                                 {!! $model->desc !!}
                             </div>
                             @if(isset($model->amenity_data))
@@ -60,7 +60,7 @@
                             <div style="margin-top: 20px; margin-bottom: 20px; width: 100%">
                             @if($model->meta_data)
                                     @if($model->with_driver)
-                                        <h4 class="text-center">@lang('message.price-policy-with-driver')</h4>
+                                        <h4 class=" text-center">@lang('message.price-policy-with-driver')</h4>
                                     @endif
                                     <table class="text-center" style="width: 100% !important;">
                                     <thead>

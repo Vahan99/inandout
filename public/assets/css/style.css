@@ -29,7 +29,7 @@ a:hover {
     /*color: #D7733D;*/
     color: #D7733D;
     text-decoration: none;
-    outline: none
+    outline: none;
 }
 
 body {
@@ -4981,4 +4981,30 @@ h5 {
     border-radius: 50px;
     height: 42px;
     position: relative;
+}
+
+header .navigation-bar > ul > li > a:hover {
+    border: solid 1px #EF8200!important;
+}
+.share-post-navigation > ul{
+    display: inline-flex;
+}
+.share-post-navigation > ul > li{
+    padding: 0 10px;
+}
+.share-post-icons{
+ padding: 10px 0;
+}
+.post-story-body{
+    padding: 10px;
+    text-align: center;
+}
+.blog_content{
+    padding: 10px;
+}
+.post-short{
+    padding: 15px;
+}
+.reserve-space{
+    padding: 30px;
 }

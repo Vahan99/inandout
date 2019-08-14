@@ -236,8 +236,8 @@ class IndexController extends Controller
         $data = $request->all();
         Mail::send('site.mails.contact', ['data' => $data], function ($message) use ($data)
         {
-            $message->from(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
-            $message->to(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->from(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
+            $message->to(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->subject("Inandout Travel Agency");
         });
         return redirect()->route('view.index')->with('success-message-send', 200);
@@ -256,10 +256,10 @@ class IndexController extends Controller
         $data = $request->all();
         Mail::send('site.mails.index', ['data' => $data], function ($message) use ($data)
         {
-            $message->from(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->from(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->to($data['email'], $data['name']);
-            $message->bcc(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
-            $message->cc(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->bcc(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
+            $message->cc(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->subject("Inandout Travel Agency");
         });
         return redirect()->route('view.index')->with('success-mail-send', 200);
@@ -278,10 +278,10 @@ class IndexController extends Controller
 
         Mail::send('site.mails.car-driver', ['data' => $data], function ($message) use ($data)
         {
-            $message->from(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->from(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->to($data['email'], $data['name']);
-            $message->bcc(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
-            $message->cc(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->bcc(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
+            $message->cc(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->subject("Inandout Travel Agency");
         });
         return redirect()->route('view.index')->with('success-mail-send', 200);
@@ -300,10 +300,10 @@ class IndexController extends Controller
         $data = $request->all();
         Mail::send('site.mails.residence', ['data' => $data], function ($message) use ($data)
         {
-            $message->from(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->from(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->to($data['email'], $data['name']);
-            $message->bcc(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
-            $message->cc(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->bcc(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
+            $message->cc(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->subject("Inandout Travel Agency");
         });
         return redirect()->route('view.index')->with('success-mail-send', 200);
@@ -321,10 +321,10 @@ class IndexController extends Controller
         $data = $request->all();
         Mail::send('site.mails.hotel', ['data' => $data], function ($message) use ($data)
         {
-            $message->from(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->from(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->to($data['email'], $data['name']);
-            $message->bcc(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
-            $message->cc(env('MAIL_FROM_ADDRESS'), 'Inandout.com');
+            $message->bcc(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
+            $message->cc(env('MAIL_FROM_ADDRESS'), 'inandouttour@gmail.com');
             $message->subject("InAndOut Travel Agency");
         });
         return redirect()->route('view.index')->with('success-mail-send', 200);

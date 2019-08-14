@@ -104,23 +104,23 @@
 
         <section class="share-post">
             {{--@include('site.partials.social-share')--}}
-            <div class="share-post-navigation">
-                <span>Tags:</span>
-                <ul>
-                    <li><a href="javascript:;">@lang('message.nav-sightseeing')</a></li>
-                    <li><a href="javascript:;">@lang('message.nav-hotel')</a></li>
-                    <li><a href="javascript:;">@lang('message.nav-hotel-2')</a></li>
-                    <li><a href="javascript:;">@lang('message.nav-traffick')</a></li>
-                </ul>
-            </div>
-            <div class="share-post-icons">
-                <span>Share Post:</span>
-                <ul>
-                    <li><a href="javascript" class="facebook-logo"></a></li>
-                    <li><a href="javascript" class="vkontakte-logo"></a></li>
-                    <li><a href="javascript" class="instagram-logo"></a></li>
-                </ul>
-            </div>
+            {{--<div class="share-post-navigation">--}}
+                {{--<span>Tags:</span>--}}
+                {{--<ul>--}}
+                    {{--<li><a href="javascript:;">@lang('message.nav-sightseeing')</a></li>--}}
+                    {{--<li><a href="javascript:;">@lang('message.nav-hotel')</a></li>--}}
+                    {{--<li><a href="javascript:;">@lang('message.nav-hotel-2')</a></li>--}}
+                    {{--<li><a href="javascript:;">@lang('message.nav-traffick')</a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
+            {{--<div class="share-post-icons">--}}
+                {{--<span>Share Post:</span>--}}
+                {{--<ul>--}}
+                    {{--<li><a href="javascript" class="facebook-logo"></a></li>--}}
+                    {{--<li><a href="javascript" class="vkontakte-logo"></a></li>--}}
+                    {{--<li><a href="javascript" class="instagram-logo"></a></li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
 
         </section>
     </main>

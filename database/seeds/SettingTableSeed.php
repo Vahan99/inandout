@@ -18,9 +18,9 @@ class SettingTableSeed extends Seeder
                 'vk' => 'https://vk.com/',
                 'instagram' => 'https://www.instagram.com/',
                 'image' => 'slider.jpg',
-                'title_hy' => "<p>Բարի գալուստ</p><p>Inandout</p>",
-                'title_en' => "<p>Welcome to</p><p>Inandout</p>",
-                'title_ru' => "<p>Добро пожаловать на</p><p>Inandout</p>",
+                'title_hy' => "<p>Բարի գալուստ</p><p>Indaout</p>",
+                'title_en' => "<p>Welcome to</p><p>Indaout</p>",
+                'title_ru' => "<p>Добро пожаловать на</p><p>Indaout</p>",
                 'slug' => 'setting',
                 'keywords' => '',
                 'keywords_desc' => ''

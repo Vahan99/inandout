@@ -44,6 +44,10 @@
     {!! Form::label('vk','Vk link', ['class' => 'awesome']) !!}
     {!! Form::text('vk', $model ? $model->vk : null ,['class' => 'form-control', 'placeholder' => 'Имя:','required'])!!}
 </div>
+<div class="form-group">
+    {!! Form::label('password','Admin Password', ['class' => 'awesome']) !!}
+    <input type="password" class="form-control" placeholder="change password:" name="password">
+</div>
 <div class="row no-padding">
     <div class="col-md-4">
         @if($model)

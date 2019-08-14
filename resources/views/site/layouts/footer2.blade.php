@@ -8,10 +8,9 @@
                 <div class="row">
                     <div class="col-lg-12 col-xl-6">
                         <ul class="d-flex footer-navigation">
-                            <li><a href="{{ route('view.index') }};">@lang('message.nav-home')</a></li>
-                            <li><a href="#">@lang('message.nav-city')</a></li>
-                            <li><a href="#">@lang('message.nav-city-home-2')</a></li>
-                            <li><a href="#">@lang('message.nav-excursion')</a></li>
+                            <li><a href="{{ route('sightseeing-places') }}">@lang('message.nav-sightseeing')</a></li>
+                            <li><a href="{{ route('site.restaurants-all') }}">@lang('message.nav-hotel')</a></li>
+                            <li><a href="{{ route('site.hotels-all') }}">@lang('message.nav-hotel-2')</a></li>
                             <li><a href="{{ route('drivers.index') }}">@lang('message.nav-traffick')</a></li>
                         </ul>
                     </div>

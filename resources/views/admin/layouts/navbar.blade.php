@@ -185,7 +185,7 @@
                         @foreach(\App\Page::all() as $page)
                             <li>
                                 <a href="{{ route('page.update', ['slug' => $page->slug]) }}"><i class="fa fa-circle-o"></i>
-                                    {{ $page->name }}
+                                    {{ $page->name_en }}
                                     <span class="label label-primary pull-right"></span>
                                 </a>
                             </li>
