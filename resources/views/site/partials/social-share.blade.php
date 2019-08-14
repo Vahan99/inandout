@@ -27,32 +27,32 @@
     {{--</div>--}}
 {{--</div>--}}
 
-<div class="share-post-navigation">
-    <span>@lang('message.tags'):</span>
-    <ul>
-        <li><a href="{{ route('sightseeing-places') }}">@lang('message.nav-sightseeing')</a></li>
-        <li><a href="{{ route('site.restaurants-all') }}">@lang('message.nav-hotel')</a></li>
-        <li><a href="{{ route('site.hotels-all') }}">@lang('message.nav-hotel-2')</a></li>
-        <li><a href="{{ route('drivers.index') }}">@lang('message.nav-traffick')</a></li>
-    </ul>
-</div>
-<div class="share-post-icons">
-    <span>@lang('message.share-post'):</span>
-    <ul>
+{{--<div class="share-post-navigation">--}}
+    {{--<span>@lang('message.tags'):</span>--}}
+    {{--<ul>--}}
+        {{--<li><a href="{{ route('sightseeing-places') }}">@lang('message.nav-sightseeing')</a></li>--}}
+        {{--<li><a href="{{ route('site.restaurants-all') }}">@lang('message.nav-hotel')</a></li>--}}
+        {{--<li><a href="{{ route('site.hotels-all') }}">@lang('message.nav-hotel-2')</a></li>--}}
+        {{--<li><a href="{{ route('drivers.index') }}">@lang('message.nav-traffick')</a></li>--}}
+    {{--</ul>--}}
+{{--</div>--}}
+{{--<div class="share-post-icons">--}}
+    {{--<span>@lang('message.share-post'):</span>--}}
+    {{--<ul>--}}
 
-        <li>
-            <a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="facebook-logo">
-                <img src="/uploads/face_g.png" />
-            </a>
-        </li>
-        <li>
-            <a href="javascript:;{{--https://twitter.com/share?url={{ url()->current() }}&amp;text=Land Of Noah &amp;hashtags=travel--}}" class="vkontakte-logo" /><img src="/uploads/vk_g.png" /></a></li>
-        <li>
-            <a href="https://plus.google.com/share?url={{ url()->current() }}" class="instagram-logo">
-                <img src="/uploads/instagram_g.png" />
-            </a>
-        </li>
+        {{--<li>--}}
+            {{--<a href="https://www.facebook.com/sharer.php?u={{ url()->current() }}" class="facebook-logo">--}}
+                {{--<img src="/uploads/face_g.png" />--}}
+            {{--</a>--}}
+        {{--</li>--}}
+        {{--<li>--}}
+            {{--<a href="javascript:;--}}{{--https://twitter.com/share?url={{ url()->current() }}&amp;text=Land Of Noah &amp;hashtags=travel--}}{{--" class="vkontakte-logo" /><img src="/uploads/vk_g.png" /></a></li>--}}
+        {{--<li>--}}
+            {{--<a href="https://plus.google.com/share?url={{ url()->current() }}" class="instagram-logo">--}}
+                {{--<img src="/uploads/instagram_g.png" />--}}
+            {{--</a>--}}
+        {{--</li>--}}
 
 
-    </ul>
-</div>
+    {{--</ul>--}}
+{{--</div>--}}

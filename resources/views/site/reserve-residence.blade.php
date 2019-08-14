@@ -13,7 +13,7 @@
 <div id="content">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 reserve-space">
                 <h3 class="text-center hch2">{{ $model->name }} </h3>
                 <div class="clearfix"></div>
                 <div class="col-md-4 booking-row">

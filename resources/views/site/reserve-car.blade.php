@@ -4,7 +4,7 @@
     <div id="content">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 reserve-space">
                     <h3 class="text-center hch2">{{ $model->name }}</h3>
                     <div class="clearfix"></div>
                     <div class="col-md-4 booking-row">
@@ -114,9 +114,6 @@
                                 </span>
                                 <div class="input-group date" id="time" >
                                     <input type="date" class="form-control" value="" name="starting_time" placeholder="{{ trans('message.starting-time') }}">
-                                    <span class="input-group-addon">
-                                        <span class="glyphicon glyphicon-calendar"></span>
-                                    </span>
                                 </div>
                             </div>
 
