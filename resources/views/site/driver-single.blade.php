@@ -18,14 +18,14 @@
                         </div>
                         <div class="post-story">
                             <div class="post-story-body clearfix">
-                                {{ $model->name }}
-                                {!! $model->desc !!}
+                                <span class="post-story-body-name">{{ $model->name }}</span>
+                                <span class="post-story-body-description">{!! $model->desc !!}</span>
                             </div>
                             @if(isset($model->amenity_data))
-                                <div class="post-story-body clearfix text-center">
                                     {{--                        <b style="font-size:18px;">@lang('message.residence-properties')</b>--}}
                                     @if($model->amenity_data)
-                                        <table class="table-responsive table table-bordered" id="">
+                                    <div class="post-story-body clearfix text-center">
+                                    <table class="table-responsive table table-bordered" id="">
                                             <thead>
                                             <tr>
                                                 <th style="text-align: center; font-size: 16px" colspan="2">@lang('message.residence-properties')</th>
@@ -53,8 +53,8 @@
                                             @endforeach
                                             </tbody>
                                         </table>
+                                    </div>
                                     @endif
-                                </div>
                             @endif
 
                             <div style="margin-top: 20px; margin-bottom: 20px; width: 100%">

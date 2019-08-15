@@ -5008,3 +5008,7 @@ header .navigation-bar > ul > li > a:hover {
 .reserve-space{
     padding: 30px;
 }
+.post-story-body-name, .post-story-body-description{
+    padding: 5px 0;
+    display: block;
+}
