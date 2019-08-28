@@ -49,7 +49,7 @@
                                     <div class="input1_wrapper">
                                         <div class="input1_inner range_input">
                                             @if(currency()->getCurrency()['code'] === 'AMD')
-                                                <input name="range_val" id="tour_range" type="range" min="0" max="5000000" step="20000"  class="form-control-range" />
+                                                <input name="range_val" id="tour_range" type="range" min="0" max="5000000" step="20000"  class="form-control-range" value="0"/>
                                                 @elseif(currency()->getCurrency()['code'] === 'RUB')
                                                 <input  name="range_val" id="tour_range" type="range" min="0" max="3000000" step="20000"  class="form-control-range" />
                                                 @else
