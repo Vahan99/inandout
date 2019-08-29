@@ -2587,7 +2587,7 @@ h2 {
     position: relative;
     right: 220px;
     text-align: right;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 h3 {
