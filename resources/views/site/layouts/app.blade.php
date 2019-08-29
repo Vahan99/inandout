@@ -36,7 +36,6 @@
     <!--FIRST PAGE CSS-->
     <link rel="stylesheet" href="{{asset('assets')}}/css/first-page.css">
 
-
     <!--JQUERY-->
     <script src="{{asset('assets')}}/js/js/libs/jquery-3.3.1.min.js"></script>
     <!--BOOTSTRAP-->
