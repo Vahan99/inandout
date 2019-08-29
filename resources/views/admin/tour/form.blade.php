@@ -38,17 +38,18 @@
 </div>
 
 {{--Text after price (price exclude)--}}
+
 <div class="form-group">
     {{ Form::label('exclude_hy', 'Price Exclude HY') }}
-    {!! Form::textarea('exclude_hy', $model ? $model->after_text_hy : null,['name' => 'exclude_hy', 'size' => '25x5','placeholder' => 'Հայերեն:', 'class' => 'form-control']); !!}
+    {!! Form::textarea('exclude_hy', $model ? $model->exclude_hy : null,['name' => 'exclude_hy', 'size' => '25x5','placeholder' => 'Հայերեն:', 'class' => 'form-control']); !!}
 </div>
 <div class="form-group">
     {{ Form::label('exclude_ru', 'Price exclude RU') }}
-    {!! Form::textarea('exclude_ru', $model ? $model->after_text_ru : null,['name' => 'exclude_ru', 'size' => '25x5','placeholder' => 'Русский:', 'class' => 'form-control']); !!}
+    {!! Form::textarea('exclude_ru', $model ? $model->exclude_ru : null,['name' => 'exclude_ru', 'size' => '25x5','placeholder' => 'Русский:', 'class' => 'form-control']); !!}
 </div>
 <div class="form-group">
     {{ Form::label('exclude_en', 'Price exclude EN') }}
-    {!! Form::textarea('exclude_en', $model ? $model->after_text_en : null,['name' => 'exclude_en', 'size' => '25x5','placeholder' => 'English:', 'class' => 'form-control']); !!}
+    {!! Form::textarea('exclude_en', $model ? $model->exclude_en : null,['name' => 'exclude_en', 'size' => '25x5','placeholder' => 'English:', 'class' => 'form-control']); !!}
 </div>
 
 
@@ -93,7 +94,7 @@
     {!! Form::file('image[]', ['multiple' => true, $model ? '' : 'required']) !!}
 </div>
 <div class="form-group">
-    {!! Form::label('grid_image', 'Grid Image 360x240') !!}
+    {!! Form::label('grid_image', 'Grid Image 340x360') !!}
     {!! Form::file('grid_image[]', [$model ? '' : 'required']) !!}
     @if(isset($model->grid_image))
     <div class="row">
