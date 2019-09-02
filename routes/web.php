@@ -153,6 +153,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'l
             Route::post('create-update-amenities-save/{id}', 'Admin\ResidenceController@createUpdateAmenitiesSave')->name('residence.create-update-amenities-save');
 
             Route::get('deleteImage/{id}','Admin\ResidenceController@deleteImage')->name('residence.deleteImage');
+            Route::post('position-update','Admin\ResidenceController@positionUpdate')->name('residence.positionUpdate');
         });
 
         Route::group(['prefix' => 'room-type'], function () {
