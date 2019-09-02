@@ -32,10 +32,32 @@
                             <a href="{{ route('residence.deleteImage', [$image->id] )}}" class="btn btn-block btn-danger btn-flat delete">
                                 <i class="fa fa-trash-o"></i>
                             </a>
+                            <input type="number" class="form-control image-position" value="{{$image->position}}" data-image-id="{{$image->id}}">
                         </div>
                     @endforeach
                 </div>
             </div>
         </div>
     @endif
+    @push('scripts')
+        <script>
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            $('.image-position').change(function () {
+                var data = {
+                    id:$(this).data('image-id'),
+                    position:$(this).val()
+                };
+                $.ajax({
+                    type:'POST',
+                    url:'{{ route('residence.positionUpdate') }}',
+                    data: data
+                });
+            });
+        </script>
+    @endpush
 @endsection

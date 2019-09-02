@@ -65,7 +65,9 @@ class Residence extends Model
 
     public function images()
     {
-        return $this->hasMany(ResidenceImage::class, 'residence_id', 'id');
+        return $this->hasMany(ResidenceImage::class, 'residence_id', 'id')
+            ->orderBy('position', 'desc')
+            ->orderBy('id', 'desc');
     }
 
     public function residence_room_types() {

@@ -14,6 +14,7 @@ class ResidenceImage extends Model
     protected $table = 'residence_images';
     protected $fillable = [
         'image',
-        'residence_id'
+        'residence_id',
+        'position'
     ];
 }
