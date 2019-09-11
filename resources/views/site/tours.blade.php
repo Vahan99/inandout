@@ -5,17 +5,17 @@
 @endphp
 
 @section('content')
-{{--@if($model->image)--}}
-{{--<div id="parallax2" class="parallax">--}}
-    {{--<div class="bg2 parallax-bg bg-fixed"--}}
-         {{--style="background-position: 50% -61px; background-image: url('/uploads/{{ $model->image }}')"></div>--}}
-    {{--<div class="overlay"></div>--}}
-    {{--<div class="parallax-content">--}}
-        {{--<div class="container">--}}
-        {{--</div>--}}
-    {{--</div>--}}
-{{--</div>--}}
-{{--@endif--}}
+@if($model->image)
+<div id="parallax2" class="parallax">
+    <div class="bg2 parallax-bg bg-fixed"
+         style="background-position: 50% -61px; background-image: url('/uploads/{{ $model->image }}')!important;"></div>
+    <div class="overlay"></div>
+    <div class="parallax-content">
+        <div class="container">
+        </div>
+    </div>
+</div>
+@endif
 <div class="tours_main_pic"></div>
 <div id="content">
     <div class="drivers_back">
