@@ -278,7 +278,7 @@ header .navigation-bar > ul > li > a {
 
 .decoration-cont-style {
     font-size: 67px;
-    color: white;
+    color: #1E2C37;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -517,7 +517,7 @@ body .btn.btn-bordered {
 
 .transport .transport-container .transport-content .decoration-cont-style {
     position: relative;
-    color: black;
+    color: #1E2C37;
     margin-bottom: 86px;
 }
 
