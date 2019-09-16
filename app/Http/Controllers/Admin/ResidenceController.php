@@ -101,7 +101,7 @@ class ResidenceController extends BaseController
         $model = Residence::find($id);
         $req = $request->all();
         $req['amenities'] = json_encode($request->amenities);
-        dd($req);
+//        dd($req);
         if(isset($req['grid_image'])){
             if($model->grid_image && file_exists(public_path('uploads/'.$model->grid_image))) {
                 unlink(public_path('uploads/'.$model->grid_image));
