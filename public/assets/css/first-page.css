@@ -247,12 +247,12 @@ header .navigation-bar > ul > li > a {
 }
 
 .hide-menu li:not(:last-child) {
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #1f2b37;
 }
 
 .hide-menu li a {
     text-decoration: none;
-    color: #8c8c8c;
+    color: #1f2b37;
     transition: .3s;
 }
 
