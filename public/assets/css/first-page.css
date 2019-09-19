@@ -247,7 +247,7 @@ header .navigation-bar > ul > li > a {
 }
 
 .hide-menu li:not(:last-child) {
-    border-bottom: 1px solid #1f2b37;
+    border-bottom: 1px solid #3c4750;
 }
 
 .hide-menu li a {
