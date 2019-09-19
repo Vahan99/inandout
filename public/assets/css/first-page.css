@@ -181,7 +181,7 @@ header .navigation-bar > ul > li > a {
 }
 
 .currency-lang .dropdown-menu li a {
-    color: #8c8c8c;
+    color: #1f2b37;
 }
 
 .currency-lang .dropdown-menu li:not(:last-child)  {
@@ -379,7 +379,7 @@ body .btn.btn-bordered {
     border-radius: 22px;
     text-transform: uppercase;
     font-size: 14px;
-    border: 1px solid #1f2b37;
+    border: 2px solid #1f2b37;
 }
 
 .btn-animated {
