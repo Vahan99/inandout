@@ -153,7 +153,7 @@ header .navigation-bar > ul > li > a {
     text-transform: uppercase;
     padding: 5px 20px;
     color: #1f2b37;
-    border: 1px solid #1f2b37;
+    border: 2px solid #1f2b37;
     border-radius: 40px;
     font-weight: 500;
 }
