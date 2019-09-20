@@ -1392,7 +1392,8 @@ body .btn.btn-bordered {
 .transport-slider-item-content,
 .tour-info-content,
 .post-story p,
-.blog_content
+.blog_content,
+.about_desc
 {
     color: #445565;
 }
