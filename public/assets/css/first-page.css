@@ -1385,3 +1385,7 @@ body .btn.btn-bordered {
         height: 236px;
     }
 }
+
+.tour-info-content p, h1, h2, h3, h4, h5{
+    color: #445565;
+}
