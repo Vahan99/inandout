@@ -13,7 +13,7 @@
     {{ Form::textarea('text_ru',$model ? $model->text_ru : null,['id' => 'text_ru', 'class' => 'form-control', 'name' => 'text_ru']) }}
 </div>
 <div class="form-group">
-    {!!  Form::label('images', '1920x727', ['class' => 'awesome']); !!}
+    {!!  Form::label('images', '1730x400', ['class' => 'awesome']); !!}
     {!! Form::file('images[]', ['id' => 'images']) !!}
 </div>
 {{ csrf_field() }}
