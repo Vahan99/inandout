@@ -16,7 +16,7 @@
             </div>
         @endif
         <div class="box-header">
-            <h3 class="box-title">Parallax Size 1920x727, Main Image Size 1920 x 809</h3>
+            <h3 class="box-title">Parallax Size 1730x400, Main Image Size 1920 x 809</h3>
         </div>
         <div class="box-body">
             @include('admin.gallery.form')
