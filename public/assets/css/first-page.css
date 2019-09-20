@@ -1386,6 +1386,11 @@ body .btn.btn-bordered {
     }
 }
 
-.tour-info-content, .transport-slider-item-content, .post-story p, .caption .text1, .text2{
+.transport-slider-item-content,
+.tour-info-content,
+.post-story p,
+.text1,
+.text2
+{
     color: #445565;
 }
