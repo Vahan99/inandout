@@ -1386,6 +1386,6 @@ body .btn.btn-bordered {
     }
 }
 
-.tour-info-content, .transport-slider-item-content{
+.tour-info-content, .transport-slider-item-content, .post-story p, .caption .text1, .text2{
     color: #445565;
 }
