@@ -19,7 +19,7 @@
 @if($model && $model->image)
 <div class="row">
     <div class="col-md-3">
-    <label>Size: 1200 x 400</label>
+    <label>Size: 1730 x 400</label>
         <img src="/uploads/{{ $model->image }}" alt="" class="img-responsive">
     </div>
 </div>

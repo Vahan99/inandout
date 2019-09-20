@@ -4680,9 +4680,9 @@ h5 {
     height: 460px;
     margin: 10px auto;
     background-image: url("../../uploads/tours_page.jpg");
-    background-position: center;
+    /*background-position: center;*/
     background-repeat: no-repeat;
-    background-size: cover;
+    /*background-size: cover;*/
 }
 
 .tours_page_logo {
