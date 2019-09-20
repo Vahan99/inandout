@@ -1386,6 +1386,6 @@ body .btn.btn-bordered {
     }
 }
 
-.tour-info-content p, h1, h2, h3, h4, h5{
+.tour-info-content {
     color: #445565;
 }
