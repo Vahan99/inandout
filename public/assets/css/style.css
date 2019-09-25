@@ -5013,3 +5013,6 @@ header .navigation-bar > ul > li > a:hover {
     color: #445565;
     font-size: 14px;
 }
+.tour-info-container {
+    font-size: 20px;
+}
