@@ -5009,3 +5009,7 @@ header .navigation-bar > ul > li > a:hover {
     padding: 10px 0;
     display: block;
 }
+.tour-info-content code {
+    color: #445565;
+    font-size: 14px;
+}
