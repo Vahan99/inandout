@@ -1761,8 +1761,7 @@ header {
 
 .popular .popular_inner figure img {
     position: relative;
-    width: 430px;
-    height: 270px;
+    width: 100%;
 }
 
 .popular .popular_inner figure .over {

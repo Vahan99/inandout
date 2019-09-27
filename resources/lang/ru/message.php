@@ -18,7 +18,7 @@ return [
     'nav-tavush' => 'Տավուշի մարզ',
     'nav-armavir' => 'Արմավիրի մարզ',
     'nav-regions-all' => 'Все',
-    'nav-excursion' => 'Экскурсии',
+    'nav-excursion' => 'Туры',
     'nav-today' => 'Ежедневные Туры',
     'nav-Individual' => 'Индивидуальные Туры',
     'nav-winter-tour' => 'Зимние туры',
