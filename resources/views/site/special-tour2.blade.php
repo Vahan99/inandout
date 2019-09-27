@@ -1,5 +1,6 @@
 @extends('site.layouts.app')
 @php
+
     $head_texts = $model->meta_data['head_texts'];
     $lang = app()->getLocale();
 @endphp
@@ -15,6 +16,7 @@
                 @endif
             </div>
         </section>
+
         <section class="tour-info-container">
             <div class="tour-info-content">
                 <h1>{{$model->name}}</h1>
@@ -44,6 +46,7 @@
                         </div>
                     </div>
                 @endif
+
             </div>
         </section>
         @if($model->meta_data)
@@ -61,21 +64,23 @@
                     <tbody>
                     @foreach($model->meta_data['data'] as $key => $data)
                         @if(!is_null($data['name']))
-                        <tr>
-                            <td>
-                                {{ $data['name'] }}
-                            </td>
-                            <td>
-                                <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price']) }}">
-                                    {{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}
-                                </a>
-                            </td>
-                            <td>
-                                <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">
-                                    {{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}
-                                </a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    {{ $data['name'] }}
+                                </td>
+                                <td>
+                                    <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price']) }}">
+                                        @if(!is_null($data['price']))
+                                        {{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}
+                                        @endif
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">
+                                        {{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}
+                                    </a>
+                                </td>
+                            </tr>
                         @endif
                     @endforeach
                     </tbody>
