@@ -21,6 +21,24 @@
             <div class="tour-info-content">
                 <h1>{{$model->name}}</h1>
                 <p>{!! $model->desc !!}</p>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="prises-info">
+                                <h1>@lang('message.the price includes')</h1>
+                                {!! $model->after_text !!}
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="prises-info">
+                                <h1>@lang('message.the price does not include')</h1>
+                                {!! $model->exclude !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 @if(count($days))
                     <div class="container-fluid">
                         <div class="row">
@@ -87,24 +105,6 @@
                 </table>
             </div>
         @endif
-        <div class="tour-price-container">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="prises-info">
-                            <h1>@lang('message.the price includes')</h1>
-                            {!! $model->after_text !!}
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="prises-info">
-                            <h1>@lang('message.the price does not include')</h1>
-                            {!! $model->exclude !!}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         </section>
 
         <section class="share-post">
