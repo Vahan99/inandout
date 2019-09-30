@@ -49,8 +49,8 @@
 
             </div>
         </section>
-        @if($model->meta_data)
         <section class="tours-days-prices">
+        @if($model->meta_data)
             <div class="tours-days-prices-container">
                 <h1>@lang('message.aboutas-min-title2')</h1>
                 <table class="table table-responsive-sm">
@@ -86,26 +86,26 @@
                     </tbody>
                 </table>
             </div>
-            <div class="tour-price-container">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="prises-info">
-                                <h1>@lang('message.the price includes')</h1>
-                                {!! $model->after_text !!}
-                            </div>
+        @endif
+        <div class="tour-price-container">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="prises-info">
+                            <h1>@lang('message.the price includes')</h1>
+                            {!! $model->after_text !!}
                         </div>
-                        <div class="col-sm-6">
-                            <div class="prises-info">
-                                <h1>@lang('message.the price does not include')</h1>
-                                {!! $model->exclude !!}
-                            </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="prises-info">
+                            <h1>@lang('message.the price does not include')</h1>
+                            {!! $model->exclude !!}
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </section>
-        @endif
 
         <section class="share-post">
             {{--@include('site.partials.social-share')--}}
