@@ -432,7 +432,10 @@ class IndexController extends Controller
                     $q->where('room_type_id', $request->room);
                 }]);
             } else {
-                $hotels = \App\RoomType::findOrFail($request->room)->hotels();
+                $hotel = RoomType::findOrFail($request->room);
+                if($hotel){
+                    $hotels = $hotel->hotels();
+                }
             }
         }
 
@@ -442,9 +445,9 @@ class IndexController extends Controller
                     $q->where('bed_type_id', $request->bed);
                 }]);
             } else {
-                $hotels = \App\BedType::whereSlug($request->bed)->firstOrFail();
-                if($hotels){
-                    $hotels->hotels()->paginate(6);
+                $hotel = \App\BedType::whereSlug($request->bed)->firstOrFail();
+                if($hotel){
+                    $hotels = $hotel->hotels()->paginate(6);
                 }
             }
         }
