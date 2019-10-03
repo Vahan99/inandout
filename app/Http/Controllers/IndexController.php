@@ -442,7 +442,10 @@ class IndexController extends Controller
                     $q->where('bed_type_id', $request->bed);
                 }]);
             } else {
-                $hotels = BedType::whereSlug($request->bed)->firstOrFail()->hotels()->paginate(6);
+                $hotels = BedType::whereSlug($request->bed)->firstOrFail();
+                if($hotels){
+                    $hotels->hotels()->paginate(6);
+                }
             }
         }
 
