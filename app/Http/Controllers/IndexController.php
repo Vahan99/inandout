@@ -438,7 +438,7 @@ class IndexController extends Controller
         }
 
         if(isset($request->bed)) {
-            $b_residence_ids = \App\ResidenceBedType::whereBedTypeId($request->bed)->get()/*->pluck('residence_id')->toArray()*/;
+            $b_residence_ids = \App\ResidenceBedType::where('bed_type_id', $request->bed)->get()/*->pluck('residence_id')->toArray()*/;
             dd($b_residence_ids);
             if(!empty($b_residence_ids)){
                 $hotels = $hotels->whereIn('id', $b_residence_ids);
