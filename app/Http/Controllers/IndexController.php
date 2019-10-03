@@ -8,6 +8,7 @@ use App\Tour;
 use App\CarDriver;
 use App\Region;
 use App\Page;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Route;
 use Mail;
 use App\Restaurant;
@@ -421,39 +422,21 @@ class IndexController extends Controller
         $beds = \App\BedType::listAll();
         $regions = Region::get();
 
+        $hotels = Residence::with('region')->whereResidenceType(Residence::residence_type_hotel);
+
         if(isset($request->slug)) {
-            $region = Region::whereSlug($request->slug)->firstOrFail();
-            $hotels = $region->hotels();
+            $r_id=Region::whereSlug($request->slug)->first()->pluck('id');
+            $hotels = $hotels->whereRegionId($r_id);
         }
 
         if(isset($request->room)) {
-            if(isset($hotels)) {
-                $hotels = $hotels->with(['residence_room_types' => function($q) use ($request) {
-                    $q->where('room_type_id', $request->room);
-                }]);
-            } else {
-                $hotel = RoomType::findOrFail($request->room);
-                if($hotel){
-                    $hotels = $hotel->hotels();
-                }
-            }
+            $residence_ids = \App\ResidenceRoomType::whereRoomTypeId($request->room)->get()->pluck('residence_id')->toArray();
+            $hotels = $hotels->whereIn('id', $residence_ids);
         }
 
         if(isset($request->bed)) {
-            if(isset($hotels)) {
-                $hotels = $hotels->with(['resbedtypes' => function($q) use ($request) {
-                    $q->where('bed_type_id', $request->bed);
-                }]);
-            } else {
-                $hotel = \App\BedType::whereSlug($request->bed)->firstOrFail();
-                if($hotel){
-                    $hotels = $hotel->hotels()->paginate(6);
-                }
-            }
-        }
-
-        if(!isset($hotels)) {
-            $hotels = Residence::whereResidenceType(Residence::residence_type_hotel);
+            $residence_ids = \App\ResidenceBedType::whereBedTypeId($request->bed)->get()->pluck('residence_id')->toArray();
+            $hotels = $hotels->whereIn('id', $residence_ids);
         }
 
         $slug = $request->slug;

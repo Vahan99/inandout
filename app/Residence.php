@@ -114,4 +114,9 @@ class Residence extends Model
         $amenities = $this->amenities ? json_decode($this->amenities, TRUE) : false;
         return $amenities;
     }
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
 }
