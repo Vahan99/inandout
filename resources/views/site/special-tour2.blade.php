@@ -76,7 +76,9 @@
                     <tr>
                         <th scope="col" class="black-border-btm">{{ $head_texts['num_of_person_' . $lang] }}</th>
                         <th scope="col" class="orange-border-btm">{{ $head_texts['price_' . $lang] }}</th>
-                        <th scope="col" class="orange-border-btm">{{ $head_texts['guide_' . $lang] }}</th>
+                        @if(!empty($data['price_guide']))
+                            <th scope="col" class="orange-border-btm">{{ $head_texts['guide_' . $lang] }}</th>
+                        @endif
                     </tr>
                     </thead>
                     <tbody>
@@ -93,11 +95,13 @@
                                         @endif
                                     </a>
                                 </td>
+                                @if(!empty($data['price_guide']))
                                 <td>
                                     <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">
                                         {{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}
                                     </a>
                                 </td>
+                                @endif
                             </tr>
                         @endif
                     @endforeach
