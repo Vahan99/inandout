@@ -87,18 +87,18 @@
                                     {{ $data['name'] }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price']) }}">
-                                        @if(!is_null($data['price']))
-                                        {{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}
-                                        @endif
-                                    </a>
+                                    @if(!empty($data['price']))
+                                        <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price']) }}">
+                                            {{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}
+                                        </a>
+                                    @endif
                                 </td>
                                 @if(!empty($data['price_guide']))
-                                <td>
-                                    <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">
-                                        {{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}
-                                    </a>
-                                </td>
+                                    <td>
+                                        <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">
+                                            {{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}
+                                        </a>
+                                    </td>
                                 @endif
                             </tr>
                         @endif
