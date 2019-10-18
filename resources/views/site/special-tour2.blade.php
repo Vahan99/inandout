@@ -76,9 +76,7 @@
                     <tr>
                         <th scope="col" class="black-border-btm">{{ $head_texts['num_of_person_' . $lang] }}</th>
                         <th scope="col" class="orange-border-btm">{{ $head_texts['price_' . $lang] }}</th>
-                        @if(!empty($data['price_guide']))
-                            <th scope="col" class="orange-border-btm">{{ $head_texts['guide_' . $lang] }}</th>
-                        @endif
+                        <th scope="col" class="orange-border-btm">{{ $head_texts['guide_' . $lang] }}</th>
                     </tr>
                     </thead>
                     <tbody>
