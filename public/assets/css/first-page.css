@@ -349,7 +349,7 @@ header .navigation-bar > ul > li > a {
     transition: all 0.3s;
 }
 
-.tours-slider .tour-single .tour-single-content a {
+.tours-slider .tour-single .tour-single-content a, .price-policy-order-btn a{
     text-decoration: none;
     color: white;
 }
@@ -1401,4 +1401,14 @@ body .btn.btn-bordered {
 
 .animated-header h1 {
     color: #1E2C37;
+}
+
+.bg-posit{
+    background-position-y: 4rem;
+}
+.currency-price{
+    display: block;
+}
+.btn-price-submit a{
+    font-size: 12px;
 }

@@ -7,7 +7,7 @@
 
 @section('content')
     <main>
-        <section class="tour-slider-container">
+        <section class="tour-slider-container" style="{{$model->meta_data ? 'margin-bottom: 6rem' : ''}}">
             <div class="tour-info-slider">
                 @if(count($model->slider_images))
                     @foreach($model->slider_images as $image)
@@ -16,8 +16,14 @@
                 @endif
             </div>
         </section>
-
-        <section class="tour-info-container">
+        @if($model->meta_data)
+            <section class="order-section col-md-2 col-md-offset-5 text-center">
+                <button class="hero__scroll btn btn-orange price-policy-order-btn">
+                    <a>@lang('message.reserve-data-submit')</a>
+                </button>
+            </section>
+        @endif
+        <section class="tour-info-container bg-posit">
             <div class="tour-info-content">
                 <h1>{{$model->name}}</h1>
                 <p>{!! $model->desc !!}</p>
@@ -69,7 +75,7 @@
         </section>
         <section class="tours-days-prices">
         @if($model->meta_data)
-            <div class="tours-days-prices-container">
+            <div class="tours-days-prices-container" id="price_policy">
                 <h1>@lang('message.aboutas-min-title2')</h1>
                 <table class="table table-responsive-sm">
                     <thead>
@@ -88,16 +94,22 @@
                                 </td>
                                 <td>
                                     @if(!empty($data['price']))
-                                        <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price']) }}">
-                                            {{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}
-                                        </a>
+                                        <span class="currency-price">{{ currency($data['price'], 'AMD', currency()->getUserCurrency()) }}</span>
+                                        <button class="btn btn-orange price-policy-order-btn btn-price-submit">
+                                            <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price']) }}">
+                                                @lang('message.reserve-data-submit')
+                                            </a>
+                                        </button>
                                     @endif
                                 </td>
                                 @if(!empty($data['price_guide']))
                                     <td>
-                                        <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">
-                                            {{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}
-                                        </a>
+                                        <span class="currency-price">{{ currency($data['price_guide'], 'AMD', currency()->getUserCurrency()) }}</span>
+                                        <button class="btn btn-orange price-policy-order-btn btn-price-submit">
+                                            <a href="{{ route('reserve-tour', ['tour-id' => $model->id, 'key' => $key, 'type' => 'price_guide']) }}">
+                                                @lang('message.reserve-data-submit')
+                                            </a>
+                                        </button>
                                     </td>
                                 @endif
                             </tr>
@@ -130,5 +142,13 @@
             {{--</div>--}}
 
         </section>
+
+        <script>
+            $('.hero__scroll').on('click', function(e) {
+                $('html, body').animate({
+                    scrollTop: $('#price_policy').offset().top
+                }, 1000);
+            });
+        </script>
     </main>
 @endsection

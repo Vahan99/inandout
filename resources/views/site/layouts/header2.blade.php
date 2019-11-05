@@ -85,7 +85,7 @@
                 <li>
                     <a class="nav-link" href="javascript:;">@lang('message.nav-city')</a>
                     <ul class="hide-menu hide-menu-armenia">
-                        {{--<li><a href="{{ route('sightseeing-places') }}">@lang('message.nav-sightseeing')</a></li>--}}
+                        <li><a href="{{ route('sightseeing-places') }}">@lang('message.nav-sightseeing')</a></li>
                         <li><a href="{{ route('arm.index') }}">@lang('message.nav-city-home')</a></li>
                         <li><a href="{{ route('site.restaurants-all') }}">@lang('message.nav-hotel')</a></li>
                         <li><a href="{{ route('news.index') }}">@lang('message.nav-news')</a></li>
