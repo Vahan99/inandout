@@ -31,10 +31,11 @@
                 @foreach($hotels as $hotel)
                     <div class="hotels-content">
                         @foreach($hotel as $h)
-                            <a href="{{ route('hotel-single', ['slug' => $h->slug]) }}" class="hotels-item" style="background-image: url('/uploads/{{ $h->grid_image }}')">
-                                    <div class="hotels-item-background">
-                                        <p>{{$h->name}}</p>
-                                    </div>
+                            <a href="{{ route('hotel-single', ['slug' => $h->slug]) }}" class="hotels-item home-hotel-item">
+                                <div class="hotels-item-background hotels-item" style="background-image: url('/uploads/{{ $h->grid_image }}')">
+                                    <div class="home-slider-box"></div>
+                                    <p>{{$h->name}}</p>
+                                </div>
                             </a>
                         @endforeach
                     </div>
