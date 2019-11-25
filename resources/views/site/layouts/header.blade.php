@@ -266,7 +266,7 @@
                                 <a href="{{ route('drivers.index') }}">@lang('message.nav-traffick')</a>
                             </li>
                             <li class="sub-menu sub-menu-1 {{ active_link(['about.index', 'view.contact', 'vacancy.index', 'service.index']) }}">
-                                <a href="#">@lang('message.nav-worldnoah') <em></em></a>
+                                <a href="#">@lang('message.worldinandout') <em></em></a>
                                 <ul>
                                     <li class="{{ active_link('about.index') }}"><a
                                                 href="{{ route('about.index') }}/">@lang('message.nav-about')</a></li>

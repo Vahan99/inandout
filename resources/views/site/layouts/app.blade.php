@@ -120,7 +120,7 @@
         </li>
         <li><a class="menu-header" href="{{ route('drivers.index') }}">@lang('message.nav-traffick')</a>
         </li>
-        <li><a class="menu-header" href="javascript:;">@lang('message.nav-worldnoah')</a>
+        <li><a class="menu-header" href="javascript:;">@lang('message.worldinandout')</a>
             <ul class="hided-content">
                 <li><a href="{{ route('about.index') }}">@lang('message.nav-about')</a></li>
                 <li><a href="{{ route('view.contact') }}">@lang('message.nav-contacts')</a></li>

@@ -16,7 +16,7 @@
                     {{--</a>--}}
                 {{--</li>--}}
                 {{--<li>--}}
-                    {{--<a href="https://twitter.com/share?url={{ url()->current() }}&amp;text=Land Of Noah &amp;hashtags=travel" class="customer share twitter" /><img src="/uploads/vk_g.png" /></a></li>--}}
+                    {{--<a href="https://twitter.com/share?url={{ url()->current() }}&amp;text=Ind andout &amp;hashtags=travel" class="customer share twitter" /><img src="/uploads/vk_g.png" /></a></li>--}}
                 {{--<li>--}}
                     {{--<a href="https://plus.google.com/share?url={{ url()->current() }}" class="customer share google_plus">--}}
                         {{--<img src="/uploads/instagram_g.png" />--}}
@@ -46,7 +46,7 @@
             {{--</a>--}}
         {{--</li>--}}
         {{--<li>--}}
-            {{--<a href="javascript:;--}}{{--https://twitter.com/share?url={{ url()->current() }}&amp;text=Land Of Noah &amp;hashtags=travel--}}{{--" class="vkontakte-logo" /><img src="/uploads/vk_g.png" /></a></li>--}}
+            {{--<a href="javascript:;--}}{{--https://twitter.com/share?url={{ url()->current() }}&amp;text=Ind andout &amp;hashtags=travel--}}{{--" class="vkontakte-logo" /><img src="/uploads/vk_g.png" /></a></li>--}}
         {{--<li>--}}
             {{--<a href="https://plus.google.com/share?url={{ url()->current() }}" class="instagram-logo">--}}
                 {{--<img src="/uploads/instagram_g.png" />--}}

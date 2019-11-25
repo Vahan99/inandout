@@ -30,14 +30,14 @@ return [
     'nav-traffick' => 'Transport',
     'nav-rent-a-car' => 'Car rental',
     'nav-car-a-driver' => 'Car with driver',
-    'nav-worldnoah' => 'Company',
+    'worldinandout' => 'Company',
     'nav-about' => 'About us',
     'nav-contacts' => 'Contact',
     'nav-job' => 'Vacancy',
     'nav-more' => 'Comments',
 
     'title-welcome' => 'Բարի Գալուստ',
-    'title-land' => 'Inandout',
+    'title-inandout' => 'Inandout',
     'title-tour' => 'Տուրիստական գործակալություն',
 
     'title-news' => 'Latest Updates',

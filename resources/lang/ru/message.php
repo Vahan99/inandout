@@ -29,14 +29,14 @@ return [
     'nav-traffick' => 'Транспортные средства',
     'nav-rent-a-car' => 'Прокат автомобилей',
     'nav-car-a-driver' => 'Автомобиль с водителем',
-    'nav-worldnoah' => 'Компания',
+    'worldinandout' => 'Компания',
     'nav-about' => 'О нас',
     'nav-contacts' => 'Контактная информация',
     'nav-job' => 'Работа вакансии',
     'nav-more' => 'Комментарии',
 
     'title-welcome' => 'Բարի Գալուստ',
-    'title-land' => 'Inandout',
+    'title-inandout' => 'Inandout',
     'title-tour' => 'Տուրիստական գործակալություն',
 
     'title-news' => 'Последние Обновления',
