@@ -18,7 +18,6 @@
     </div>
     <div class="row">
       <div class="col-sm-8 contact_content">
-        <h3>WELCOME TO THE OFFICIAL WEBSITE OF THE TOUR ORGANIZATION LOREM IPSUM, ARMENIA</h3>
         {!! $model->desc !!}
       </div>
       <div class="col-sm-4">

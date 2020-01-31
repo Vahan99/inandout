@@ -33,16 +33,18 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-
                                     <label>@lang('message.price')<span class="range_input_prices"></span></label>
                                     <div class="input1_wrapper">
                                         <div class="input1_inner range_input">
+                                            @php
+                                              $range_val = request('range_val') ? request('range_val') : 0;
+                                            @endphp
                                             @if(currency()->getCurrency()['code'] === 'AMD')
-                                                <input name="range_val" id="tour_range" type="range" min="0" max="5000000" step="20000"  class="form-control-range" value="0"/>
+                                                <input name="range_val" id="tour_range" type="range" min="0" max="100000" step="1000"  class="form-control-range" value="{{$range_val}}"/>
                                                 @elseif(currency()->getCurrency()['code'] === 'RUB')
-                                                <input  name="range_val" id="tour_range" type="range" min="0" max="3000000" step="20000"  class="form-control-range" />
+                                                <input  name="range_val" id="tour_range" type="range" min="0" max="10000" step="100"  class="form-control-range" value="{{$range_val}}" />
                                                 @else
-                                                <input name="range_val" id="tour_range" type="range" min="0" max="40000" step="1000"  class="form-control-range" />
+                                                <input name="range_val" id="tour_range" type="range" min="0" max="10000" step="100"  class="form-control-range" value="{{$range_val}}"/>
                                             @endif
                                             <div  class="text-center range_val"></div>
                                         </div>

@@ -40,7 +40,7 @@ class IndexController extends Controller
             ->chunk(4, function ($q) use ($hotels) {
                 $hotels->push($q);
             });
-        $tours = Tour::with('region')->whereSightseeingPlace(0)->take(20)/*->inRandomOrder()*/->orderBy('id', 'desc')->get();
+        $tours = Tour::with('region')->whereDisplay(true)->whereSightseeingPlace(0)->take(20)/*->inRandomOrder()*/->orderBy('id', 'desc')->get();
         $cars = CarDriver::with('sliderImages')->take(10)->/*inRandomOrder()->*/orderBy('id', 'desc')->get();
         $settings = \App\Setting::first();
 
@@ -148,14 +148,14 @@ class IndexController extends Controller
         if(isset($request->region)) {
             $tours = $tours->where('region_id', $request->region);
         }
+
         if(isset($request->range_val) && $request->range_val != 0) {
             $usd_price = currency()->getCurrencies()['USD']['exchange_rate'];
             if(app()->getLocale() !== 'en') {
                 $price = $usd_price * $request->range_val;
-                $tours = $tours->whereBetween('price', [0,$price]);
-            }
-            else {
-                $tours = $tours->whereBetween('price', [0,$request->range_val]);
+                $tours->where('data', 'like', '%' . $price . '%');
+            }else {
+                $tours->where('data', 'like', '%' . $request->range_val . '%');
             }
         }
 
@@ -338,15 +338,16 @@ class IndexController extends Controller
             $region = \App\Region::whereSlug($request->slug)->first();
             $places = \App\Tour::where([
                 ['sightseeing_place', '=', 1],
-                ['region_id', '=', $region->id]
+                ['region_id', '=', $region->id],
+                ['display', '=', true],
             ])->orderBy('id', 'desc')->paginate(6);
             $places->appends(['slug' => $request->slug]);
         } else {
-            $places = \App\Tour::whereSightseeingPlace(1)->paginate(6);
+            $places = \App\Tour::whereDisplay(true)->whereSightseeingPlace(1)->paginate(6);
             $slug = false;
         }
         if($request->keywords) {
-            $places = \App\Tour::where([['name_en', 'like', '%' . $request->keywords . '%'], ['sightseeing_place', '=', 1]])
+            $places = \App\Tour::whereDisplay(true)->where([['name_en', 'like', '%' . $request->keywords . '%'], ['sightseeing_place', '=', 1]])
                 ->orWhere([['name_ru', 'like', '%' . $request->keywords . '%'], ['sightseeing_place', '=', 1]])
                 ->orWhere([['name_hy', 'like', '%' . $request->keywords . '%'], ['sightseeing_place', '=', 1]])
                 ->orderBy('id', 'desc')->paginate(8);

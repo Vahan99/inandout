@@ -57,7 +57,8 @@ class Tour extends Model
         'exclude_hy',
         'exclude_ru',
         'exclude_en',
-        'duration'
+        'duration',
+        'display'
     ];
 
     protected $guarded = ['created_at','update_at'];

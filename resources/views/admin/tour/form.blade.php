@@ -52,15 +52,21 @@
     {!! Form::textarea('exclude_en', $model ? $model->exclude_en : null,['name' => 'exclude_en', 'size' => '25x5','placeholder' => 'English:', 'class' => 'form-control']); !!}
 </div>
 
+<div class="form-group">
+    {!! Form::label('display') !!}
+    {!! Form::checkbox('display', 1, $model && $model->display? true : false) !!}
+</div>
+
+<div class="form-group">
+    {!! Form::label('sightseeing_place') !!}
+    {!! Form::checkbox('sightseeing_place', 1, $model && $model->sightseeing_place ? true : false) !!}
+</div>
 
 <div class="form-group">
     {!! Form::label('region_id') !!}
     {!! Form::select('region_id', App\Region::listAll('id'), $model ? $model->region_id : null, ['class' => 'form-control','required']) !!}
 </div>
-<div class="form-group">
-    {!! Form::label('sightseeing_place') !!}
-    {!! Form::checkbox('sightseeing_place', 1, $model && $model->sightseeing_place ? true : false) !!}
-</div>
+
 <div class="form-group">
   {!! Form::label('date', 'Date') !!}
   {!! Form::text('from', $model ? $model->date : null, ['class' => 'form-control']) !!}

@@ -40,7 +40,7 @@ class TourType extends Model
 
     public function tours()
     {
-        return $this->hasMany(\App\Tour::class, 'tour_type_id', 'id');
+        return $this->hasMany(\App\Tour::class, 'tour_type_id', 'id')->whereDisplay(true);
     }
 
     public static function listTourTypes()

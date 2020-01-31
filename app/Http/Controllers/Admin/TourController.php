@@ -121,7 +121,6 @@ class TourController extends BaseController
             'image' => 'max:500',
         ]);
         $req = $request->all();
-//        dd($req);
         $req['grid_image'] = $this->fileUpload($request->file('grid_image'), public_path('uploads/'))[0];
         $req['slug'] = str_slug($req['name_en']);
         if(isset($req['tour_type_id'])) {
@@ -132,7 +131,6 @@ class TourController extends BaseController
         }
 
         $images = $this->fileUpload($request->file('image'), public_path('uploads/'));
-//        dd($req);
 
         $id = Tour::create($req)->id;
 
