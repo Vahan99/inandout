@@ -155,6 +155,7 @@ class TourController extends BaseController
 
     public function edit(Request $request, $id)
     {
+//        dd($request->all());
         $model = Tour::find($id);
         $req = $request->all();
         if(isset($req['tour_type_id'])) {
@@ -170,6 +171,7 @@ class TourController extends BaseController
         }
 
         $req['sightseeing_place'] = isset($req['sightseeing_place']);
+        $req['display'] = isset($req['display']);
 
         $model->update($req);
         $images = $this->fileUpload($request->file('image'), public_path('uploads/'));

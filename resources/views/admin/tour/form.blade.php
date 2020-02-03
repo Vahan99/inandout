@@ -54,7 +54,7 @@
 
 <div class="form-group">
     {!! Form::label('display') !!}
-    {!! Form::checkbox('display', 1, $model && $model->display? true : false) !!}
+    {!! Form::checkbox('display', 1, $model && $model->display ? true : false) !!}
 </div>
 
 <div class="form-group">
