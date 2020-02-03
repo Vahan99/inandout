@@ -44,7 +44,7 @@
                                                 @elseif(currency()->getCurrency()['code'] === 'RUB')
                                                 <input  name="range_val" id="tour_range" type="range" min="0" max="1000000" step="1000"  class="form-control-range" value="{{$range_val}}" />
                                                 @else
-                                                <input name="range_val" id="tour_range" type="range" min="0" max="1000" step="100"  class="form-control-range" value="{{$range_val}}"/>
+                                                <input name="range_val" id="tour_range" type="range" min="0" max="100000" step="100"  class="form-control-range" value="{{$range_val}}"/>
                                             @endif
                                             <div  class="text-center range_val"></div>
                                         </div>
