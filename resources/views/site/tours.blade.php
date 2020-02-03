@@ -32,7 +32,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-7">
                                     <label>@lang('message.price')<span class="range_input_prices"></span></label>
                                     <div class="input1_wrapper">
                                         <div class="input1_inner range_input">
