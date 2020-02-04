@@ -159,7 +159,7 @@ class IndexController extends Controller
 //                $tours->where('data', 'like', '%' . $request->range_val . '%');
 //            }
             if($request->range_val){
-                $tours->where('data', 'like', '%' . $request->range_val . '%');
+                $tours->whereBetween('data', array(0, (int)$request->range_val));
             }
         }
 
