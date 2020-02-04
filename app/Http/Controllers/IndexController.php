@@ -152,10 +152,13 @@ class IndexController extends Controller
         if(isset($request->range_val) && $request->range_val != 0) {
             $usd_price = currency()->getCurrencies()['USD']['exchange_rate'];
 
-            if(currency()->getCurrency()['code'] !== 'USD') {
-                $price = $usd_price * $request->range_val;
-                $tours->where('data', 'like', '%' . $price . '%');
-            }else {
+//            if(currency()->getCurrency()['code'] !== 'USD') {
+//                $price = $usd_price * $request->range_val;
+//                $tours->where('data', 'like', '%' . $price . '%');
+//            }else {
+//                $tours->where('data', 'like', '%' . $request->range_val . '%');
+//            }
+            if($request->range_val){
                 $tours->where('data', 'like', '%' . $request->range_val . '%');
             }
         }
