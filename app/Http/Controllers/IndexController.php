@@ -427,10 +427,10 @@ class IndexController extends Controller
 
         $hotels = Residence::with('region')->whereResidenceType(Residence::residence_type_hotel);
 
-
-        if(isset($request->slug)) {
-            $r_id=Region::whereSlug($request->slug)->first()->pluck('id');
-            $hotels = $hotels->whereRegionId($r_id);
+        if(isset($request->slug)){
+            $hotels = $hotels->whereHas('region', function($query)use($request){
+                $query->whereSlug($request->slug);
+            });
         }
 
         if(isset($request->room)) {
