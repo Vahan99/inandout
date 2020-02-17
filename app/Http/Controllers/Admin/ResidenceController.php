@@ -50,12 +50,12 @@ class ResidenceController extends BaseController
         $req['slug'] = str_slug($req['name_en']);
         $req['amenities'] = json_encode($request->amenities);
         $req['grid_image'] = $this->fileUpload($request->file('grid_image'), public_path('uploads/'))[0];
-        $id = Residence::create($req)->id;
+        $model = Residence::create($req);
 
         if($req['room_type'] && count($req['room_type'])) {
             foreach($req['room_type'] as $key => $room_id){
                 ResidenceRoomType::create([
-                    'residence_id' => $id,
+                    'residence_id' => $model->id,
                     'room_type_id' => $room_id
                 ]);
             }
@@ -63,7 +63,7 @@ class ResidenceController extends BaseController
         if($req['bed_type']) {
             foreach($req['bed_type'] as $key => $bed_id){
                 ResBedType::create([
-                    'residence_id' => $id,
+                    'residence_id' => $model->id,
                     'bed_type_id' => $bed_id
                 ]);
             }
@@ -74,7 +74,7 @@ class ResidenceController extends BaseController
 
             foreach ($images as $image) {
                 ResidenceImage::create([
-                    'residence_id' => $id,
+                    'residence_id' => $model->id,
                     'image' => $image
                 ]);
             }
@@ -99,10 +99,11 @@ class ResidenceController extends BaseController
     }
     public function edit(Request $request, $id)
     {
-        $model = Residence::find($id);
+        $model = Residence::with('residence_room_types')->find($id);
         $req = $request->all();
+
         $req['amenities'] = json_encode($request->amenities);
-//        dd($req);
+
         if(isset($req['grid_image'])){
             if($model->grid_image && file_exists(public_path('uploads/'.$model->grid_image))) {
                 unlink(public_path('uploads/'.$model->grid_image));
@@ -112,7 +113,11 @@ class ResidenceController extends BaseController
             }
         }
 
+        isset($req['room_type']) ? $model->residence_room_types_pivot()->sync($req['room_type']) :
+        $model->residence_room_types_pivot()->detach();
+
         $model->update($req);
+
         $images = $this->fileUpload($request->file('image'), public_path('uploads/'));
 
         if(isset($req['residence_type'])) {

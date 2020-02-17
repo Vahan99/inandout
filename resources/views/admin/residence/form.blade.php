@@ -54,15 +54,21 @@
 </div>
 <div class="form-group">
     {!! Form::label('residence_type') !!}
-    {!! Form::select('residence_type', App\Residence::residenceList(), $model ? $model->residence_type : null, ['class' => 'form-control','required']) !!}
+    {!! Form::select('residence_type', App\Residence::residenceList(), $model ? $model->residence_type : null, ['class' => 'form-control js-example-basic-multiple','required']) !!}
 </div>
+
 <div class="form-group">
+
     {!! Form::label('room_type') !!}
-    {!! Form::select('room_type', App\RoomType::listAll(), $model ? $model->room_type : null, ['multiple'=>'multiple', 'class' => 'form-control',/*'required',*/ 'name' => 'room_type[]']) !!}
+    <select class="js-example-basic-multiple form-control" name="room_type[]" multiple="multiple">
+        @foreach(App\RoomType::listAll() as $key => $room)
+            <option value="{{ $key }}" {{$model && isset(array_flip($model->residence_room_types->pluck('room_type_id')->toArray())[$key]) ? "selected" : ''}}>{{$room}}</option>
+        @endforeach
+    </select>
 </div>
 <div class="form-group">
     {!! Form::label('bed_type') !!}
-    {!! Form::select('bed_type', App\BedType::listAll(), $model ? $model->bed_type : null, ['multiple'=>'multiple', 'class' => 'form-control',/*'required',*/ 'name' => 'bed_type[]']) !!}
+    {!! Form::select('bed_type', App\BedType::listAll(), $model ? $model->bed_type : null, ['class' => 'form-control',/*'required',*/ 'name' => 'bed_type[]']) !!}
 </div>
 
 <div class="form-group">
@@ -98,4 +104,12 @@
 @endpush
 @push('scripts')
 <script src="{{ mix('js/tour-create-plugin.js') }}"></script>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.js-example-basic-multiple').select2();
+    });
+</script>
+
 @endpush

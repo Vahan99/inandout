@@ -74,6 +74,10 @@ class Residence extends Model
         return $this->hasMany(ResidenceRoomType::class,'residence_id','id');
     }
 
+    public function residence_room_types_pivot() {
+        return $this->belongsToMany('\App\Residence', 'residence_room_types', 'residence_id', 'room_type_id', '\App\RoomType');
+    }
+
     public function resbedtypes(){
         return $this->hasMany('App\ResBedType');
     }
