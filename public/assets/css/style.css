@@ -4980,7 +4980,7 @@ h5 {
 }
 
 header .navigation-bar > ul > li > a:hover {
-    border: solid 1px #EF8200!important;
+    border: solid 2px #EF8200!important;
 }
 .share-post-navigation > ul{
     display: inline-flex;
