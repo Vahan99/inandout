@@ -149,6 +149,7 @@ class IndexController extends Controller
             $tours = $tours->where('region_id', $request->region);
         }
 
+            dd($tours->get());
         if(isset($request->range_val) && $request->range_val != 0) {
             $usd_price = currency()->getCurrencies()['USD']['exchange_rate'];
 
@@ -158,9 +159,6 @@ class IndexController extends Controller
 //            }else {
 //                $tours->where('data', 'like', '%' . $request->range_val . '%');
 //            }
-            if($request->range_val){
-                $tours->whereBetween('data', array(0, (int)$request->range_val));
-            }
         }
 
         $tours = $tours->paginate(6);
@@ -429,24 +427,23 @@ class IndexController extends Controller
 
         $hotels = Residence::with('region')->whereResidenceType(Residence::residence_type_hotel);
 
+
         if(isset($request->slug)) {
             $r_id=Region::whereSlug($request->slug)->first()->pluck('id');
             $hotels = $hotels->whereRegionId($r_id);
         }
 
         if(isset($request->room)) {
-            $r_residence_ids = \App\ResidenceRoomType::whereRoomTypeId($request->room)->get()->pluck('residence_id')->toArray();
-            if(!empty($r_residence_ids)){
-                $hotels = $hotels->whereIn('id', $r_residence_ids);
-            }
-
+            $hotels = $hotels->whereHas('residence_room_types', function ($query) use($request) {
+                $query->whereRoomTypeId($request->room);
+            });
         }
 
+
         if(isset($request->bed)) {
-            $b_residence_ids = \App\ResidenceBedType::whereBedTypeId($request->bed)->get()->pluck('residence_id')->toArray();
-            if(!empty($b_residence_ids)){
-                $hotels = $hotels->whereIn('id', $b_residence_ids);
-            }
+            $hotels = $hotels->whereHas('resbedtypes', function ($query) use($request) {
+                $query->whereBedTypeId($request->bed);
+            });
         }
 
         $slug = $request->slug;

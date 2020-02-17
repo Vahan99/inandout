@@ -39,7 +39,7 @@
                                                 <option value="">@lang('message.select-all')</option>
                                                 @if(count($rooms))
                                                     @foreach($rooms as $key => $room)
-                                                        <option value={{$key}}>{{ $room }}</option>
+                                                        <option value={{$key}} {{ request('room') == $key ? 'selected' : '' }}>{{ $room }}</option>
                                                     @endforeach
                                                 @endif
                                             </select>
@@ -56,7 +56,7 @@
                                                 <option value="">@lang('message.select-all')</option>
                                                 @if(count($beds))
                                                     @foreach($beds as $key => $bed)
-                                                        <option value={{$key}}>{{ $bed  }}</option>
+                                                        <option value={{$key}} {{ request('bed') == $key ? 'selected' : '' }}>{{ $bed }}</option>
                                                     @endforeach
                                                 @endif
                                             </select>

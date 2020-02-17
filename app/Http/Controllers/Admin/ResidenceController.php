@@ -51,7 +51,8 @@ class ResidenceController extends BaseController
         $req['amenities'] = json_encode($request->amenities);
         $req['grid_image'] = $this->fileUpload($request->file('grid_image'), public_path('uploads/'))[0];
         $id = Residence::create($req)->id;
-        if($req['room_type'] && count($req['room_type'])>1) {
+
+        if($req['room_type'] && count($req['room_type'])) {
             foreach($req['room_type'] as $key => $room_id){
                 ResidenceRoomType::create([
                     'residence_id' => $id,
