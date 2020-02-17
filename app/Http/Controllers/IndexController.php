@@ -149,7 +149,6 @@ class IndexController extends Controller
             $tours = $tours->where('region_id', $request->region);
         }
 
-            dd($tours->get());
         if(isset($request->range_val) && $request->range_val != 0) {
             $usd_price = currency()->getCurrencies()['USD']['exchange_rate'];
 
