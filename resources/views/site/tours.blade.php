@@ -40,14 +40,15 @@
                                               $range_val = request('range_val') ? request('range_val') : 0;
                                             @endphp
                                             @if(currency()->getCurrency()['code'] === 'AMD')
-                                                <input name="range_val" id="tour_range" type="range" min="0" max="10000000" step="10000"  class="form-control-range" value="{{$range_val}}"/>
+                                                <input name="range_val" id="rangeInput" type="range" min="0" max="10000000" step="10000" oninput="amount.value=rangeInput.value" class="form-control-range" value="{{$range_val}}"/>
                                                 @elseif(currency()->getCurrency()['code'] === 'RUB')
-                                                <input  name="range_val" id="tour_range" type="range" min="0" max="1000000" step="1000"  class="form-control-range" value="{{$range_val}}" />
+                                                <input  name="range_val" id="rangeInput" type="range" min="0" max="1000000" step="1000" oninput="amount.value=rangeInput.value" class="form-control-range" value="{{$range_val}}" />
                                                 @else
-                                                <input name="range_val" id="tour_range" type="range" min="0" max="100000" step="100"  class="form-control-range" value="{{$range_val}}"/>
+                                                <input name="range_val" id="rangeInput" type="range" min="0" max="100000" step="100" oninput="amount.value=rangeInput.value" class="form-control-range" value="{{$range_val}}"/>
                                             @endif
-                                            <div  class="text-center range_val"></div>
+                                            <input class="text-center" id="amount" type="number" value="{{$range_val}}" oninput="rangeInput.value=amount.value" disabled/>
                                         </div>
+
                                     </div>
                                 </div>
                                 <div class="col-sm-4 col-md-2">
@@ -57,6 +58,7 @@
                                 </div>
                             </div>
                         </form>
+
                         <div class="d-block text-center animated-header">
                             <h1 class="decoration decoration-cont-style" data-animation="fadeInUp" data-animation-delay="200">@lang('message.aboutas-tours')</h1>
                         </div>

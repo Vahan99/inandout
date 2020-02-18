@@ -122,3 +122,4 @@ if (!function_exists('listOfTimeIntervals')) {
         }
     }
 }
+

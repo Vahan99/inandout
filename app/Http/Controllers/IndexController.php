@@ -145,19 +145,23 @@ class IndexController extends Controller
     {
         $model = \App\TourType::whereSlug($request->slug)->firstOrFail();
         $tours = $model->tours();
+
         if(isset($request->region)) {
             $tours = $tours->where('region_id', $request->region);
         }
 
         if(isset($request->range_val) && $request->range_val != 0) {
-            $usd_price = currency()->getCurrencies()['USD']['exchange_rate'];
+            $tour_ids = [];
+            foreach($tours->get() as $tour){
+                $data = json_decode($tour->data, true)['data'];
+                if(isset($data)){
+                    foreach ($data as $d){
+                        $d['price'] <= $request->range_val ? array_push($tour_ids, $tour->id) : false;
+                    }
+                }
+            }
 
-//            if(currency()->getCurrency()['code'] !== 'USD') {
-//                $price = $usd_price * $request->range_val;
-//                $tours->where('data', 'like', '%' . $price . '%');
-//            }else {
-//                $tours->where('data', 'like', '%' . $request->range_val . '%');
-//            }
+            $tours = $tours->whereIn('id', $tour_ids);
         }
 
         $tours = $tours->paginate(6);
