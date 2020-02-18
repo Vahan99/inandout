@@ -46,7 +46,7 @@
                                                 @else
                                                 <input name="range_val" id="rangeInput" type="range" min="0" max="100000" step="100" oninput="amount.value=rangeInput.value" class="form-control-range" value="{{$range_val}}"/>
                                             @endif
-                                            <input class="text-center" id="amount" type="number" value="{{$range_val}}" oninput="rangeInput.value=amount.value" disabled/>
+                                            <input class="text-center" style="height: 30px;" id="amount" type="number" value="{{$range_val}}" oninput="rangeInput.value=amount.value" disabled/>
                                         </div>
 
                                     </div>
