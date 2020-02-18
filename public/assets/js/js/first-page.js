@@ -49,4 +49,17 @@ $(document).ready(function () {
     $('.hided-content').not(currentElem).slideUp(500);
     currentElem.slideToggle(500);
   });
+
+
 });
+
+function parsUrl(currency) {
+  let queryString = window.location.search,
+      urlParams = new URLSearchParams(queryString),
+      fullUrl = new URL(window.location);
+
+  !urlParams.has('currency') ?
+    urlParams.append('currency', currency) : urlParams.set('currency', currency);
+
+  location.href = new URL(`?${urlParams.toString()}`, fullUrl.origin + fullUrl.pathname).href;
+}

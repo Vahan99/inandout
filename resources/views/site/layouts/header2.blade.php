@@ -50,7 +50,7 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         @foreach(currency()->getCurrencies() as $currency)
                             <li>
-                                <a href="?currency={{ $currency['code'] }}"><img src="{{ $currency['symbol'] }} " alt=""> {{ $currency['code'] }}</a>
+                                <a href="javascript: parsUrl(`{{$currency['code']}}`)" data-value="{{ $currency['code'] }}"><img src="{{ $currency['symbol'] }} " alt=""> {{ $currency['code'] }}</a>
                             </li>
                         @endforeach
                     </ul>
