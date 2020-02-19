@@ -156,8 +156,9 @@ class IndexController extends Controller
                 $data = json_decode($tour->data, true)['data'];
                 if(isset($data)){
                     foreach ($data as $d){
-                        dump(currency($d['price'], $request->currency, currency()->getUserCurrency()), "------", $request->range_val, currency($d['price'], $request->currency, currency()->getUserCurrency()) <= $request->range_val);
-                        currency($d['price'], $request->currency, currency()->getUserCurrency()) <= $request->range_val ? array_push($tour_ids, $tour->id) : false;
+                        $currency = str_replace(currency()->getUserCurrency(), '', currency($d['price'], "AMD", currency()->getUserCurrency()));
+                        $currency = str_replace(' ', '', $currency);
+                        $currency <= $request->range_val ? array_push($tour_ids, $tour->id) : false;
                     }
                 }
             }
