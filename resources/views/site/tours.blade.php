@@ -25,7 +25,7 @@
                                                 <option value="">@lang('message.select-all')</option>
                                                 @if(count($region))
                                                     @foreach($region as $item)
-                                                        <option value="{{ $item->id }}">{{ $item[$item->lang]}}</option>
+                                                        <option value="{{ $item->id }}" {{request('region') && request('region') == $item->id ? 'selected' : ''}}>{{ $item[$item->lang]}}</option>
                                                     @endforeach
                                                 @endif
                                             </select>
