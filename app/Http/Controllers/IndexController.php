@@ -150,7 +150,7 @@ class IndexController extends Controller
             $tours = $tours->where('region_id', $request->region);
         }
 
-        if(isset($request->range_val) && $request->range_val != 0) {
+        if(isset($request->range_val)) {
             $tour_ids = [];
             foreach($tours->get() as $tour){
                 $data = json_decode($tour->data, true)['data'];
