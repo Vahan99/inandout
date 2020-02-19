@@ -13,6 +13,7 @@
                 <div class="tabs tabs2 ui-tabs ui-widget ui-widget-content ui-corner-all">
                     <div class="tabs_content tabs1_content">
                         <form action="{{ route('tours', request()->slug) }}" method="get" class="form1">
+                            <input type="hidden" name="currency" value="{{ session()->get('currency') }}">
                             <div class="row">
                                 {{--region filter--}}
                                 <div class="col-sm-3 col-md-3">

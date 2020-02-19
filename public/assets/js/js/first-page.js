@@ -60,6 +60,5 @@ function parsUrl(currency) {
 
   !urlParams.has('currency') ?
     urlParams.append('currency', currency) : urlParams.set('currency', currency);
-
   location.href = new URL(`?${urlParams.toString()}`, fullUrl.origin + fullUrl.pathname).href;
 }

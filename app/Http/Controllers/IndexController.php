@@ -172,7 +172,8 @@ class IndexController extends Controller
         foreach($region as $item){
             $item->lang = $locale;
         }
-        return view('site.tours', compact('model', 'tours', 'activeParentTourType','region'));
+
+        return view('site.tours', compact('model', 'tours', 'activeParentTourType', 'region'));
     }
 
     public function tourSingle(Request $request, $slug)
