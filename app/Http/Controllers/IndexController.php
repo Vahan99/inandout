@@ -146,7 +146,7 @@ class IndexController extends Controller
         $model = \App\TourType::whereSlug($request->slug)->firstOrFail();
         $tours = $model->tours();
 
-        if(isset($request->range_val) && !(isset($request->region) && $request->range_val == 0 && $request->range_val == 'all')) {
+        if(isset($request->range_val) && !(isset($request->region) && $request->range_val == 0 && $request->region == 'all')) {
             $tour_ids = [];
             foreach($tours->get() as $tour){
                 $data = json_decode($tour->data, true)['data'];
