@@ -146,11 +146,7 @@ class IndexController extends Controller
         $model = \App\TourType::whereSlug($request->slug)->firstOrFail();
         $tours = $model->tours();
 
-        if(isset($request->region)) {
-            $tours = $tours->where('region_id', $request->region);
-        }
-
-        if(isset($request->range_val) && !(isset($request->region) && $request->range_val == 0)) {
+        if(isset($request->range_val) && !(isset($request->region) && $request->range_val == 0 || 'all')) {
             $tour_ids = [];
             foreach($tours->get() as $tour){
                 $data = json_decode($tour->data, true)['data'];
@@ -166,9 +162,10 @@ class IndexController extends Controller
             $tours = $tours->whereIn('id', $tour_ids);
         }
 
-        if(isset($request->region)){
+        if(isset($request->region) && !($request->region == 'all')){
             $tours = $tours->whereRegionId($request->region);
         }
+
 
         $tours = $tours->paginate(6);
 

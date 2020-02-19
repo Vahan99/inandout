@@ -22,7 +22,7 @@
                                     <div class="select1_wrapper">
                                         <div class="select1_inner">
                                             <select class="select2 select select2-hidden-accessible" name="region" style="width: 100%" tabindex="-1" aria-hidden="true">
-                                                <option value="">@lang('message.select-all')</option>
+                                                <option value="all" {{request('region') && request('region') == 'all' ? 'selected' : ''}}>@lang('message.select-all')</option>
                                                 @if(count($region))
                                                     @foreach($region as $item)
                                                         <option value="{{ $item->id }}" {{request('region') && request('region') == $item->id ? 'selected' : ''}}>{{ $item[$item->lang]}}</option>
