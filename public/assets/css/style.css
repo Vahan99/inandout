@@ -1033,8 +1033,8 @@ header {
     height: 40px;
     border: none;
     background: #fff;
-    color: #c2c2c2;
-    font-size: 13px;
+    /*color: #c2c2c2;*/
+    font-size: 17px;
     line-height: 20px;
     font-family: inherit;
     display: block;
